@@ -6,11 +6,8 @@
 using namespace std;
 
 class usuario{
-	private:
-		
-
-	public:
-		
+private:
+			
 };
 
 #endif

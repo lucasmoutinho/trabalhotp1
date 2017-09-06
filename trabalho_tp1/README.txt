@@ -6,4 +6,7 @@
 - Instalar o Doxygen (Não consigui instalar até agora)
 - Produzir documentação para as classes implementadas usando o Doxygen
 
-READ: http://www.cplusplus.com/forum/articles/10627/
+READ:
+
+http://www.cplusplus.com/forum/articles/10627/
+http://www.cplusplus.com/doc/tutorial/classes/

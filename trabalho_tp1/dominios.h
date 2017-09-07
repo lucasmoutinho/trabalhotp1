@@ -37,14 +37,16 @@ public:
 
 class Telefone{
 private:
-	const static int LIMITE_TELEFONE = 9;
-	int telefone[9];
+	const static int LIMITE_NUMERO = 9;
+	const static int LIMITE_DDD = 2;
+	string telefone;
 
-	void validaTelefone(int) throw(invalid_argument);
+	void validaTelefone(string) throw(invalid_argument);
 
 public:
 
-	void setTelefone(int) throw(invalid_argument);
+	void setTelefone(string) throw(invalid_argument);
+	void showTelefone() const;
 	void getTelefone() const{
 		return telefone;
 	}

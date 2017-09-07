@@ -15,7 +15,7 @@ private:
 public:
 
 	void setNome(string) throw(invalid_argument);
-	void getNome() const{
+	string getNome() const{
 		return nome;
 	}
 };
@@ -30,7 +30,7 @@ private:
 public:
 
 	void setApelido(string) throw(invalid_argument);
-	void getApelido() const{
+	string getApelido() const{
 		return apelido;
 	}
 };
@@ -41,13 +41,13 @@ private:
 	const static int LIMITE_DDD = 2;
 	string telefone;
 
-	void validaTelefone(string) throw(invalid_argument);
+	void validaTelefone(string, string) throw(invalid_argument);
 
 public:
 
-	void setTelefone(string) throw(invalid_argument);
+	void setTelefone(string, string) throw(invalid_argument);
 	void showTelefone() const;
-	void getTelefone() const{
+	string getTelefone() const{
 		return telefone;
 	}
 };
@@ -62,7 +62,7 @@ private:
 public:
 
 	void setSenha(string) throw(invalid_argument);
-	void getSenha() const{
+	string getSenha() const{
 		return senha;
 	}
 };

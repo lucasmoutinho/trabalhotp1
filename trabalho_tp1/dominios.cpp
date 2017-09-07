@@ -1,14 +1,15 @@
 #include "dominios.h"
+#include <iostream>
 
-bool string_contem_numero(string nome){
+bool string_contem_numero(string str){
 
 	int i = 0, j = 0;
-	int numeros[] {0,1,2,3,4,5,6,7,8,9};
+	int numeros[] = {0,1,2,3,4,5,6,7,8,9};
 	bool contem_numero = false;
 
-	while(!contem_numero && i<nome.length()){
-		while(!contem_numero && j<numeros.size()){
-			if((int)nome[i] == numeros[j]){
+	while(!contem_numero && (unsigned)i<str.length()){
+		while(!contem_numero && (unsigned)j<sizeof(numeros)){
+			if((str[i] - '0') == numeros[j]){
 				contem_numero = true;
 			}
 			j++;
@@ -19,20 +20,21 @@ bool string_contem_numero(string nome){
 	return contem_numero;
 }
 
-bool string_contem_apenas_numeros(string str)(){
+bool string_contem_apenas_numeros(string str){
 
 	int i = 0, j = 0;
-	int numeros[] {0,1,2,3,4,5,6,7,8,9};
+	int numeros[] = {0,1,2,3,4,5,6,7,8,9};
 	bool eh_numero = true;
 
-	while(eh_numero && i<str.length()){
+	while(eh_numero && (unsigned)i<str.length()){
 		eh_numero = false;
-		while(!eh_numero && j<numeros.size()){
-			if((int)str[i] == numeros[j]){
+		while(!eh_numero && (unsigned)j<sizeof(numeros)){
+			if((str[i] - '0') == numeros[j]){
 				eh_numero = true;
 			}
 			j++;
 		}
+		j=0;
 		i++;
 	}
 	return eh_numero;	
@@ -41,8 +43,8 @@ bool string_contem_apenas_numeros(string str)(){
 bool string_repete_letra(string str){
 
 	int i = 0, j = 0;
-	bool repete_letra = false
-	const int TAMANHO = str.length();
+	bool repete_letra = false;
+	const int TAMANHO = (int)str.length();
 
 	while(!repete_letra && i<TAMANHO){
 		j = i+1;
@@ -93,16 +95,16 @@ void Apelido::setApelido(string apelido) throw(invalid_argument){
 void Telefone::validaTelefone(string ddd, string numero) throw(invalid_argument){
 
 	if(ddd.length() > LIMITE_DDD || ddd.length() < LIMITE_DDD){
-		throw invalid_argument("DDD nao deve exceder o tamanho");
-	}
-	if(numero.length() > LIMITE_NUMERO || numero.length() < LIMITE_NUMERO){
-		throw invalid_argument("Numero nao deve exceder o tamanho");
+		throw invalid_argument("DDD com quantidade de algarismos invalida");
 	}
 	if(!string_contem_apenas_numeros(ddd)){
-		throw invalid_argument("DDD deve conter apenas algarismos de 0 a 9")
+		throw invalid_argument("DDD deve conter apenas algarismos de 0 a 9");
+	}
+	if(numero.length() > LIMITE_NUMERO || numero.length() < LIMITE_NUMERO){
+		throw invalid_argument("Numero com quantidade de algarismos invalida");
 	}
 	if(!string_contem_apenas_numeros(numero)){
-		throw invalid_argument("Numero deve conter apenas algarismos de 0 a 9")
+		throw invalid_argument("Numero deve conter apenas algarismos de 0 a 9");
 	}
 }
 
@@ -112,9 +114,9 @@ void Telefone::setTelefone(string ddd, string numero) throw(invalid_argument){
 	this->telefone = ddd + numero;
 }
 
-void Telefone::showTelefone(){
+void Telefone::showTelefone() const{
 
-	cout << '(' << telefone.substr(0,LIMITE_DDD) << ')-' 
+	cout << '(' << telefone.substr(0,LIMITE_DDD) << ")-" 
 	<< telefone.substr(LIMITE_DDD , LIMITE_DDD + LIMITE_NUMERO) << endl;
 }
 

@@ -15,7 +15,9 @@ private:
 public:
 
 	void setNome(string) throw(invalid_argument);
-	void getNome(string);
+	void getNome() const{
+		return nome;
+	}
 };
 
 class Apelido{
@@ -28,22 +30,24 @@ private:
 public:
 
 	void setApelido(string) throw(invalid_argument);
-	void getApelido(string);
+	void getApelido() const{
+		return apelido;
+	}
 };
 
 class Telefone{
 private:
-	const static int LIMITE_DDD = 2;
-	const static int LIMITE_NUMERO = 9;
-	string telefone;
+	const static int LIMITE_TELEFONE = 9;
+	int telefone[9];
 
-	void validaDDD(string) throw(invalid_argument);
-	void validaNumero(string) throw(invalid_argument);
+	void validaTelefone(int) throw(invalid_argument);
 
 public:
 
-	void setTelefone(string) throw(invalid_argument);
-	void getTelefone(string);
+	void setTelefone(int) throw(invalid_argument);
+	void getTelefone() const{
+		return telefone;
+	}
 };
 
 class Senha{
@@ -56,7 +60,9 @@ private:
 public:
 
 	void setSenha(string) throw(invalid_argument);
-	void getSenha(string);
+	void getSenha() const{
+		return senha;
+	}
 };
 
 #endif

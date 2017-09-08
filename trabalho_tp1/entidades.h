@@ -44,4 +44,11 @@ public:
 			
 };
 
+class Resenha{
+private:
+
+public:
+
+};
+
 #endif

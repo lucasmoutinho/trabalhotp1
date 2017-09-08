@@ -14,36 +14,30 @@ private:
 	
 public:
 	
-	void setNome(const Nome& nome){
-		this->nome = nome;
+	void setNome(string) throw(invalid_argument);
+
+	string getNome() const{
+		return this->nome.getNome();
 	}
 
-	Nome getNome() const{
-		return nome;
+	void setApelido(string) throw(invalid_argument);
+
+	string getApelido() const{
+		return this->apelido.getApelido();
 	}
 
-	void setApelido(const Apelido& apelido){
-		this->apelido = apelido;
+	void setTelefone(string) throw(invalid_argument);
+
+	void showTelefone() const;
+
+	string getTelefone() const{
+		return this->telefone.getTelefone();
 	}
 
-	Apelido getApelido() const{
-		return apelido;
-	}
+	void setSenha(string senha) throw(invalid_argument);
 
-	void setTelefone(const Telefone& telefone){
-		this->telefone = telefone;
-	}
-
-	Telefone getTelefone() const{
-		return telefone;
-	}
-
-	void setSenha(const Senha& senha){
-		this->senha = senha;
-	}
-
-	Senha getSenha() const{
-		return senha;
+	string getSenha() const{
+		return this->senha.getSenha();
 	}
 			
 };

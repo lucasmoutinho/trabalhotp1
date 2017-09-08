@@ -42,6 +42,7 @@ private:
 	string telefone;
 
 	void validaTelefone(string, string) throw(invalid_argument);
+	bool string_contem_apenas_numeros(string);
 
 public:
 
@@ -58,6 +59,7 @@ private:
 	string senha;
 
 	void validaSenha(string) throw(invalid_argument);
+	bool string_repete_letra(string);
 
 public:
 

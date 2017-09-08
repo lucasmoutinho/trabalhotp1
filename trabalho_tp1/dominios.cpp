@@ -20,46 +20,6 @@ bool string_contem_numero(string str){
 	return contem_numero;
 }
 
-bool string_contem_apenas_numeros(string str){
-
-	int i = 0, j = 0;
-	int numeros[] = {0,1,2,3,4,5,6,7,8,9};
-	bool eh_numero = true;
-
-	while(eh_numero && (unsigned)i<str.length()){
-		eh_numero = false;
-		while(!eh_numero && (unsigned)j<sizeof(numeros)){
-			if((str[i] - '0') == numeros[j]){
-				eh_numero = true;
-			}
-			j++;
-		}
-		j=0;
-		i++;
-	}
-	return eh_numero;	
-}
-
-bool string_repete_letra(string str){
-
-	int i = 0, j = 0;
-	bool repete_letra = false;
-	const int TAMANHO = (int)str.length();
-
-	while(!repete_letra && i<TAMANHO){
-		j = i+1;
-		while(!repete_letra && j<TAMANHO){
-			if(str[i] == str[j]){
-				repete_letra = true;
-			}
-			j++;
-		}
-		j = 0;
-		i++;
-	}
-	return repete_letra;
-}
-
 void Nome::validaNome(string nome) throw(invalid_argument){
 
 	if(nome.length() > LIMITE_NOME){
@@ -92,6 +52,26 @@ void Apelido::setApelido(string apelido) throw(invalid_argument){
 	this->apelido = apelido;
 }
 
+bool Telefone::string_contem_apenas_numeros(string str){
+
+	int i = 0, j = 0;
+	int numeros[] = {0,1,2,3,4,5,6,7,8,9};
+	bool eh_numero = true;
+
+	while(eh_numero && (unsigned)i<str.length()){
+		eh_numero = false;
+		while(!eh_numero && (unsigned)j<sizeof(numeros)){
+			if((str[i] - '0') == numeros[j]){
+				eh_numero = true;
+			}
+			j++;
+		}
+		j=0;
+		i++;
+	}
+	return eh_numero;	
+}
+
 void Telefone::validaTelefone(string ddd, string numero) throw(invalid_argument){
 
 	if(ddd.length() > LIMITE_DDD || ddd.length() < LIMITE_DDD){
@@ -118,6 +98,26 @@ void Telefone::showTelefone() const{
 
 	cout << '(' << telefone.substr(0,LIMITE_DDD) << ")-" 
 	<< telefone.substr(LIMITE_DDD , LIMITE_DDD + LIMITE_NUMERO) << endl;
+}
+
+bool Senha::string_repete_letra(string str){
+
+	int i = 0, j = 0;
+	bool repete_letra = false;
+	const int TAMANHO = (int)str.length();
+
+	while(!repete_letra && i<TAMANHO){
+		j = i+1;
+		while(!repete_letra && j<TAMANHO){
+			if(str[i] == str[j]){
+				repete_letra = true;
+			}
+			j++;
+		}
+		j = 0;
+		i++;
+	}
+	return repete_letra;
 }
 
 void Senha::validaSenha(string senha) throw(invalid_argument){

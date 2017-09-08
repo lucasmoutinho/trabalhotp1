@@ -6,6 +6,13 @@ using namespace std;
 
 class usuario{
 private:
+
+	Nome nome;
+	Apelido apelido;
+	Telefone telefone;
+	Senha senha;
+public:
+	
 			
 };
 

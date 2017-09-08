@@ -1,6 +1,7 @@
 #ifndef __DOMINIOS_H_INCLUDED__
 #define __DOMINIOS_H_INCLUDED__
 
+#include <iostream>
 #include <string>
 #include <stdexcept>
 using namespace std;

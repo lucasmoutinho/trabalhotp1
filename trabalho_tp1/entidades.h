@@ -2,9 +2,11 @@
 #define __ENTIDADES_H_INCLUDED__
 
 #include "dominios.h"
+#include <string>
+#include <stdexcept>
 using namespace std;
 
-class usuario{
+class Usuario{
 private:
 
 	Nome nome;
@@ -26,7 +28,7 @@ public:
 		return this->apelido.getApelido();
 	}
 
-	void setTelefone(string) throw(invalid_argument);
+	void setTelefone(string, string) throw(invalid_argument);
 
 	void showTelefone() const;
 
@@ -34,7 +36,7 @@ public:
 		return this->telefone.getTelefone();
 	}
 
-	void setSenha(string senha) throw(invalid_argument);
+	void setSenha(string) throw(invalid_argument);
 
 	string getSenha() const{
 		return this->senha.getSenha();

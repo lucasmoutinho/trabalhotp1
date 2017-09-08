@@ -1,17 +1,20 @@
 #include <iostream>
 #include <string>
 #include "dominios.h"
+#include "entidades.h"
+
 using namespace std;
 
 int main(){
-	Telefone* obj = new Telefone;
-	string str1, str2;
-	cout << "Escreva um DDD" << endl;
-	cin >> str1;
-	cout << "Escreva um numero" << endl;
-	cin >> str2;
-	obj->setTelefone(str1, str2);
-	cout << obj->getTelefone() << endl;
-	obj->showTelefone();
+	Usuario user;
+	user.setNome("Lucas");
+	user.setApelido("Lukk");
+	user.setSenha("lone");
+	user.setTelefone("22","123456789");
+	cout << user.getNome() <<endl;
+	cout << user.getApelido() <<endl;
+	cout << user.getSenha() <<endl;
+	cout << user.getTelefone() <<endl;
+	user.showTelefone();
 	return 0;
 }

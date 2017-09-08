@@ -1,5 +1,4 @@
 #include "dominios.h"
-#include <iostream>
 
 bool string_contem_numero(string str){
 

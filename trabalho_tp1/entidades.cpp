@@ -19,3 +19,15 @@ void Usuario::showTelefone() const{
 void Usuario::setSenha(string senha) throw(invalid_argument){
 	this->senha.setSenha(senha);
 }
+
+void Resenha::setNomeDoLivro(string nome) throw(invalid_argument){
+	this->nomeDoLivro.setNome(nome);	
+}
+
+void Resenha::setNomeDoAutor(string nome) throw(invalid_argument){
+	this->nomeDoAutor.setNome(nome);	
+}
+
+void Resenha::setResenha(string resenha){
+	this->resenha = resenha;
+}

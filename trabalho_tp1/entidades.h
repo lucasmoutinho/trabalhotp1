@@ -47,8 +47,28 @@ public:
 class Resenha{
 private:
 
+	Nome nomeDoLivro, nomeDoAutor;
+	string resenha;
+
 public:
 
+	void setNomeDoLivro(string) throw(invalid_argument);
+
+	string getNomeDoLivro() const{
+		return this->nomeDoLivro.getNome();
+	}
+
+	void setNomeDoAutor(string) throw(invalid_argument);
+
+	string getNomeDoAutor() const{
+		return this->nomeDoAutor.getNome();
+	}
+
+	void setResenha(string);
+
+	string getResenha() const{
+		return this->resenha;
+	}	
 };
 
 #endif

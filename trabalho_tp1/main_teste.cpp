@@ -16,7 +16,7 @@ int main(){
 	user.setSenha("lone");
 	user.setTelefone("(22)-123456789");
 	livro.setTitulo("bananao");
-	livro.setAutor("j");
+	livro.setAutor("i");
 	livro.setCodigo("01234");
 	livro.setData("12/12/12");
 	livro.setGenero(4);

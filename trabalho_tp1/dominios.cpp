@@ -10,9 +10,9 @@ bool string_contem_numero(string str){
 		while(!contem_numero && (unsigned)cont2<sizeof(numeros)){
 			if((str[cont1] - '0') == numeros[cont2]){
 				contem_numero = true;
-				// if(str[cont1] == 'i'){
-				// 	contem_numero = false;
-				// }
+				if(str[cont1] == 'i'){
+					contem_numero = false;
+				}
 			}
 			cont2++;
 		}

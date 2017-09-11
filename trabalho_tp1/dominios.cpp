@@ -10,9 +10,9 @@ bool string_contem_numero(string str){
 		while(!contem_numero && (unsigned)cont2<sizeof(numeros)){
 			if((str[cont1] - '0') == numeros[cont2]){
 				contem_numero = true;
-				if(str[cont1] == 'i'){
-					contem_numero = false;
-				}
+				// if(str[cont1] == 'i'){
+				// 	contem_numero = false;
+				// }
 			}
 			cont2++;
 		}
@@ -24,20 +24,20 @@ bool string_contem_numero(string str){
 
 bool string_contem_apenas_numeros(string str){
 
-	int cont1 = 0, cont2 = 0;
-	int numeros[] = {0,1,2,3,4,5,6,7,8,9};
+	int contador1 = 0, contador2 = 0;
+	int listaNumeros[] = {0,1,2,3,4,5,6,7,8,9};
 	bool eh_numero = true;
 
-	while(eh_numero && (unsigned)cont1<str.length()){
+	while(eh_numero && (unsigned)contador1<str.length()){
 		eh_numero = false;
-		while(!eh_numero && (unsigned)cont2<sizeof(numeros)){
-			if((str[cont1] - '0') == numeros[cont2]){
+		while(!eh_numero && (unsigned)contador2<sizeof(listaNumeros)){
+			if((str[contador1] - '0') == listaNumeros[contador2]){
 				eh_numero = true;
 			}
-			cont2++;
+			contador2++;
 		}
-		cont2=0;
-		cont1++;
+		contador2=0;
+		contador1++;
 	}
 	return eh_numero;	
 }
@@ -108,20 +108,20 @@ void Telefone::setTelefone(string telefone) throw(invalid_argument){
 
 bool Senha::string_repete_letra(string str){
 
-	int i = 0, j = 0;
+	int cont1 = 0, cont2 = 0;
 	bool repete_letra = false;
-	const int TAMANHO = (int)str.length();
+	const int TAMANHO_STRING = (int)str.length();
 
-	while(!repete_letra && i<TAMANHO){
-		j = i+1;
-		while(!repete_letra && j<TAMANHO){
-			if(str[i] == str[j]){
+	while(!repete_letra && cont1<TAMANHO_STRING){
+		cont2 = cont1+1;
+		while(!repete_letra && cont2<TAMANHO_STRING){
+			if(str[cont1] == str[cont2]){
 				repete_letra = true;
 			}
-			j++;
+			cont2++;
 		}
-		j = 0;
-		i++;
+		cont2 = 0;
+		cont1++;
 	}
 	return repete_letra;
 }
@@ -147,15 +147,15 @@ void Senha::setSenha(string senha) throw(invalid_argument){
 
 bool Titulo::string_contem_espaco_em_branco_duplicado(string str){
 
-    int i=0;
+    int cont=0;
     bool espaco_branco_duplo = false;
     const int TAMANHO = (int)str.length();
 
-    while(!espaco_branco_duplo && i<TAMANHO-1){
-        if (str[i]== ' ' && str[i+1]== ' '){
+    while(!espaco_branco_duplo && cont<TAMANHO-1){
+        if (str[cont]== ' ' && str[cont+1]== ' '){
             espaco_branco_duplo = true;
         }
-        i++;
+        cont++;
     }
     return espaco_branco_duplo;
 }

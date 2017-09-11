@@ -88,22 +88,22 @@ public:
 class Resenha{
 private:
 
-	Nome autor;
-	Titulo livro;
+	Nome nomeAutor;
+	Titulo tituloLivro;
 	Texto resenha;
 
 public:
 
-	void setLivro(string) throw(invalid_argument);
+	void setTituloLivro(string) throw(invalid_argument);
 
-	string getLivro() const{
-		return this->livro.getTitulo();
+	string getTituloLivro() const{
+		return this->tituloLivro.getTitulo();
 	}
 
-	void setAutor(string) throw(invalid_argument);
+	void setNomeAutor(string) throw(invalid_argument);
 
-	string getAutor() const{
-		return this->autor.getNome();
+	string getNomeAutor() const{
+		return this->nomeAutor.getNome();
 	}
 
 	void setResenha(string);

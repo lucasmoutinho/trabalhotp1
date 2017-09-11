@@ -38,17 +38,17 @@ public:
 
 class Telefone{
 private:
-	const static int LIMITE_NUMERO = 9;
 	const static int LIMITE_DDD = 2;
+	const static int LIMITE_NUMERO = 9;
+	const static int LIMITE_TELEFONE = LIMITE_DDD + LIMITE_NUMERO + 3;
 	string telefone;
 
-	void validaTelefone(string, string) throw(invalid_argument);
-	bool string_contem_apenas_numeros(string);
+	void validaTelefone(string) throw(invalid_argument);
+	bool telefone_formato_correto(string);
 
 public:
 
-	void setTelefone(string, string) throw(invalid_argument);
-	void showTelefone() const;
+	void setTelefone(string) throw(invalid_argument);
 	string getTelefone() const{
 		return telefone;
 	}
@@ -68,6 +68,85 @@ public:
 	string getSenha() const{
 		return senha;
 	}
+};
+
+class Titulo{
+private:
+	const static int LIMITE_TITULO = 20;
+	string titulo;
+
+	void validaTitulo(string) throw(invalid_argument);
+	bool string_contem_espaco_em_branco_duplicado(string);
+
+public:
+
+	void setTitulo(string) throw(invalid_argument);
+	string getTitulo() const{
+		return titulo;
+	}
+};
+
+class Data{
+private:
+	const static int LIMITE_DATA = 8;
+	string data;
+
+	void validaData(string) throw(invalid_argument);
+	bool data_formato_correto(string);
+	
+public:
+
+	void setData(string) throw(invalid_argument);
+	string getData() const{
+		return data;
+	}
+};
+
+class Codigo{
+private:
+	const static int LIMITE_CODIGO = 5;
+	string codigo;
+
+	void validaCodigo(string) throw(invalid_argument);
+
+public:
+
+	void setCodigo(string) throw(invalid_argument);
+	string getCodigo() const{
+		return codigo;
+	}
+};
+
+class Texto{
+private:
+	const static int LIMITE_TEXTO = 40;
+	string texto;
+
+	void validaTexto(string) throw(invalid_argument);
+
+public:
+
+	void setTexto(string) throw(invalid_argument);
+	string getTexto() const{
+		return texto;
+	}
+};
+
+class Genero{
+private:
+	const static string* genderList;
+	const static int TAMANHO_LISTA_GENEROS = 5;
+	string genero;
+
+	void validaGenero(int) throw(invalid_argument);
+
+public:
+
+	void setGenero(int) throw(invalid_argument);
+	string getGenero() const{
+		return genero;
+	}
+	void showGeneros() const;
 };
 
 #endif

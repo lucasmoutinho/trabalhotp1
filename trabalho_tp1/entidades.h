@@ -28,9 +28,7 @@ public:
 		return this->apelido.getApelido();
 	}
 
-	void setTelefone(string, string) throw(invalid_argument);
-
-	void showTelefone() const;
+	void setTelefone(string) throw(invalid_argument);
 
 	string getTelefone() const{
 		return this->telefone.getTelefone();
@@ -44,30 +42,74 @@ public:
 			
 };
 
-class Resenha{
+class Livro{
 private:
 
-	Nome nomeDoLivro, nomeDoAutor;
-	string resenha;
+	Titulo titulo;
+	Nome autor;
+	Data data;
+	Codigo codigo;
+	Genero genero;
 
 public:
 
-	void setNomeDoLivro(string) throw(invalid_argument);
+	void setTitulo(string) throw(invalid_argument);
 
-	string getNomeDoLivro() const{
-		return this->nomeDoLivro.getNome();
+	string getTitulo() const{
+		return this->titulo.getTitulo();
 	}
 
-	void setNomeDoAutor(string) throw(invalid_argument);
+	void setAutor(string) throw(invalid_argument);
 
-	string getNomeDoAutor() const{
-		return this->nomeDoAutor.getNome();
+	string getAutor() const{
+		return this->autor.getNome();
+	}
+
+	void setData(string) throw(invalid_argument);
+
+	string getData() const{
+		return this->data.getData();
+	}
+
+	void setCodigo(string) throw(invalid_argument);
+
+	string getCodigo() const{
+		return this->codigo.getCodigo();
+	}
+
+	void setGenero(int) throw(invalid_argument);
+
+	string getGenero() const{
+		return this->genero.getGenero();
+	}
+
+};
+
+class Resenha{
+private:
+
+	Nome autor;
+	Titulo livro;
+	Texto resenha;
+
+public:
+
+	void setLivro(string) throw(invalid_argument);
+
+	string getLivro() const{
+		return this->livro.getTitulo();
+	}
+
+	void setAutor(string) throw(invalid_argument);
+
+	string getAutor() const{
+		return this->autor.getNome();
 	}
 
 	void setResenha(string);
 
 	string getResenha() const{
-		return this->resenha;
+		return this->resenha.getTexto();
 	}	
 };
 

@@ -8,26 +8,42 @@ void Usuario::setApelido(string apelido) throw(invalid_argument){
 	this->apelido.setApelido(apelido);
 }
 
-void Usuario::setTelefone(string ddd, string numero) throw(invalid_argument){
-	this->telefone.setTelefone(ddd,numero);
-}
-
-void Usuario::showTelefone() const{
-	this->telefone.showTelefone();
+void Usuario::setTelefone(string telefone) throw(invalid_argument){
+	this->telefone.setTelefone(telefone);
 }
 
 void Usuario::setSenha(string senha) throw(invalid_argument){
 	this->senha.setSenha(senha);
 }
 
-void Resenha::setNomeDoLivro(string nome) throw(invalid_argument){
-	this->nomeDoLivro.setNome(nome);	
+void Livro::setTitulo(string titulo) throw(invalid_argument){
+	this->titulo.setTitulo(titulo);
 }
 
-void Resenha::setNomeDoAutor(string nome) throw(invalid_argument){
-	this->nomeDoAutor.setNome(nome);	
+void Livro::setAutor(string nome) throw(invalid_argument){
+	this->autor.setNome(nome);
+}
+
+void Livro::setData(string data) throw(invalid_argument){
+	this->data.setData(data);
+}
+
+void Livro::setCodigo(string codigo) throw(invalid_argument){
+	this->codigo.setCodigo(codigo);
+}
+
+void Livro::setGenero(int genero) throw(invalid_argument){
+	this->genero.setGenero(genero);
+}
+
+void Resenha::setLivro(string nome) throw(invalid_argument){
+	this->livro.setTitulo(nome);	
+}
+
+void Resenha::setAutor(string nome) throw(invalid_argument){
+	this->autor.setNome(nome);	
 }
 
 void Resenha::setResenha(string resenha){
-	this->resenha = resenha;
+	this->resenha.setTexto(resenha);
 }

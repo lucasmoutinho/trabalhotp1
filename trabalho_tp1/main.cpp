@@ -11,10 +11,10 @@ int main(){
 
     switch(teste.run()){
         case TUNome::SUCESSO: 
-        	cout << "SUCESSO" << endl;
+        	cout << "NOME - SUCESSO" << endl;
             break;
         case TUNome::FALHA: 
-        	cout << "FALHA" << endl;
+        	cout << "NOME - FALHA" << endl;
             break;
     }
 

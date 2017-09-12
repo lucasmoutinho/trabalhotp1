@@ -199,8 +199,8 @@ void TUTitulo::testarCenarioFalha(){
     }
 }
 
-const string TUTitulo::VALOR_VALIDO = "Jorge";
-const string TUTitulo::VALOR_INVALIDO = "Jorjinho sarrada";
+const string TUTitulo::VALOR_VALIDO = "Pulp fiction";
+const string TUTitulo::VALOR_INVALIDO = "Forrest  Gump";
 
 int TUTitulo::run(){
     setUp();
@@ -241,8 +241,8 @@ void TUData::testarCenarioFalha(){
     }
 }
 
-const string TUData::VALOR_VALIDO = "Jorge";
-const string TUData::VALOR_INVALIDO = "Jorjinho sarrada";
+const string TUData::VALOR_VALIDO = "12/12/12";
+const string TUData::VALOR_INVALIDO = "32/12/12";
 
 int TUData::run(){
     setUp();
@@ -283,8 +283,8 @@ void TUCodigo::testarCenarioFalha(){
     }
 }
 
-const string TUCodigo::VALOR_VALIDO = "Jorge";
-const string TUCodigo::VALOR_INVALIDO = "Jorjinho sarrada";
+const string TUCodigo::VALOR_VALIDO = "01234";
+const string TUCodigo::VALOR_INVALIDO = "o1234";
 
 int TUCodigo::run(){
     setUp();
@@ -325,8 +325,8 @@ void TUTexto::testarCenarioFalha(){
     }
 }
 
-const string TUTexto::VALOR_VALIDO = "Jorge";
-const string TUTexto::VALOR_INVALIDO = "Jorjinho sarrada";
+const string TUTexto::VALOR_VALIDO = "Texto";
+const string TUTexto::VALOR_INVALIDO = "TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto";
 
 int TUTexto::run(){
     setUp();

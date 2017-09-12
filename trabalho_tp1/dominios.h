@@ -94,7 +94,7 @@ private:
 
 	void validaData(string) throw(invalid_argument);
 	bool data_formato_correto(string);
-	
+
 public:
 
 	void setData(string) throw(invalid_argument);

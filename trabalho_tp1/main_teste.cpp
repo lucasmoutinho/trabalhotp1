@@ -2,6 +2,7 @@
 #include <string>
 #include "dominios.h"
 #include "entidades.h"
+#include "testes.h"
 
 using namespace std;
 

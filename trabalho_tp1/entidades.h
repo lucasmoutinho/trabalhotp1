@@ -13,9 +13,9 @@ private:
 	Apelido apelido;
 	Telefone telefone;
 	Senha senha;
-	
+
 public:
-	
+
 	void setNome(string) throw(invalid_argument);
 
 	string getNome() const{
@@ -39,7 +39,7 @@ public:
 	string getSenha() const{
 		return this->senha.getSenha();
 	}
-			
+
 };
 
 class Livro{
@@ -110,7 +110,7 @@ public:
 
 	string getResenha() const{
 		return this->resenha.getTexto();
-	}	
+	}
 };
 
 #endif

@@ -9,7 +9,7 @@ void TUNome::tearDown(){
     delete nome;
 }
 
-void TUNome::testarCenarioSucesso(){
+void TUNome::testarCenarioSucesso()q{
     try{
         nome->setNome(VALOR_VALIDO);
         if(nome->getNome() != VALOR_VALIDO){

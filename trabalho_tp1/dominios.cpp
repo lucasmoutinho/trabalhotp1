@@ -15,6 +15,7 @@ void Nome::validaNome(string nome) throw(invalid_argument){
 }
 
 void Nome::setNome(string nome) throw(invalid_argument){
+	///ESSE METODO VAI SETAR A SUA CARA
 	validaNome(nome);
 	this->nome = nome;
 }

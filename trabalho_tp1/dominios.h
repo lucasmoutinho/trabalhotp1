@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include <cctype>
 using namespace std;
 
 class Nome{
@@ -39,13 +40,14 @@ public:
 
 class Telefone{
 private:
-	const static int LIMITE_DDD = 2;
-	const static int LIMITE_NUMERO = 9;
-	const static int LIMITE_TELEFONE = LIMITE_DDD + LIMITE_NUMERO + 3;
+	const static int INICIO_DDD = 1;
+	const static int FIM_DDD = 2;
+	const static int INICIO_NUMERO = 5;
+	const static int FIM_NUMERO = 13;
+	const static int LIMITE_TELEFONE = 14;
 	string telefone;
 
 	void validaTelefone(string) throw(invalid_argument);
-	bool telefone_formato_correto(string);
 
 public:
 
@@ -77,7 +79,6 @@ private:
 	string titulo;
 
 	void validaTitulo(string) throw(invalid_argument);
-	bool string_contem_espaco_em_branco_duplicado(string);
 
 public:
 
@@ -139,11 +140,12 @@ private:
 	const static int TAMANHO_LISTA_GENEROS = 5;
 	string genero;
 
-	void validaGenero(int) throw(invalid_argument);
-
+	void validaGenero(string) throw(invalid_argument);
+	bool genero_valido(string);
+	
 public:
 
-	void setGenero(int) throw(invalid_argument);
+	void setGenero(string) throw(invalid_argument);
 	string getGenero() const{
 		return genero;
 	}

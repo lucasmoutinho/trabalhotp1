@@ -20,8 +20,8 @@ void Livro::setTitulo(string titulo) throw(invalid_argument){
 	this->titulo.setTitulo(titulo);
 }
 
-void Livro::setAutor(string nome) throw(invalid_argument){
-	this->autor.setNome(nome);
+void Livro::setAutor(string autor) throw(invalid_argument){
+	this->autor.setNome(autor);
 }
 
 void Livro::setData(string data) throw(invalid_argument){
@@ -32,16 +32,16 @@ void Livro::setCodigo(string codigo) throw(invalid_argument){
 	this->codigo.setCodigo(codigo);
 }
 
-void Livro::setGenero(int genero) throw(invalid_argument){
+void Livro::setGenero(string genero) throw(invalid_argument){
 	this->genero.setGenero(genero);
 }
 
-void Resenha::setTituloLivro(string nome) throw(invalid_argument){
-	this->tituloLivro.setTitulo(nome);
+void Resenha::setTitulo(string titulo) throw(invalid_argument){
+	this->titulo.setTitulo(titulo);
 }
 
-void Resenha::setNomeAutor(string nome) throw(invalid_argument){
-	this->nomeAutor.setNome(nome);
+void Resenha::setAutor(string autor) throw(invalid_argument){
+	this->autor.setNome(autor);
 }
 
 void Resenha::setResenha(string resenha){

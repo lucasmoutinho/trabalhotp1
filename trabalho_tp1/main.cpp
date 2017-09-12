@@ -1,7 +1,7 @@
 #include <iostream>
 #include "dominios.h"
 #include "entidades.h"
-#include "testes.h"
+#include "TUdominios.h"
 
 using namespace std;
 

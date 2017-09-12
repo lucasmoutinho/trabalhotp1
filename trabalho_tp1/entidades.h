@@ -77,7 +77,7 @@ public:
 		return this->codigo.getCodigo();
 	}
 
-	void setGenero(int) throw(invalid_argument);
+	void setGenero(string) throw(invalid_argument);
 
 	string getGenero() const{
 		return this->genero.getGenero();
@@ -88,22 +88,22 @@ public:
 class Resenha{
 private:
 
-	Nome nomeAutor;
-	Titulo tituloLivro;
+	Nome autor;
+	Titulo titulo;
 	Texto resenha;
 
 public:
 
-	void setTituloLivro(string) throw(invalid_argument);
+	void setTitulo(string) throw(invalid_argument);
 
-	string getTituloLivro() const{
-		return this->tituloLivro.getTitulo();
+	string getTitulo() const{
+		return this->titulo.getTitulo();
 	}
 
-	void setNomeAutor(string) throw(invalid_argument);
+	void setAutor(string) throw(invalid_argument);
 
-	string getNomeAutor() const{
-		return this->nomeAutor.getNome();
+	string getAutor() const{
+		return this->autor.getNome();
 	}
 
 	void setResenha(string);

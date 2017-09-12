@@ -1,5 +1,5 @@
-#ifndef __TESTES_H_INCLUDED__
-#define __TESTES_H_INCLUDED__
+#ifndef __TU_DOMINIOS_H_INCLUDED__
+#define __TU_DOMINIOS_H_INCLUDED__
 
 #include "dominios.h"
 #include "entidades.h"
@@ -187,9 +187,8 @@ public:
 class TUGenero{
 private:
 
-	const static int INDEX_VALIDO = 0;
-	const static int INDEX_INVALIDO = 5;
 	const static string VALOR_VALIDO;
+	const static string VALOR_INVALIDO;
 
 	Genero* genero;
 	int estado;

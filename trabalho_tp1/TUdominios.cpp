@@ -1,4 +1,4 @@
-#include "testes.h"
+#include "TUdominios.h"
 
 void TUNome::setUp(){
     nome = new Nome();
@@ -347,7 +347,7 @@ void TUGenero::tearDown(){
 
 void TUGenero::testarCenarioSucesso(){
     try{
-        genero->setGenero(INDEX_VALIDO);
+        genero->setGenero(VALOR_VALIDO);
         if(genero->getGenero() != VALOR_VALIDO){
             estado = FALHA;
         }
@@ -359,7 +359,7 @@ void TUGenero::testarCenarioSucesso(){
 
 void TUGenero::testarCenarioFalha(){
     try{
-        genero->setGenero(INDEX_INVALIDO);
+        genero->setGenero(VALOR_INVALIDO);
         estado = FALHA;
     }
     catch(invalid_argument excecao){
@@ -368,6 +368,7 @@ void TUGenero::testarCenarioFalha(){
 }
 
 const string TUGenero::VALOR_VALIDO = "EPOPEIA";
+const string TUGenero::VALOR_INVALIDO = "COMEDIA";
 
 int TUGenero::run(){
     setUp();

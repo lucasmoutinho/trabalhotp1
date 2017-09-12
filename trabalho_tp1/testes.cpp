@@ -73,13 +73,8 @@ void TUApelido::testarCenarioFalha(){
     }
 }
 
-<<<<<<< HEAD
 const string TUApelido::VALOR_VALIDO = "joao";
 const string TUApelido::VALOR_INVALIDO = "joao1";
-=======
-const string TUApelido::VALOR_VALIDO = "Jorge";
-const string TUApelido::VALOR_INVALIDO = "Jorjinho sarrada";
->>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUApelido::run(){
     setUp();
@@ -120,13 +115,8 @@ void TUTelefone::testarCenarioFalha(){
     }
 }
 
-<<<<<<< HEAD
 const string TUTelefone::VALOR_VALIDO = "(61)-123456789";
 const string TUTelefone::VALOR_INVALIDO = "61-123456789";
-=======
-const string TUTelefone::VALOR_VALIDO = "Jorge";
-const string TUTelefone::VALOR_INVALIDO = "Jorjinho sarrada";
->>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUTelefone::run(){
     setUp();
@@ -167,13 +157,8 @@ void TUSenha::testarCenarioFalha(){
     }
 }
 
-<<<<<<< HEAD
 const string TUSenha::VALOR_VALIDO = "vida";
 const string TUSenha::VALOR_INVALIDO = "lual";
-=======
-const string TUSenha::VALOR_VALIDO = "Jorge";
-const string TUSenha::VALOR_INVALIDO = "Jorjinho sarrada";
->>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUSenha::run(){
     setUp();
@@ -382,12 +367,7 @@ void TUGenero::testarCenarioFalha(){
     }
 }
 
-<<<<<<< HEAD
 const string TUGenero::VALOR_VALIDO = "EPOPEIA";
-=======
-const string TUGenero::VALOR_VALIDO = "Jorge";
-const string TUGenero::VALOR_INVALIDO = "Jorjinho sarrada";
->>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUGenero::run(){
     setUp();

@@ -103,7 +103,7 @@ bool Telefone::telefone_formato_correto(string telefone){
 
 void Telefone::validaTelefone(string telefone) throw(invalid_argument){
 
-	if(telefone.length() > LIMITE_TELEFONE || telefone.length() < LIMITE_TELEFONE){
+	if(telefone.length() != LIMITE_TELEFONE){
 		throw invalid_argument("Telefone deve conter o numero de caracteres especificado");
 	}
 	if(!string_contem_apenas_numeros(telefone.substr(1,LIMITE_DDD))){
@@ -216,7 +216,7 @@ bool Data::data_formato_correto(string str){
 
 void Data::validaData(string data) throw(invalid_argument){
 
-	if(data.length() > LIMITE_DATA || data.length() < LIMITE_DATA){
+	if(data.length() != LIMITE_DATA){
 		throw invalid_argument("Data deve conter o numero de caracteres especificado");
 	}
 	if(!string_contem_apenas_numeros(data.substr(0,2))){
@@ -240,8 +240,8 @@ void Data::setData(string data) throw(invalid_argument){
 
 void Codigo::validaCodigo(string codigo) throw(invalid_argument){
 
-	if(codigo.length() > LIMITE_CODIGO){
-		throw invalid_argument("Codigo nao deve exceder o limite de caracteres");
+	if(codigo.length() != LIMITE_CODIGO){
+		throw invalid_argument("Codigo deve conter o numero de caracteres especificado");
 	}
 	if(!string_contem_apenas_numeros(codigo)){
 		throw invalid_argument("Codigo deve conter apenas algarismos de 0 a 9");

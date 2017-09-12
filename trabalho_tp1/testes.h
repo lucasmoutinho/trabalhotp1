@@ -187,8 +187,9 @@ public:
 class TUGenero{
 private:
 
+	const static int INDEX_VALIDO = 0;
+	const static int INDEX_INVALIDO = 5;
 	const static string VALOR_VALIDO;
-	const static string VALOR_INVALIDO;
 
 	Genero* genero;
 	int estado;

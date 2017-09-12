@@ -1,38 +1,4 @@
 # depslib dependency file v1.0
-1505256695 source:c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\dominios.cpp
-	"dominios.h"
-
-1505256695 c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\dominios.h
-	<iostream>
-	<string>
-	<stdexcept>
-	<cctype>
-
-1505256695 source:c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\entidades.cpp
-	"entidades.h"
-
-1505256695 c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\entidades.h
-	"dominios.h"
-	<string>
-	<stdexcept>
-
-1505256695 source:c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\main.cpp
-	<iostream>
-	<cstdio>
-	"dominios.h"
-	"entidades.h"
-	"TUdominios.h"
-	"TUentidades.h"
-
-1505216903 c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\testes.h
-	"dominios.h"
-	"entidades.h"
-	<string>
-	<stdexcept>
-
-<<<<<<< HEAD
-1505256695 c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\tudominios.h
-=======
 1505251910 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/dominios.cpp
 	"dominios.h"
 
@@ -59,28 +25,20 @@
 	"TUentidades.h"
 
 1505252414 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUdominios.h
->>>>>>> bbdae124e84c73c23949569bc1b6dd9f29e5131b
 	"dominios.h"
 	"entidades.h"
 	<string>
 	<stdexcept>
 
-<<<<<<< HEAD
-1505256695 c:\users\jpbrc\onedrive\documentos\github\trabalhotp1\trabalho_tp1\tuentidades.h
-=======
 1505255879 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUentidades.h
->>>>>>> bbdae124e84c73c23949569bc1b6dd9f29e5131b
 	"dominios.h"
 	"entidades.h"
 	<string>
 	<stdexcept>
 
-<<<<<<< HEAD
-=======
 1505252335 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUdominios.cpp
 	"TUdominios.h"
 
 1505255879 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUentidades.cpp
 	"TUentidades.h"
 
->>>>>>> bbdae124e84c73c23949569bc1b6dd9f29e5131b

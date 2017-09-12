@@ -1,7 +1,9 @@
 #include <iostream>
+#include <cstdio>
 #include "dominios.h"
 #include "entidades.h"
 #include "TUdominios.h"
+#include "TUentidades.h"
 
 using namespace std;
 
@@ -16,6 +18,13 @@ int main(){
     TUCodigo testeCodigo;
     TUTexto testeTexto;
     TUGenero testeGenero;
+    TUUsuario testeUsuario;
+    TULivro testeLivro;
+    TUResenha testeResenha;
+
+    cout << "*************************************" << endl << endl;
+    cout << "TESTES DE UNIDADES DOS DOMINIOS" << endl << endl;
+    cout << "*************************************" << endl << endl;
 
     switch(testeNome.run()){
         case TUNome::SUCESSO:
@@ -98,5 +107,38 @@ int main(){
             break;
     }
 
+    cout << endl;
+    cout << "*************************************" << endl << endl;
+    cout << "TESTES DE UNIDADES DAS ENTIDADES" << endl << endl;
+    cout << "*************************************" << endl << endl;
+
+    switch(testeUsuario.run()){
+        case TUUsuario::SUCESSO:
+            cout << "USUARIO - SUCESSO" << endl;
+            break;
+        case TUUsuario::FALHA:
+            cout << "USUARIO - FALHA" << endl;
+            break;
+    }
+
+    switch(testeLivro.run()){
+        case TULivro::SUCESSO:
+            cout << "LIVRO - SUCESSO" << endl;
+            break;
+        case TULivro::FALHA:
+            cout << "LIVRO - FALHA" << endl;
+            break;
+    }
+
+    switch(testeResenha.run()){
+        case TUResenha::SUCESSO:
+            cout << "RESENHA - SUCESSO" << endl;
+            break;
+        case TUResenha::FALHA:
+            cout << "RESENHA - FALHA" << endl;
+            break;
+    }
+
+    getchar();
     return 0;
 }

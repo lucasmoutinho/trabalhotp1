@@ -90,7 +90,7 @@ private:
 
 	Nome autor;
 	Titulo titulo;
-	Texto resenha;
+	Texto texto;
 
 public:
 
@@ -106,10 +106,10 @@ public:
 		return this->autor.getNome();
 	}
 
-	void setResenha(string);
+	void setTexto(string);
 
-	string getResenha() const{
-		return this->resenha.getTexto();
+	string getTexto() const{
+		return this->texto.getTexto();
 	}
 };
 

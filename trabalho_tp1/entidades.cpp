@@ -44,6 +44,6 @@ void Resenha::setAutor(string autor) throw(invalid_argument){
 	this->autor.setNome(autor);
 }
 
-void Resenha::setResenha(string resenha){
-	this->resenha.setTexto(resenha);
+void Resenha::setTexto(string texto){
+	this->texto.setTexto(texto);
 }

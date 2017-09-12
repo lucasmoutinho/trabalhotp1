@@ -2,7 +2,7 @@
 
 - Codificar classes que representam os domínios OK
 - Codificar classes que representam as entidades OK
-- Codificar testes de unidades para todas as classes
+- Codificar testes de unidades para todas as classes OK
 - Instalar o Doxygen OK
 - Produzir documentação para as classes implementadas usando o Doxygen
 

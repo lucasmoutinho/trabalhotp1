@@ -1,45 +1,62 @@
 #include "dominios.h"
 
-bool string_contem_numero(string str){
+bool string_contem_apenas_letras(string str){
 
-	int cont1 = 0, cont2 = 0;
-	int numeros[] = {0,1,2,3,4,5,6,7,8,9};
-	bool contem_numero = false;
+	int cont = 0;
+	bool contem_apenas_letras = true;
 
-	while(!contem_numero && (unsigned)cont1<str.length()){
-		while(!contem_numero && (unsigned)cont2<sizeof(numeros)){
-			if((str[cont1] - '0') == numeros[cont2]){
-				contem_numero = true;
-				if(str[cont1] == 'i'){
-					contem_numero = false;
-				}
-			}
-			cont2++;
+	while(contem_apenas_letras && (unsigned)cont<str.length()){
+		contem_apenas_letras = false;
+		if(str[cont] >= 'a' && str[cont] <= 'z'){
+			contem_apenas_letras = true;
 		}
-		cont2 = 0;
-		cont1++;
+		else if(str[cont] >= 'A' && str[cont] <= 'Z'){
+			contem_apenas_letras = true;	
+		}
+		cont++;
 	}
-	return contem_numero;
+	return contem_apenas_letras;
 }
 
 bool string_contem_apenas_numeros(string str){
 
-	int contador1 = 0, contador2 = 0;
-	int listaNumeros[] = {0,1,2,3,4,5,6,7,8,9};
+	int cont1 = 0, cont2 = 0;
+	int numeros[] = {0,1,2,3,4,5,6,7,8,9};
 	bool eh_numero = true;
 
-	while(eh_numero && (unsigned)contador1<str.length()){
+	while(eh_numero && (unsigned)cont1<str.length()){
 		eh_numero = false;
-		while(!eh_numero && (unsigned)contador2<sizeof(listaNumeros)){
-			if((str[contador1] - '0') == listaNumeros[contador2]){
+		while(!eh_numero && (unsigned)cont2<sizeof(numeros)){
+			if((str[cont1] - '0') == numeros[cont2]){
 				eh_numero = true;
 			}
-			contador2++;
+			cont2++;
 		}
-		contador2=0;
-		contador1++;
+		cont2=0;
+		cont1++;
 	}
 	return eh_numero;	
+}
+
+bool Nome::string_contem_apenas_letras_espaco_e_ponto(string str){
+
+	int cont = 0;
+	bool contem_apenas_letras = true;
+
+	while(contem_apenas_letras && (unsigned)cont<str.length()){
+		contem_apenas_letras = false;
+		if(str[cont] >= 'a' && str[cont] <= 'z'){
+			contem_apenas_letras = true;
+		}
+		else if(str[cont] >= 'A' && str[cont] <= 'Z'){
+			contem_apenas_letras = true;	
+		}
+		else if(str[cont] == ' ' || str[cont] == '.'){
+			contem_apenas_letras = true;	
+		}
+		cont++;
+	}
+	return contem_apenas_letras;
 }
 
 void Nome::validaNome(string nome) throw(invalid_argument){
@@ -47,8 +64,8 @@ void Nome::validaNome(string nome) throw(invalid_argument){
 	if(nome.length() > LIMITE_NOME){
 		throw invalid_argument("Nome nao deve exceder o limite de caracteres");
 	}
-	if(string_contem_numero(nome)){
-		throw invalid_argument("Nome nao deve conter algarismos numericos");
+	if(!string_contem_apenas_letras_espaco_e_ponto(nome)){
+		throw invalid_argument("Nome deve conter apenas letras, espaco ou ponto");
 	}
 }
 
@@ -63,8 +80,8 @@ void Apelido::validaApelido(string apelido) throw(invalid_argument){
 	if(apelido.length() > LIMITE_APELIDO){
 		throw invalid_argument("Apelido nao deve exceder o limite de caracteres");
 	}
-	if(string_contem_numero(apelido)){
-		throw invalid_argument("Apelido nao deve conter algarismos numericos");
+	if(!string_contem_apenas_letras(apelido)){
+		throw invalid_argument("Apelido deve conter apenas letras");
 	}
 }
 
@@ -131,8 +148,8 @@ void Senha::validaSenha(string senha) throw(invalid_argument){
 	if(senha.length() > LIMITE_SENHA){
 		throw invalid_argument("Senha nao deve exceder o limite de caracteres");
 	}
-	if(string_contem_numero(senha)){
-		throw invalid_argument("Senha nao deve conter algarismos numericos");
+	if(!string_contem_apenas_letras(senha)){
+		throw invalid_argument("Senha deve conter apenas letras");
 	}
 	if(string_repete_letra(senha)){
 		throw invalid_argument("Senha nao deve repetir caracteres");

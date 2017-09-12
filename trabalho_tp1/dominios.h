@@ -12,6 +12,7 @@ private:
 	string nome;
 
 	void validaNome(string) throw(invalid_argument);
+	bool string_contem_apenas_letras_espaco_e_ponto(string);
 
 public:
 

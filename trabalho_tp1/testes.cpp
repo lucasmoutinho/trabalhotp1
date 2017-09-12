@@ -43,7 +43,7 @@ int TUNome::run(){
 }
 
 void TUApelido::setUp(){
-    nome = new Apelido();
+    apelido = new Apelido();
     estado = SUCESSO;
 }
 
@@ -53,8 +53,8 @@ void TUApelido::tearDown(){
 
 void TUApelido::testarCenarioSucesso(){
     try{
-        Apelido->setApelido(VALOR_VALIDO);
-        if(Apelido->getApelido() != VALOR_VALIDO){
+        apelido->setApelido(VALOR_VALIDO);
+        if(apelido->getApelido() != VALOR_VALIDO){
             estado = FALHA;
         }
     }
@@ -65,7 +65,7 @@ void TUApelido::testarCenarioSucesso(){
 
 void TUApelido::testarCenarioFalha(){
     try{
-        Apelido->setApelido(VALOR_INVALIDO);
+        apelido->setApelido(VALOR_INVALIDO);
         estado = FALHA;
     }
     catch(invalid_argument excecao){
@@ -367,8 +367,8 @@ void TUGenero::testarCenarioFalha(){
     }
 }
 
-const string TUGenero::VALOR_VALIDO = "EPOPEIA";
-const string TUGenero::VALOR_INVALIDO = "AVENTURA";
+const int TUGenero::VALOR_VALIDO = 4;
+const int TUGenero::VALOR_INVALIDO = 8;
 
 int TUGenero::run(){
     setUp();

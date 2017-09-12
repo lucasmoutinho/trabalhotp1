@@ -37,11 +37,11 @@ void Livro::setGenero(int genero) throw(invalid_argument){
 }
 
 void Resenha::setTituloLivro(string nome) throw(invalid_argument){
-	this->tituloLivro.setTitulo(nome);	
+	this->tituloLivro.setTitulo(nome);
 }
 
 void Resenha::setNomeAutor(string nome) throw(invalid_argument){
-	this->nomeAutor.setNome(nome);	
+	this->nomeAutor.setNome(nome);
 }
 
 void Resenha::setResenha(string resenha){

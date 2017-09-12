@@ -30,6 +30,7 @@ public:
     int run();
 };
 
+<<<<<<< HEAD
 class TUApelido{
 private:
 
@@ -207,3 +208,6 @@ public:
     int run();
 };
 #endif
+=======
+#endif
+>>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1

@@ -73,8 +73,13 @@ void TUApelido::testarCenarioFalha(){
     }
 }
 
+<<<<<<< HEAD
 const string TUApelido::VALOR_VALIDO = "joao";
 const string TUApelido::VALOR_INVALIDO = "joao1";
+=======
+const string TUApelido::VALOR_VALIDO = "Jorge";
+const string TUApelido::VALOR_INVALIDO = "Jorjinho sarrada";
+>>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUApelido::run(){
     setUp();
@@ -115,8 +120,13 @@ void TUTelefone::testarCenarioFalha(){
     }
 }
 
+<<<<<<< HEAD
 const string TUTelefone::VALOR_VALIDO = "(61)-123456789";
 const string TUTelefone::VALOR_INVALIDO = "61-123456789";
+=======
+const string TUTelefone::VALOR_VALIDO = "Jorge";
+const string TUTelefone::VALOR_INVALIDO = "Jorjinho sarrada";
+>>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUTelefone::run(){
     setUp();
@@ -157,8 +167,13 @@ void TUSenha::testarCenarioFalha(){
     }
 }
 
+<<<<<<< HEAD
 const string TUSenha::VALOR_VALIDO = "vida";
 const string TUSenha::VALOR_INVALIDO = "lual";
+=======
+const string TUSenha::VALOR_VALIDO = "Jorge";
+const string TUSenha::VALOR_INVALIDO = "Jorjinho sarrada";
+>>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUSenha::run(){
     setUp();
@@ -199,8 +214,8 @@ void TUTitulo::testarCenarioFalha(){
     }
 }
 
-const string TUTitulo::VALOR_VALIDO = "Pulp fiction";
-const string TUTitulo::VALOR_INVALIDO = "Forrest  gump";
+const string TUTitulo::VALOR_VALIDO = "Jorge";
+const string TUTitulo::VALOR_INVALIDO = "Jorjinho sarrada";
 
 int TUTitulo::run(){
     setUp();
@@ -241,8 +256,8 @@ void TUData::testarCenarioFalha(){
     }
 }
 
-const string TUData::VALOR_VALIDO = "20/04/97";
-const string TUData::VALOR_INVALIDO = "38/12/02";
+const string TUData::VALOR_VALIDO = "Jorge";
+const string TUData::VALOR_INVALIDO = "Jorjinho sarrada";
 
 int TUData::run(){
     setUp();
@@ -283,8 +298,8 @@ void TUCodigo::testarCenarioFalha(){
     }
 }
 
-const string TUCodigo::VALOR_VALIDO = "12345";
-const string TUCodigo::VALOR_INVALIDO = "123a8";
+const string TUCodigo::VALOR_VALIDO = "Jorge";
+const string TUCodigo::VALOR_INVALIDO = "Jorjinho sarrada";
 
 int TUCodigo::run(){
     setUp();
@@ -325,8 +340,8 @@ void TUTexto::testarCenarioFalha(){
     }
 }
 
-const string TUTexto::VALOR_VALIDO = "O livro fala sobre a vida";
-const string TUTexto::VALOR_INVALIDO = "O livro nao fala sobre nada e nao chega a lugar nenhum enrolando em aspectos";
+const string TUTexto::VALOR_VALIDO = "Jorge";
+const string TUTexto::VALOR_INVALIDO = "Jorjinho sarrada";
 
 int TUTexto::run(){
     setUp();
@@ -367,7 +382,12 @@ void TUGenero::testarCenarioFalha(){
     }
 }
 
+<<<<<<< HEAD
 const string TUGenero::VALOR_VALIDO = "EPOPEIA";
+=======
+const string TUGenero::VALOR_VALIDO = "Jorge";
+const string TUGenero::VALOR_INVALIDO = "Jorjinho sarrada";
+>>>>>>> a4430176dd9ede971be3dfbe1b1ae889cdfd5bd1
 
 int TUGenero::run(){
     setUp();

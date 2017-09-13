@@ -15,7 +15,9 @@ void Nome::validaNome(string nome) throw(invalid_argument){
 }
 
 void Nome::setNome(string nome) throw(invalid_argument){
-	///ESSE METODO VAI SETAR A SUA CARA
+	///Método responsável por armazenar um nome e avaliar a integridade do mesmo. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este excede o limite de caracteres e se contém apenas letras, espaços ou pontos.
 	validaNome(nome);
 	this->nome = nome;
 }
@@ -34,12 +36,15 @@ void Apelido::validaApelido(string apelido) throw(invalid_argument){
 }
 
 void Apelido::setApelido(string apelido) throw(invalid_argument){
-
+	///Método responsável por armazenar um apelido e avaliar a integridade do mesmo. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este excede o limite de caracteres e se contém por apenas letras.
 	validaApelido(apelido);
 	this->apelido = apelido;
 }
 
 void Telefone::validaTelefone(string telefone) throw(invalid_argument){
+
 	int i;
 
 	if(telefone.length() != LIMITE_TELEFONE){
@@ -64,6 +69,9 @@ void Telefone::validaTelefone(string telefone) throw(invalid_argument){
 }
 
 void Telefone::setTelefone(string telefone) throw(invalid_argument){
+	///Método responsável por armazenar um telefone e avaliar a integridade do mesmo. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este está no formato padrão (XX)-XXXXXXXXX e se contém apenas números nas posições adequadas.
 	validaTelefone(telefone);
 	this->telefone = telefone;
 }
@@ -106,6 +114,9 @@ void Senha::validaSenha(string senha) throw(invalid_argument){
 }
 
 void Senha::setSenha(string senha) throw(invalid_argument){
+	///Método responsável por armazenar uma senha e avaliar a integridade da mesma. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este excede o limite de caracteres, se contém apenas letras e se este não repete caracteres.
 	validaSenha(senha);
 	this->senha = senha;
 }
@@ -124,6 +135,9 @@ void Titulo::validaTitulo(string titulo) throw(invalid_argument){
 }
 
 void Titulo::setTitulo(string titulo) throw(invalid_argument){
+	///Método responsável por armazenar um título e avaliar a integridade do mesmo. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este excede o limite de caracteres e se não possui espaço em branco duplicado.
 	validaTitulo(titulo);
 	this->titulo = titulo;
 }
@@ -181,6 +195,9 @@ void Data::validaData(string data) throw(invalid_argument){
 }
 
 void Data::setData(string data) throw(invalid_argument){
+	///Método responsável por armazenar uma data e avaliar a integridade da mesma. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se esta está no formato padrão DD/MM/AA, e se possui apenas números nas posições adequadas.
 	validaData(data);
 	this->data = data;
 }
@@ -199,6 +216,9 @@ void Codigo::validaCodigo(string codigo) throw(invalid_argument){
 }
 
 void Codigo::setCodigo(string codigo) throw(invalid_argument){
+	///Método responsável por armazenar um código e avaliar a integridade do mesmo. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este é um conjunto de cinco números, ou seja, se XXXXX, onde X é um número entre 0 e 9.
 	validaCodigo(codigo);
 	this->codigo = codigo;
 }
@@ -211,6 +231,9 @@ void Texto::validaTexto(string texto) throw(invalid_argument){
 }
 
 void Texto::setTexto(string texto) throw(invalid_argument){
+	///Método responsável por armazenar um texto e avaliar a integridade do mesmo. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este ultrapassa o limite de caracteres.
 	validaTexto(texto);
 	this->texto = texto;
 }
@@ -241,12 +264,15 @@ void Genero::validaGenero(string genero) throw(invalid_argument){
 }
 
 void Genero::setGenero(string genero) throw(invalid_argument){
+	///Método responsável por armazenar uma gênero literário e avaliar a integridade do mesmo. 
+	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+	///Avalia se este gênero está presente na lista de gêneros disponíveis.
 	validaGenero(genero);
 	this->genero = genero;
 }
 
 void Genero::showGeneros() const{
-
+	///Método responsável por mostrar a lista de gêneros literários disponíveis. Não é requerido uma entrada.
 	for(int i = 0; i < TAMANHO_LISTA_GENEROS; i++){
 		cout << genderList[i] << endl;
 	}

@@ -68,13 +68,63 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2cb01229e3c1120858ef6c1f692432da"><td class="memItemLeft" align="right" valign="top"><a id="a2cb01229e3c1120858ef6c1f692432da"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setApelido</b> (string)  throw (invalid_argument)</td></tr>
+<tr class="memitem:a2cb01229e3c1120858ef6c1f692432da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApelido.html#a2cb01229e3c1120858ef6c1f692432da">setApelido</a> (string)  throw (invalid_argument)</td></tr>
 <tr class="separator:a2cb01229e3c1120858ef6c1f692432da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3547459a5aff2cd4d6e2befe69ffe12"><td class="memItemLeft" align="right" valign="top"><a id="af3547459a5aff2cd4d6e2befe69ffe12"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getApelido</b> () const</td></tr>
+<tr class="memitem:af3547459a5aff2cd4d6e2befe69ffe12"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classApelido.html#af3547459a5aff2cd4d6e2befe69ffe12">getApelido</a> () const</td></tr>
 <tr class="separator:af3547459a5aff2cd4d6e2befe69ffe12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af3547459a5aff2cd4d6e2befe69ffe12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3547459a5aff2cd4d6e2befe69ffe12">&#9670;&nbsp;</a></span>getApelido()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Apelido::getApelido </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Método responsável por retornar o apelido que fora armazenado. Retorna uma string. </p>
+
+</div>
+</div>
+<a id="a2cb01229e3c1120858ef6c1f692432da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cb01229e3c1120858ef6c1f692432da">&#9670;&nbsp;</a></span>setApelido()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Apelido::setApelido </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>apelido</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2">invalid_argument</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método responsável por armazenar um apelido e avaliar a integridade do mesmo. É necessário uma string como entrada e lança uma exceção caso esta não seja válida. Avalia se este excede o limite de caracteres e se contém por apenas letras. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="dominios_8h_source.html">dominios.h</a></li>
 <li>dominios.cpp</li>

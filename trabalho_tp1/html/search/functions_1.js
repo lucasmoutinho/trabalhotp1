@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['senha',['Senha',['../classSenha.html',1,'']]],
   ['setapelido',['setApelido',['../classApelido.html#a2cb01229e3c1120858ef6c1f692432da',1,'Apelido::setApelido()'],['../classUsuario.html#a1da1c9170ba41c06b9adea159d21c092',1,'Usuario::setApelido()']]],
   ['setautor',['setAutor',['../classLivro.html#adcc86bd3488de769173fe872c7949077',1,'Livro::setAutor()'],['../classResenha.html#a93b2d590fce3efecb9d1a2a5c1ab4ef1',1,'Resenha::setAutor()']]],
   ['setcodigo',['setCodigo',['../classCodigo.html#a863651a26dd7112dccced628aa96d86e',1,'Codigo::setCodigo()'],['../classLivro.html#a30b6c41de98f92185b4a5f33dcdf5a66',1,'Livro::setCodigo()']]],

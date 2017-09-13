@@ -68,13 +68,63 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a735e4bf5f65cc8d28daa7dbf202fd999"><td class="memItemLeft" align="right" valign="top"><a id="a735e4bf5f65cc8d28daa7dbf202fd999"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSenha</b> (string)  throw (invalid_argument)</td></tr>
+<tr class="memitem:a735e4bf5f65cc8d28daa7dbf202fd999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSenha.html#a735e4bf5f65cc8d28daa7dbf202fd999">setSenha</a> (string)  throw (invalid_argument)</td></tr>
 <tr class="separator:a735e4bf5f65cc8d28daa7dbf202fd999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cc904431d0a8287d0b22dee3e9d34ae"><td class="memItemLeft" align="right" valign="top"><a id="a1cc904431d0a8287d0b22dee3e9d34ae"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getSenha</b> () const</td></tr>
+<tr class="memitem:a1cc904431d0a8287d0b22dee3e9d34ae"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSenha.html#a1cc904431d0a8287d0b22dee3e9d34ae">getSenha</a> () const</td></tr>
 <tr class="separator:a1cc904431d0a8287d0b22dee3e9d34ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1cc904431d0a8287d0b22dee3e9d34ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc904431d0a8287d0b22dee3e9d34ae">&#9670;&nbsp;</a></span>getSenha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Senha::getSenha </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Método responsável por retornar a senha que fora armazenada. Retorna uma string. </p>
+
+</div>
+</div>
+<a id="a735e4bf5f65cc8d28daa7dbf202fd999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735e4bf5f65cc8d28daa7dbf202fd999">&#9670;&nbsp;</a></span>setSenha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Senha::setSenha </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>senha</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2">invalid_argument</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método responsável por armazenar uma senha e avaliar a integridade da mesma. É necessário uma string como entrada e lança uma exceção caso esta não seja válida. Avalia se este excede o limite de caracteres, se contém apenas letras e se este não repete caracteres. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="dominios_8h_source.html">dominios.h</a></li>
 <li>dominios.cpp</li>

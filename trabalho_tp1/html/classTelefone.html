@@ -68,13 +68,63 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a79516b37434ff927bd2a9bd66080a36d"><td class="memItemLeft" align="right" valign="top"><a id="a79516b37434ff927bd2a9bd66080a36d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTelefone</b> (string)  throw (invalid_argument)</td></tr>
+<tr class="memitem:a79516b37434ff927bd2a9bd66080a36d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelefone.html#a79516b37434ff927bd2a9bd66080a36d">setTelefone</a> (string)  throw (invalid_argument)</td></tr>
 <tr class="separator:a79516b37434ff927bd2a9bd66080a36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64d1e99657fde65bb698ddcd56e7eb04"><td class="memItemLeft" align="right" valign="top"><a id="a64d1e99657fde65bb698ddcd56e7eb04"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getTelefone</b> () const</td></tr>
+<tr class="memitem:a64d1e99657fde65bb698ddcd56e7eb04"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTelefone.html#a64d1e99657fde65bb698ddcd56e7eb04">getTelefone</a> () const</td></tr>
 <tr class="separator:a64d1e99657fde65bb698ddcd56e7eb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a64d1e99657fde65bb698ddcd56e7eb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d1e99657fde65bb698ddcd56e7eb04">&#9670;&nbsp;</a></span>getTelefone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Telefone::getTelefone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Método responsável por retornar o telefone que fora armazenado. Retorna uma string. </p>
+
+</div>
+</div>
+<a id="a79516b37434ff927bd2a9bd66080a36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79516b37434ff927bd2a9bd66080a36d">&#9670;&nbsp;</a></span>setTelefone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Telefone::setTelefone </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>telefone</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2">invalid_argument</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método responsável por armazenar um telefone e avaliar a integridade do mesmo. É necessário uma string como entrada e lança uma exceção caso esta não seja válida. Avalia se este está no formato padrão (XX)-XXXXXXXXX e se contém apenas números nas posições adequadas. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="dominios_8h_source.html">dominios.h</a></li>
 <li>dominios.cpp</li>

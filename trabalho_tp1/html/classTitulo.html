@@ -68,13 +68,63 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4b3e70d24f498a9085ae9d01d51ef12"><td class="memItemLeft" align="right" valign="top"><a id="ac4b3e70d24f498a9085ae9d01d51ef12"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTitulo</b> (string)  throw (invalid_argument)</td></tr>
+<tr class="memitem:ac4b3e70d24f498a9085ae9d01d51ef12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTitulo.html#ac4b3e70d24f498a9085ae9d01d51ef12">setTitulo</a> (string)  throw (invalid_argument)</td></tr>
 <tr class="separator:ac4b3e70d24f498a9085ae9d01d51ef12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13d7166263fe5b8053532a820165390"><td class="memItemLeft" align="right" valign="top"><a id="ad13d7166263fe5b8053532a820165390"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getTitulo</b> () const</td></tr>
+<tr class="memitem:ad13d7166263fe5b8053532a820165390"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTitulo.html#ad13d7166263fe5b8053532a820165390">getTitulo</a> () const</td></tr>
 <tr class="separator:ad13d7166263fe5b8053532a820165390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad13d7166263fe5b8053532a820165390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad13d7166263fe5b8053532a820165390">&#9670;&nbsp;</a></span>getTitulo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Titulo::getTitulo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Método responsável por retornar o título que fora armazenado. Retorna uma string. </p>
+
+</div>
+</div>
+<a id="ac4b3e70d24f498a9085ae9d01d51ef12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b3e70d24f498a9085ae9d01d51ef12">&#9670;&nbsp;</a></span>setTitulo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Titulo::setTitulo </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>titulo</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2">invalid_argument</td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Método responsável por armazenar um título e avaliar a integridade do mesmo. É necessário uma string como entrada e lança uma exceção caso esta não seja válida. Avalia se este excede o limite de caracteres e se não possui espaço em branco duplicado. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="dominios_8h_source.html">dominios.h</a></li>
 <li>dominios.cpp</li>

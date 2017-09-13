@@ -12,12 +12,12 @@ private:
 	const static int LIMITE_NOME = 15;
 	string nome;
 	void validaNome(string) throw(invalid_argument);
-	bool string_contem_apenas_letras_espaco_e_ponto(string);
 
 public:
 
 	void setNome(string) throw(invalid_argument);
 	string getNome() const{
+		/// Método responsável por retornar o nome que fora armazenado. Retorna uma string.
 		return nome;
 	}
 };
@@ -33,6 +33,7 @@ public:
 
 	void setApelido(string) throw(invalid_argument);
 	string getApelido() const{
+		/// Método responsável por retornar o apelido que fora armazenado. Retorna uma string.
 		return apelido;
 	}
 };
@@ -52,6 +53,7 @@ public:
 
 	void setTelefone(string) throw(invalid_argument);
 	string getTelefone() const{
+		/// Método responsável por retornar o telefone que fora armazenado. Retorna uma string.
 		return telefone;
 	}
 };
@@ -68,6 +70,7 @@ public:
 
 	void setSenha(string) throw(invalid_argument);
 	string getSenha() const{
+		/// Método responsável por retornar a senha que fora armazenada. Retorna uma string.
 		return senha;
 	}
 };
@@ -83,6 +86,7 @@ public:
 
 	void setTitulo(string) throw(invalid_argument);
 	string getTitulo() const{
+		/// Método responsável por retornar o título que fora armazenado. Retorna uma string.
 		return titulo;
 	}
 };
@@ -99,6 +103,7 @@ public:
 
 	void setData(string) throw(invalid_argument);
 	string getData() const{
+		/// Método responsável por retornar a data que fora armazenada. Retorna uma string.
 		return data;
 	}
 };
@@ -114,6 +119,7 @@ public:
 
 	void setCodigo(string) throw(invalid_argument);
 	string getCodigo() const{
+		/// Método responsável por retornar o código que fora armazenado. Retorna uma string.
 		return codigo;
 	}
 };
@@ -129,6 +135,7 @@ public:
 
 	void setTexto(string) throw(invalid_argument);
 	string getTexto() const{
+		/// Método responsável por retornar o texto que fora armazenado. Retorna uma string.
 		return texto;
 	}
 };
@@ -146,6 +153,7 @@ public:
 
 	void setGenero(string) throw(invalid_argument);
 	string getGenero() const{
+		/// Método responsável por retornar o gênero literário que fora armazenado. Retorna uma string.
 		return genero;
 	}
 	void showGeneros() const;

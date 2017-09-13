@@ -1,12 +1,20 @@
-## Coisas a fazer:
+########## TRABALHO DE TP1 ###########
 
-- Codificar classes que representam os domínios OK
-- Codificar classes que representam as entidades OK
-- Codificar testes de unidades para todas as classes OK
-- Instalar o Doxygen OK
-- Produzir documentação para as classes implementadas usando o Doxygen
+## ALUNOS:
+- Lucas da Silva Moutinho - 15/0015747
+- João Pedro Batista Ribeiro Costa - 15//0080123
+- Universidade de Brasília (UNB) - Departamento de Ciência da Computação
 
-READ:
+## ARQUIVOS:
+- BIN: contém o executável
+- HTML: contém a documentação feita utilizando-se da ferramenta doxygen
+- OBJ: contém os objetos
+- Códigos fonte encontram-se na pasta principal 'trabalho_tp1'
+
+## PROJETO CODEBLOCKS:
+- trabalho_tp1.cbp
+
+## MATERIAL DE APOIO UTILIZADO:
 
 https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html
 http://www.cplusplus.com/forum/articles/10627/

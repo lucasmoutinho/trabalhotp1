@@ -7,6 +7,7 @@
 #include <cctype>
 using namespace std;
 
+///Classe que representa o domínio Nome.
 class Nome{
 private:
 	const static int LIMITE_NOME = 15;
@@ -22,6 +23,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Apelido.
 class Apelido{
 private:
 	const static int LIMITE_APELIDO = 5;
@@ -38,6 +40,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Telefone.
 class Telefone{
 private:
 	const static int INICIO_DDD = 1;
@@ -58,6 +61,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Senha.
 class Senha{
 private:
 	const static int LIMITE_SENHA = 4;
@@ -75,6 +79,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Titulo.
 class Titulo{
 private:
 	const static int LIMITE_TITULO = 20;
@@ -91,6 +96,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Data.
 class Data{
 private:
 	const static int LIMITE_DATA = 8;
@@ -108,6 +114,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Codigo.
 class Codigo{
 private:
 	const static int LIMITE_CODIGO = 5;
@@ -124,6 +131,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Texto.
 class Texto{
 private:
 	const static int LIMITE_TEXTO = 40;
@@ -140,6 +148,7 @@ public:
 	}
 };
 
+///Classe que representa o domínio Genero.
 class Genero{
 private:
 	const static string* genderList;

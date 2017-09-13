@@ -8,6 +8,7 @@
 
 using namespace std;
 
+///Uma Classe de testes de unidade para o domínio Nome.
 class TUNome{
 private:
 
@@ -23,13 +24,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Apelido.
 class TUApelido{
 private:
 
@@ -45,13 +48,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Telefone.
 class TUTelefone{
 private:
 
@@ -67,13 +72,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Senha.
 class TUSenha{
 private:
 
@@ -89,13 +96,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Titulo.
 class TUTitulo{
 private:
 
@@ -111,13 +120,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Data.
 class TUData{
 private:
 
@@ -133,13 +144,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Codigo.
 class TUCodigo{
 private:
 
@@ -155,13 +168,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Texto.
 class TUTexto{
 private:
 
@@ -177,13 +192,15 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para o domínio Genero.
 class TUGenero{
 private:
 
@@ -199,10 +216,11 @@ private:
     void testarCenarioFalha();
 
 public:
-
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 

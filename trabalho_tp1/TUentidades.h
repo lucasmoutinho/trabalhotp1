@@ -8,6 +8,7 @@
 
 using namespace std;
 
+///Uma Classe de testes de unidade para a entidade Usuario.
 class TUUsuario{
 private:
 
@@ -30,12 +31,15 @@ private:
 
 public:
 
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para a entidade Livro.
 class TULivro{
 private:
 
@@ -60,12 +64,15 @@ private:
 
 public:
 
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 
+///Uma Classe de testes de unidade para a entidade Resenha.
 class TUResenha{
 private:
 
@@ -86,9 +93,11 @@ private:
 
 public:
 
+	///Constante adotada para indicar o sucesso na execução do teste de unidade.
 	const static int SUCESSO =  0;
+	///Constante adotada para indicar a falha na execução do teste de unidade.
     const static int FALHA   = -1;
-
+    ///Método responsável por executar os testes para cenários de Sucesso e Falha.
     int run();
 };
 

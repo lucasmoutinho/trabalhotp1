@@ -47,6 +47,9 @@ const string TUUsuario::SENHA_VALIDO = "vida";
 const string TUUsuario::SENHA_INVALIDO = "nata";
 
 int TUUsuario::run(){
+    ///Método responsável por executar o teste da entidade Usuário. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um conjunto de valores válidos para o atributos da entidade Usuário, como, também, se há lançamento de exceção para valores inválidos.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -105,6 +108,9 @@ const string TULivro::GENERO_VALIDO = "EPOPEIA";
 const string TULivro::GENERO_INVALIDO = "COMEDIA";
 
 int TULivro::run(){
+    ///Método responsável por executar o teste da entidade Livro. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um conjunto de valores válidos para o atributos da entidade Livro, como, também, se há lançamento de exceção para valores inválidos.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -155,6 +161,9 @@ const string TUResenha::TEXTO_VALIDO = "bananas de pijamas";
 const string TUResenha::TEXTO_INVALIDO = "bananas de pijamasbananas de pijamasbananas de pijamasbananas de pijamas";
 
 int TUResenha::run(){
+    ///Método responsável por executar o teste da entidade Resenha. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um conjunto de valores válidos para o atributos da entidade Resenha, como, também, se há lançamento de exceção para valores inválidos.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();

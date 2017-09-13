@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(){
-    
+
     TUNome testeNome;
     TUApelido testeApelido;
     TUTelefone testeTelefone;
@@ -25,7 +25,7 @@ int main(){
     cout << "*************************************" << endl << endl;
     cout << "TESTES DE UNIDADES DOS DOMINIOS" << endl << endl;
     cout << "*************************************" << endl << endl;
-
+    
     switch(testeNome.run()){
         case TUNome::SUCESSO:
         	cout << "NOME - SUCESSO" << endl;

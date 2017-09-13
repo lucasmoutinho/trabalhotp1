@@ -35,6 +35,9 @@ const string TUNome::VALOR_VALIDO = "Jorge";
 const string TUNome::VALOR_INVALIDO = "Jorjinho sarrada";
 
 int TUNome::run(){
+    ///Método responsável por executar o teste do domínio Nome. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Nome, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -77,6 +80,9 @@ const string TUApelido::VALOR_VALIDO = "joao";
 const string TUApelido::VALOR_INVALIDO = "joao1";
 
 int TUApelido::run(){
+    ///Método responsável por executar o teste do domínio Apelido. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Apelido, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -119,6 +125,9 @@ const string TUTelefone::VALOR_VALIDO = "(61)-123456789";
 const string TUTelefone::VALOR_INVALIDO = "61-123456789";
 
 int TUTelefone::run(){
+    ///Método responsável por executar o teste do domínio Telefone. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Telefone, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -161,6 +170,9 @@ const string TUSenha::VALOR_VALIDO = "vida";
 const string TUSenha::VALOR_INVALIDO = "lual";
 
 int TUSenha::run(){
+    ///Método responsável por executar o teste do domínio Senha. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Senha, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -203,6 +215,9 @@ const string TUTitulo::VALOR_VALIDO = "Pulp fiction";
 const string TUTitulo::VALOR_INVALIDO = "Forrest  Gump";
 
 int TUTitulo::run(){
+    ///Método responsável por executar o teste do domínio Título. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Título, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -245,6 +260,9 @@ const string TUData::VALOR_VALIDO = "12/12/12";
 const string TUData::VALOR_INVALIDO = "32/12/12";
 
 int TUData::run(){
+    ///Método responsável por executar o teste do domínio Data. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Data, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -287,6 +305,9 @@ const string TUCodigo::VALOR_VALIDO = "01234";
 const string TUCodigo::VALOR_INVALIDO = "o1234";
 
 int TUCodigo::run(){
+    ///Método responsável por executar o teste do domínio Código. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Código, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -329,6 +350,9 @@ const string TUTexto::VALOR_VALIDO = "Texto";
 const string TUTexto::VALOR_INVALIDO = "TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto";
 
 int TUTexto::run(){
+    ///Método responsável por executar o teste do domínio Texto. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Texto, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();
@@ -371,6 +395,9 @@ const string TUGenero::VALOR_VALIDO = "EPOPEIA";
 const string TUGenero::VALOR_INVALIDO = "COMEDIA";
 
 int TUGenero::run(){
+    ///Método responsável por executar o teste do domínio Gênero. Não é necessário entrada para sua execução.
+    ///É testado se, de fato, ocorre o armazenamento de um valor válido para o atributo Gênero, como, também, se há lançamento de exceção para um valor inválido.
+    ///Retorna a constante SUCESSO caso os testes tenham ocorrido da maneira esperada e a constante FALHA, caso contrário.
     setUp();
     testarCenarioSucesso();
     testarCenarioFalha();

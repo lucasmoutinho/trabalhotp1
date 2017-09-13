@@ -6,6 +6,7 @@
 #include <stdexcept>
 using namespace std;
 
+///Classe que representa a entidade Usuario, esta que contém os atributos: nome, apelido, telefone e senha.
 class Usuario{
 private:
 
@@ -46,6 +47,7 @@ public:
 
 };
 
+///Classe que representa a entidade Livro, esta que contém os atributos: título, autor, data, código e gênero.
 class Livro{
 private:
 
@@ -94,6 +96,7 @@ public:
 
 };
 
+///Classe que representa a entidade Resenha, esta que contém os atributos: autor, título e texto.
 class Resenha{
 private:
 

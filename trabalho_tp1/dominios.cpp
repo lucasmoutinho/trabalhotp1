@@ -38,7 +38,7 @@ void Apelido::validaApelido(string apelido) throw(invalid_argument){
 void Apelido::setApelido(string apelido) throw(invalid_argument){
 	///Método responsável por armazenar um apelido e avaliar a integridade do mesmo. 
 	///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
-	///Avalia se este excede o limite de caracteres e se contém por apenas letras.
+	///Avalia se este excede o limite de caracteres e se contém apenas letras.
 	validaApelido(apelido);
 	this->apelido = apelido;
 }

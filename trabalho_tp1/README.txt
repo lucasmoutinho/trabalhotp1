@@ -2,7 +2,7 @@
 
 ## ALUNOS:
 - Lucas da Silva Moutinho - 15/0015747
-- João Pedro Batista Ribeiro Costa - 15//0080123
+- João Pedro Batista Ribeiro Costa - 15/0080123
 - Universidade de Brasília (UNB) - Departamento de Ciência da Computação
 
 ## ARQUIVOS:

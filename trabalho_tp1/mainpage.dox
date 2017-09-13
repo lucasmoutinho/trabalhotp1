@@ -1,0 +1,20 @@
+/**
+\mainpage Trabalho de Técnicas de Programação 1 - SISTEMA DE ESTANTES VIRTUAIS
+
+## BREVE DESCRIÇÃO:
+Este sistema representa a base para a construção de um programa que concretizará a organização
+de livros por meio de estantes virtuais. Nesta parte inicial foram projetados todas as entidades
+e domínios que serão utilizados para a implementação futura; assim como um conjunto de testes de 
+unidade para averiguar a correta implementação destes.
+
+## ALUNOS:
+- Lucas da Silva Moutinho - 15/0015747
+- João Pedro Batista Ribeiro Costa - 15/0080123
+- Universidade de Brasília (UNB) - Departamento de Ciência da Computação
+
+## MATERIAL DE APOIO UTILIZADO:
+
+- https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html   
+- http://www.cplusplus.com/forum/articles/10627/   
+- http://www.cplusplus.com/doc/tutorial/classes/   
+*/

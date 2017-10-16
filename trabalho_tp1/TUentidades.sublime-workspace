@@ -1,0 +1,911 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"merge",
+				"mergesort"
+			],
+			[
+				"se",
+				"setaValor"
+			],
+			[
+				"bub",
+				"bubble_sort_reversed"
+			],
+			[
+				"bubble_sort_",
+				"bubble_sort_ordened"
+			],
+			[
+				"ins",
+				"insertion_sort_reversed"
+			],
+			[
+				"re",
+				"removeArvore"
+			],
+			[
+				"pro",
+				"procuraMenor"
+			],
+			[
+				"rot",
+				"rotacionaRR"
+			],
+			[
+				"ro",
+				"rotacionaLR"
+			],
+			[
+				"rota",
+				"rotacionaLL"
+			],
+			[
+				"ite",
+				"item_id"
+			],
+			[
+				"ma",
+				"maximiza"
+			],
+			[
+				"pe",
+				"perguntaAoUsuario"
+			],
+			[
+				"per",
+				"perguntaAoUsuario"
+			],
+			[
+				"tab",
+				"tab"
+			],
+			[
+				"cond",
+				"cond2"
+			],
+			[
+				"con",
+				"cond1"
+			],
+			[
+				"tes",
+				"testeCaptura"
+			],
+			[
+				"atu",
+				"atualizaJogador"
+			],
+			[
+				"te",
+				"testeIncremento"
+			],
+			[
+				"ta",
+				"tab"
+			],
+			[
+				"max",
+				"maxMaiorQueAtual"
+			],
+			[
+				"di",
+				"dificuldade"
+			],
+			[
+				"t",
+				"t_no"
+			],
+			[
+				"or",
+				"organizaPartida"
+			],
+			[
+				"organi",
+				"organizaRodada"
+			],
+			[
+				"come",
+				"comeca"
+			],
+			[
+				"t_ele",
+				"t_elemento"
+			],
+			[
+				"cri",
+				"criaArvore"
+			],
+			[
+				"for",
+				"fourth"
+			],
+			[
+				"fi",
+				"fifth"
+			],
+			[
+				"m",
+				"mostraTabuleiro"
+			],
+			[
+				"jo",
+				"jogada"
+			],
+			[
+				"cr",
+				"criaTabuleiro"
+			],
+			[
+				"cria",
+				"criaNo"
+			],
+			[
+				"icn",
+				"inc\t#include <…>"
+			],
+			[
+				"text",
+				"text-center"
+			],
+			[
+				"comme",
+				"comments"
+			],
+			[
+				"in",
+				"insereAresta"
+			],
+			[
+				"list",
+				"lista"
+			],
+			[
+				"a",
+				"atualV"
+			],
+			[
+				"atua",
+				"atualA"
+			],
+			[
+				"atau",
+				"atualA"
+			],
+			[
+				"ata",
+				"atualV"
+			],
+			[
+				"atual",
+				"atualA"
+			],
+			[
+				"valor",
+				"valorA"
+			],
+			[
+				"t_elemento",
+				"t_elementoV"
+			],
+			[
+				"to",
+				"to_i"
+			],
+			[
+				"gr",
+				"gremio"
+			],
+			[
+				"maio",
+				"maiorind"
+			],
+			[
+				"mai",
+				"maiorind"
+			],
+			[
+				"str",
+				"string-like"
+			],
+			[
+				"ano",
+				"another_way_to_write_class_methods"
+			],
+			[
+				"sca",
+				"scalene"
+			],
+			[
+				"Tri",
+				"TriangleError"
+			],
+			[
+				"equ",
+				"equilateral"
+			],
+			[
+				"My",
+				"MySpecialError"
+			],
+			[
+				"ex",
+				"exception_handled"
+			],
+			[
+				"Stand",
+				"StandardError"
+			],
+			[
+				"Run",
+				"RuntimeError"
+			],
+			[
+				"false",
+				"false_stuff"
+			],
+			[
+				"tre",
+				"true_stuff"
+			],
+			[
+				"fal",
+				"false_stuff"
+			],
+			[
+				"fa",
+				"false_stuff"
+			],
+			[
+				"true",
+				"true_value"
+			],
+			[
+				"return",
+				"return_value"
+			],
+			[
+				"retur",
+				"return_value"
+			],
+			[
+				"s",
+				"salario"
+			],
+			[
+				"da",
+				"dataNasc"
+			],
+			[
+				"emp",
+				"empregado"
+			],
+			[
+				"es",
+				"estaBalanceada"
+			],
+			[
+				"POS",
+				"posfixa"
+			],
+			[
+				"p",
+				"printf"
+			],
+			[
+				"num",
+				"num2"
+			],
+			[
+				"de",
+				"desempilharint"
+			],
+			[
+				"nu",
+				"num2"
+			],
+			[
+				"dese",
+				"desempilharint"
+			],
+			[
+				"pi",
+				"pilha"
+			],
+			[
+				"val",
+				"valida"
+			],
+			[
+				"e",
+				"expressao"
+			],
+			[
+				"inc",
+				"inc\t#include <…>"
+			],
+			[
+				"pri",
+				"printf\tprintf …"
+			],
+			[
+				"t_",
+				"t_elemento"
+			],
+			[
+				"pil",
+				"pilha"
+			],
+			[
+				"pr",
+				"prioridade"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"l",
+				"lang\tAttr"
+			],
+			[
+				"th",
+				"th\tTag"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"column-",
+				"column-rule"
+			],
+			[
+				"colum",
+				"column-fill"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"la",
+				"lasanha"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"ar",
+				"arvore"
+			],
+			[
+				"rem",
+				"removeNO"
+			],
+			[
+				"Ar",
+				"arvore2"
+			],
+			[
+				"arvore",
+				"arvoreIguais"
+			],
+			[
+				"al",
+				"alturaArvore"
+			],
+			[
+				"arv",
+				"arvore2"
+			],
+			[
+				"f",
+				"forv\tVector For Loop"
+			],
+			[
+				"mo",
+				"mostraArvore"
+			],
+			[
+				"no",
+				"no_atual"
+			],
+			[
+				"fila",
+				"filavazia"
+			],
+			[
+				"V",
+				"vazia"
+			],
+			[
+				"inse",
+				"insere"
+			],
+			[
+				"mostra",
+				"mostraPilha"
+			],
+			[
+				"remo",
+				"removefim"
+			],
+			[
+				"inre",
+				"inserequalquer"
+			],
+			[
+				"q",
+				"que"
+			],
+			[
+				"lis",
+				"lista"
+			],
+			[
+				"lista",
+				"t_lista"
+			],
+			[
+				"insere",
+				"inserefim"
+			],
+			[
+				"inser",
+				"insereinicio"
+			],
+			[
+				"u",
+				"ul\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 112.0,
+		"last_filter": "project",
+		"selected_items":
+		[
+			[
+				"project",
+				"Project: Add Folder"
+			],
+			[
+				"pro",
+				"Project: Refresh Folders"
+			],
+			[
+				"terminal",
+				"Preferences: Terminal View: Color Scheme"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"ter",
+				"Terminal View: Open Bash Terminal"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"terinal",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"termina",
+				"Terminal: Open in project folder"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pack instal",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax c",
+				"Set Syntax: C"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"HTM",
+				"Set Syntax: HTML"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"pac",
+				"Package Control: Add Channel"
+			],
+			[
+				"Package Control: INS",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); ",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/moutinho/Documents/UNB/TP1/Testes/garbage.cpp",
+		"/home/moutinho/Documents/CJR/NOE/Indicadores/links.txt",
+		"/home/moutinho/Documents/UNB/ED/codigo/arvore/arvoreb.c",
+		"/home/moutinho/Documents/UNB/ED/codigo/arvore/arvore_binaria.c",
+		"/home/moutinho/Documents/UNB/ED/codigo/arvore/arvoreavl.c",
+		"/home/moutinho/Documents/UNB/ED/codigo/ordenacao/ordenacao.c",
+		"/home/moutinho/Documents/UNB/ISC/ordena_insercao.c",
+		"/home/moutinho/Documents/UNB/ED/codigo_professor/arvore_binaria.c",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/Gemfile",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/models/article.rb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/config/routes.rb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/app/views/layouts/_header.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/app/assets/stylesheets/users.scss",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/app/views/users/new.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/app/models/user.rb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/app/controllers/users_controller.rb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/db/migrate/20170627161520_add_index_to_users_username.rb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/app/views/carts/index.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/app/views/categories/index.html.erb",
+		"/home/moutinho/Documents/UNB/ED/trabalho2/gametree.c",
+		"/home/moutinho/Documents/UNB/ED/trabalho2/teste.c",
+		"/home/moutinho/Documents/UNB/random_codes/fefe.c",
+		"/home/moutinho/Documents/UNB/ED/trabalho2/gametree",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/assets/stylesheets/application.scss",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/.git/refs/remotes/heroku/master",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/environments/production.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/puma.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/spring.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/boot.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/application.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/environment.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config.ru",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/README.md",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/log/development.log",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/bin/rails",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/models/application_record.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/initializers/application_controller_renderer.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/initializers/assets.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/config/routes.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/Rakefile",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/Gemfile",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/Gemfile.lock",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/Procfile",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/articles/edit.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/articles/_form.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/welcome/index.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/articles/new.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/articles/index.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/articles/show.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/comments/edit.html.erb",
+		"/home/moutinho/Documents/CJR/PT/Projeto Final/dinnerdash/README.md",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/controllers/comments_controller.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1160.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1435.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1435_2.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1190.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/views/comments/_comment.html.erb",
+		"/home/moutinho/Documents/URI/Iniciante/1094.py",
+		"/home/moutinho/Documents/UNB/ED/codigo/lista_pilha/lista.c",
+		"/home/moutinho/Documents/URI/Iniciante/1181.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1182.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1183.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1184.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1185.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1186.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1187.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1189.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1890.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1889.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1888.rb",
+		"/home/moutinho/Documents/UNB/ED/codigo/arvore/arvore",
+		"/home/moutinho/Documents/URI/Iniciante/1079.py",
+		"/home/moutinho/Documents/URI/Iniciante/1154.py",
+		"/home/moutinho/Documents/URI/Iniciante/1155.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1156.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1157.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1158.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1159.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1164.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1165.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1172.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1173.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1175.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1174.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1176.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1177.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1178.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1179.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1180.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1153.py",
+		"/home/moutinho/Documents/UNB/Python - USP/jogo_nim(v2).py",
+		"/home/moutinho/Documents/URI/Iniciante/1134.py",
+		"/home/moutinho/Documents/URI/Iniciante/1142.py",
+		"/home/moutinho/Documents/URI/Iniciante/1143.py",
+		"/home/moutinho/Documents/URI/Iniciante/1145.py",
+		"/home/moutinho/Documents/URI/Iniciante/1146.py",
+		"/home/moutinho/Documents/URI/Iniciante/1149.py",
+		"/home/moutinho/Documents/URI/Iniciante/1150.py",
+		"/home/moutinho/Documents/URI/Iniciante/1151.py",
+		"/home/moutinho/Documents/URI/Iniciante/1153.c",
+		"/home/moutinho/Documents/URI/Iniciante/1153_2.c",
+		"/home/moutinho/Documents/URI/Iniciante/1144.py",
+		"/home/moutinho/Documents/URI/Iniciante/1118.py",
+		"/home/moutinho/Documents/URI/Iniciante/1116.py",
+		"/home/moutinho/Documents/URI/Iniciante/1096.py",
+		"/home/moutinho/Documents/URI/Iniciante/1095.py",
+		"/home/moutinho/Documents/URI/Iniciante/1115.py",
+		"/home/moutinho/Documents/URI/Iniciante/1133.py",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/db/migrate/20170601173951_create_articles.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/app/controllers/articles_controller.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 6/Rails/blog/db/migrate/20170601141954_create_articles.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1101.py",
+		"/home/moutinho/Documents/URI/Iniciante/1113.py",
+		"/home/moutinho/Documents/URI/Iniciante/1114.py",
+		"/home/moutinho/Documents/URI/Iniciante/1117.py",
+		"/home/moutinho/Documents/URI/Iniciante/1131.py",
+		"/home/moutinho/Documents/URI/Iniciante/1132.py",
+		"/home/moutinho/Documents/URI/Iniciante/1021.py",
+		"/home/moutinho/Documents/URI/Iniciante/1097.py",
+		"/home/moutinho/Documents/URI/Iniciante/1098.py",
+		"/home/moutinho/Documents/URI/Iniciante/1099.py",
+		"/home/moutinho/Documents/CJR/PT/Módulo 5/teste.rb",
+		"/home/moutinho/Documents/CJR/PT/Módulo 5/tes2.rb",
+		"/home/moutinho/Documents/URI/Iniciante/1064.py",
+		"/home/moutinho/Documents/URI/Iniciante/1065.py",
+		"/home/moutinho/Documents/URI/Iniciante/1067.py",
+		"/home/moutinho/Documents/URI/Iniciante/1066.py",
+		"/home/moutinho/Documents/URI/Iniciante/1070.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "TUentidades.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ca",
+				"ex7/carinha.html"
+			],
+			[
+				"si",
+				"ex6/site.css"
+			],
+			[
+				"port",
+				"ex5/portifolio.css"
+			],
+			[
+				"site",
+				"ex6/site.css"
+			],
+			[
+				"for",
+				"ex4/formulario.css"
+			],
+			[
+				"",
+				"ex2/cjr.html"
+			],
+			[
+				"ta",
+				"ex3/tabela.css"
+			],
+			[
+				"cjr",
+				"ex2/cjr.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 269.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

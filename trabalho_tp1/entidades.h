@@ -128,4 +128,25 @@ public:
 	}
 };
 
+
+class Resultado{
+protected:
+
+	int valor;
+
+public:
+
+	const static int FALHA_CADASTRO = 0;
+	const static int SUCESSO_CADASTRO = 1;
+
+	void setValor(int valor){
+		this->valor = valor;
+	}
+
+	int getValor() const{
+		return valor;
+	}
+};
+
+
 #endif

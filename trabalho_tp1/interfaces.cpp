@@ -8,3 +8,13 @@ IUCadastro::~IUCadastro(){
 
 ILNCadastro::~ILNCadastro(){
 }
+
+IUCadastrolivro::IUCadastrolivro(){
+}
+
+IUCadastrolivro::~IUCadastrolivro(){
+}
+
+ILNCadastrolivro::~ILNCadastrolivro(){
+}
+

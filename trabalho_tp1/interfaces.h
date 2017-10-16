@@ -18,7 +18,7 @@ public:
 
     virtual Resultado cadastrar() throw(runtime_error) = 0;
 
-    virtual void setCntrLNCadastro(ILNCadastro *) = 0;
+    virtual void setCntrLNCadastro(ILNCadastro*) = 0;
 };
 
 class ILNCadastro{
@@ -28,6 +28,28 @@ public:
 
     virtual ~ILNCadastro();
 
+};
+
+class ILNCadastrolivro;
+class IUCadastrolivro;
+
+class IUCadastrolivro{
+public:
+
+    IUCadastrolivro();
+    virtual ~IUCadastrolivro();
+
+    virtual Resultado cadastrarlivro() throw(runtime_error) = 0;
+
+    virtual void setCntrLNCadastrolivro(ILNCadastrolivro*) = 0;
+};
+
+class ILNCadastrolivro{
+public:
+
+    virtual Resultado cadastrarlivro(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error) = 0;
+
+    virtual ~ILNCadastrolivro();
 };
 
 #endif

@@ -23,4 +23,17 @@ public:
 
 };
 
+class STUBCadastrolivro:public ILNCadastrolivro{
+public:
+
+    STUBCadastrolivro();
+    virtual ~STUBCadastrolivro();
+
+    static const string TRIGGER_FALHA_CADASTRO_LIVRO;
+    static const string TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO;
+
+    Resultado cadastrarlivro(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error);
+
+};
+
 #endif

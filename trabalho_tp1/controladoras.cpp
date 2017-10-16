@@ -21,6 +21,7 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
     while(true){
 
         try{
+            cout << "**************************************************" << endl;
             cout << "Informe o Nome :" << endl;
             cin >> entrada_nome;
             nome.setNome(entrada_nome);
@@ -33,10 +34,11 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
             cout << "Informe o Telefone :" << endl;
             cin >> entrada_telefone;
             telefone.setTelefone(entrada_telefone);
+            cout << endl << "**************************************************" << endl;
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) incorreta, informe novamente." << endl;
+            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
         }
     }
 

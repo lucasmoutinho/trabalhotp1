@@ -13,11 +13,13 @@ Resultado STUBCadastro::cadastrar(Nome nome, Apelido apelido, Senha senha, Telef
 
     Resultado resultado;
 
-    cout << endl << "Usuario Cadastrado" << endl;
+    cout << endl << endl << "**************************************************" << endl;
+    cout << "Usuario Cadastrado" << endl;
     cout << "Nome :  " << nome.getNome() << endl;
     cout << "Apelido :  " << apelido.getApelido() << endl;
     cout << "Senha :  " << senha.getSenha() << endl;
     cout << "Telefone :  " << telefone.getTelefone() << endl;
+    cout << "**************************************************" << endl << endl;
 
     if(apelido.getApelido() == TRIGGER_FALHA_CADASTRO){
         resultado.setValor(Resultado::FALHA_CADASTRO);

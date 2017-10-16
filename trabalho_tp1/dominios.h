@@ -16,6 +16,7 @@ private:
 
 public:
 
+	const static string NOME_INVALIDO;
 	void setNome(string) throw(invalid_argument);
 	string getNome() const{
 		/// Método responsável por retornar o nome que fora armazenado. Retorna uma string.
@@ -33,6 +34,7 @@ private:
 
 public:
 
+	const static string APELIDO_INVALIDO;
 	void setApelido(string) throw(invalid_argument);
 	string getApelido() const{
 		/// Método responsável por retornar o apelido que fora armazenado. Retorna uma string.
@@ -54,6 +56,7 @@ private:
 
 public:
 
+	const static string TELEFONE_INVALIDO;
 	void setTelefone(string) throw(invalid_argument);
 	string getTelefone() const{
 		/// Método responsável por retornar o telefone que fora armazenado. Retorna uma string.
@@ -72,6 +75,7 @@ private:
 
 public:
 
+	const static string SENHA_INVALIDO;
 	void setSenha(string) throw(invalid_argument);
 	string getSenha() const{
 		/// Método responsável por retornar a senha que fora armazenada. Retorna uma string.
@@ -89,6 +93,7 @@ private:
 
 public:
 
+	const static string TITULO_INVALIDO;
 	void setTitulo(string) throw(invalid_argument);
 	string getTitulo() const{
 		/// Método responsável por retornar o título que fora armazenado. Retorna uma string.
@@ -107,6 +112,7 @@ private:
 
 public:
 
+	const static string DATA_INVALIDO;
 	void setData(string) throw(invalid_argument);
 	string getData() const{
 		/// Método responsável por retornar a data que fora armazenada. Retorna uma string.
@@ -124,6 +130,7 @@ private:
 
 public:
 
+	const static string CODIGO_INVALIDO;
 	void setCodigo(string) throw(invalid_argument);
 	string getCodigo() const{
 		/// Método responsável por retornar o código que fora armazenado. Retorna uma string.
@@ -141,6 +148,7 @@ private:
 
 public:
 
+	const static string TEXTO_INVALIDO;
 	void setTexto(string) throw(invalid_argument);
 	string getTexto() const{
 		/// Método responsável por retornar o texto que fora armazenado. Retorna uma string.
@@ -160,6 +168,7 @@ private:
 	
 public:
 
+	const static string GENERO_INVALIDO;
 	void setGenero(string) throw(invalid_argument);
 	string getGenero() const{
 		/// Método responsável por retornar o gênero literário que fora armazenado. Retorna uma string.

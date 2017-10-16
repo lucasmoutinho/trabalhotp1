@@ -20,23 +20,55 @@ int main(){
 
     cntrCadastro->setCntrLNCadastro(stubLNCadastro);
 
+    int SAIDA = 0;
+    int opcao_escolhida;
     Resultado resultado;
 
-    cout << endl << "VALORES DOS TRIGGERS:" << endl << endl;
-    cout << "Apelido invalido = " << STUBCadastro::TRIGGER_FALHA_CADASTRO << endl;
-    cout << "Apelido invalido = " << STUBCadastro::TRIGGER_ERRO_SISTEMA_CADASTRO << endl << endl;
+    cout << "APRESENTACAO DE VALORES INVALIDOS E TRIGGERS" << endl << endl;
 
-    while(true){
+    cout << endl << "VALORES DOS TRIGGERS (cadastro):" << endl;
+    cout << "Nome inválido = " << Nome::NOME_INVALIDO << endl;
+    cout << "Apelido inválido = " << Apelido::APELIDO_INVALIDO << endl;
+    cout << "Senha inválida = " << Senha::SENHA_INVALIDO << endl;
+    cout << "Telefone inválido = " << Telefone::TELEFONE_INVALIDO<< endl;
+    cout << "Trigger de falha (apelido) = " << STUBCadastro::TRIGGER_FALHA_CADASTRO << endl;
+    cout << "Trigger de erro de sistema (apelido) = " << STUBCadastro::TRIGGER_ERRO_SISTEMA_CADASTRO << endl << endl;
 
-        try{
-            resultado = cntrCadastro->cadastrar();
-            if(resultado.getValor() == Resultado::SUCESSO_CADASTRO){
+
+    cout << "**************************************************" << endl;
+    cout << "Bem vindo à biblioteca do Trabalho de TP1 - UNB" << endl;
+    cout << "Informe a opção desejada entre as disponíveis abaixo:" << endl;
+    cout << "Saída - 0" << endl << "Cadastro - 1" << endl;
+    cout << "**************************************************" << endl << endl;
+    cin >> opcao_escolhida;
+    cout << endl;
+
+    while(opcao_escolhida != SAIDA){
+
+        switch(opcao_escolhida){
+            case 1:
+
+                while(true){
+                    try{
+                        resultado = cntrCadastro->cadastrar();
+                        if(resultado.getValor() == Resultado::SUCESSO_CADASTRO){
+                            break;
+                        }
+                    }
+                    catch(const runtime_error &exp){
+                        cout << "Erro de Sistema" << endl;
+                    }
+                }
                 break;
-            }
         }
-        catch(const runtime_error &exp){
-            cout << "Erro de Sistema" << endl;
-        }
+
+        cout << endl;
+        cout << "**************************************************" << endl;
+        cout << "Informe a operação desejada" << endl;
+        cout << "Saída - 0" << endl << "Cadastro - 1" << endl;
+        cout << "**************************************************" << endl << endl;
+        cin >> opcao_escolhida;
+        cout << endl;
     }
 
     return 0;

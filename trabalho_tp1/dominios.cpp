@@ -1,5 +1,15 @@
 #include "dominios.h"
 
+const string Nome::NOME_INVALIDO = "Jorjinho sarrada";
+const string Apelido::APELIDO_INVALIDO = "joao1";
+const string Telefone::TELEFONE_INVALIDO = "61-123456789";
+const string Senha::SENHA_INVALIDO = "lual";
+const string Titulo::TITULO_INVALIDO = "Forrest  Gump";
+const string Data::DATA_INVALIDO = "32/12/12";
+const string Codigo::CODIGO_INVALIDO = "o1234";
+const string Texto::TEXTO_INVALIDO = "TextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTextoTexto";
+const string Genero::GENERO_INVALIDO = "COMEDIA";
+
 void Nome::validaNome(string nome) throw(invalid_argument){
 
 	if(nome.length() > LIMITE_NOME){

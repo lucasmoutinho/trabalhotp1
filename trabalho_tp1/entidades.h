@@ -17,7 +17,7 @@ private:
 
 public:
 
-	void setNome(const string nome) throw(invalid_argument){
+	void setNome(string nome) throw(invalid_argument){
 		///Método responsável por armazenar o nome de determinado usuário.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->nome.setNome(nome);
@@ -28,7 +28,7 @@ public:
 		return this->nome.getNome();
 	}
 
-	void setApelido(const string apelido) throw(invalid_argument){
+	void setApelido(string apelido) throw(invalid_argument){
 		///Método responsável por armazenar o apelido de determinado usuário.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->apelido.setApelido(apelido);
@@ -39,7 +39,7 @@ public:
 		return this->apelido.getApelido();
 	}
 
-	void setTelefone(const string telefone) throw(invalid_argument){
+	void setTelefone(string telefone) throw(invalid_argument){
 		///Método responsável por armazenar o telefone de determinado usuário.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->telefone.setTelefone(telefone);
@@ -50,7 +50,7 @@ public:
 		return this->telefone.getTelefone();
 	}
 
-	void setSenha(const string senha) throw(invalid_argument){
+	void setSenha(string senha) throw(invalid_argument){
 		///Método responsável por armazenar a senha de determinado usuário.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->senha.setSenha(senha);
@@ -75,7 +75,7 @@ private:
 
 public:
 
-	void setTitulo(const string titulo) throw(invalid_argument){
+	void setTitulo(string titulo) throw(invalid_argument){
 		///Método responsável por armazenar o título de determinado livro.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->titulo.setTitulo(titulo);
@@ -86,7 +86,7 @@ public:
 		return this->titulo.getTitulo();
 	}
 
-	void setAutor(const string autor) throw(invalid_argument){
+	void setAutor(string autor) throw(invalid_argument){
 		///Método responsável por armazenar o autor de determinado livro.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->autor.setNome(autor);
@@ -97,7 +97,7 @@ public:
 		return this->autor.getNome();
 	}
 
-	void setData(const string data) throw(invalid_argument){
+	void setData(string data) throw(invalid_argument){
 		///Método responsável por armazenar a data de publicação de determinado livro.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->data.setData(data);
@@ -108,7 +108,7 @@ public:
 		return this->data.getData();
 	}
 
-	void setCodigo(const string codigo) throw(invalid_argument){
+	void setCodigo(string codigo) throw(invalid_argument){
 		///Método responsável por armazenar o código de determinado livro.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->codigo.setCodigo(codigo);
@@ -119,7 +119,7 @@ public:
 		return this->codigo.getCodigo();
 	}
 
-	void setGenero(const string genero) throw(invalid_argument){
+	void setGenero(string genero) throw(invalid_argument){
 		///Método responsável por armazenar o gênero literário de determinado livro.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->genero.setGenero(genero);
@@ -142,7 +142,7 @@ private:
 
 public:
 
-	void setTitulo(const string titulo) throw(invalid_argument){
+	void setTitulo(string titulo) throw(invalid_argument){
 		///Método responsável por armazenar o título do livro da resenha.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->titulo.setTitulo(titulo);
@@ -153,7 +153,7 @@ public:
 		return this->titulo.getTitulo();
 	}
 
-	void setAutor(const string autor) throw(invalid_argument){
+	void setAutor(string autor) throw(invalid_argument){
 		///Método responsável por armazenar o autor da resenha.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->autor.setNome(autor);
@@ -164,7 +164,7 @@ public:
 		return this->autor.getNome();
 	}
 
-	void setTexto(const string texto){
+	void setTexto(string texto){
 		///Método responsável por armazenar o conteúdo textual da resenha.
 		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
 		this->texto.setTexto(texto);

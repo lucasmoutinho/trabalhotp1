@@ -17,28 +17,44 @@ private:
 
 public:
 
-	void setNome(string) throw(invalid_argument);
+	void setNome(const string nome) throw(invalid_argument){
+		///Método responsável por armazenar o nome de determinado usuário.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->nome.setNome(nome);
+	}
 
 	string getNome() const{
 		/// Método responsável por retornar o nome do usuário. Retorna uma string.
 		return this->nome.getNome();
 	}
 
-	void setApelido(string) throw(invalid_argument);
+	void setApelido(const string apelido) throw(invalid_argument){
+		///Método responsável por armazenar o apelido de determinado usuário.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->apelido.setApelido(apelido);
+	}
 
 	string getApelido() const{
 		/// Método responsável por retornar o apelido do usuário. Retorna uma string.
 		return this->apelido.getApelido();
 	}
 
-	void setTelefone(string) throw(invalid_argument);
+	void setTelefone(const string telefone) throw(invalid_argument){
+		///Método responsável por armazenar o telefone de determinado usuário.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->telefone.setTelefone(telefone);
+	}
 
 	string getTelefone() const{
 		/// Método responsável por retornar o telefone do usuário. Retorna uma string.
 		return this->telefone.getTelefone();
 	}
 
-	void setSenha(string) throw(invalid_argument);
+	void setSenha(const string senha) throw(invalid_argument){
+		///Método responsável por armazenar a senha de determinado usuário.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->senha.setSenha(senha);
+	}
 
 	string getSenha() const{
 		/// Método responsável por retornar a senha do usuário que fora armazenada. Retorna uma string.
@@ -59,35 +75,55 @@ private:
 
 public:
 
-	void setTitulo(string) throw(invalid_argument);
+	void setTitulo(const string titulo) throw(invalid_argument){
+		///Método responsável por armazenar o título de determinado livro.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->titulo.setTitulo(titulo);
+	}
 
 	string getTitulo() const{
 		/// Método responsável por retornar o título do livro. Retorna uma string.
 		return this->titulo.getTitulo();
 	}
 
-	void setAutor(string) throw(invalid_argument);
+	void setAutor(const string autor) throw(invalid_argument){
+		///Método responsável por armazenar o autor de determinado livro.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->autor.setNome(autor);
+	}
 
 	string getAutor() const{
 		/// Método responsável por retornar o autor do livro. Retorna uma string.
 		return this->autor.getNome();
 	}
 
-	void setData(string) throw(invalid_argument);
+	void setData(const string data) throw(invalid_argument){
+		///Método responsável por armazenar a data de publicação de determinado livro.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->data.setData(data);
+	}
 
 	string getData() const{
 		/// Método responsável por retornar a data de publicação do livro. Retorna uma string.
 		return this->data.getData();
 	}
 
-	void setCodigo(string) throw(invalid_argument);
+	void setCodigo(const string codigo) throw(invalid_argument){
+		///Método responsável por armazenar o código de determinado livro.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->codigo.setCodigo(codigo);
+	}
 
 	string getCodigo() const{
 		/// Método responsável por retornar o código do livro. Retorna uma string.
 		return this->codigo.getCodigo();
 	}
 
-	void setGenero(string) throw(invalid_argument);
+	void setGenero(const string genero) throw(invalid_argument){
+		///Método responsável por armazenar o gênero literário de determinado livro.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->genero.setGenero(genero);
+	}
 
 	string getGenero() const{
 		/// Método responsável por retornar o gênero literário do livro. Retorna uma string.
@@ -106,21 +142,33 @@ private:
 
 public:
 
-	void setTitulo(string) throw(invalid_argument);
+	void setTitulo(const string titulo) throw(invalid_argument){
+		///Método responsável por armazenar o título do livro da resenha.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->titulo.setTitulo(titulo);
+	}
 
 	string getTitulo() const{
 		/// Método responsável por retornar o título do livro da resenha. Retorna uma string.
 		return this->titulo.getTitulo();
 	}
 
-	void setAutor(string) throw(invalid_argument);
+	void setAutor(const string autor) throw(invalid_argument){
+		///Método responsável por armazenar o autor da resenha.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->autor.setNome(autor);
+	}
 
 	string getAutor() const{
 		/// Método responsável por retornar o autor da resenha. Retorna uma string.
 		return this->autor.getNome();
 	}
 
-	void setTexto(string);
+	void setTexto(const string texto){
+		///Método responsável por armazenar o conteúdo textual da resenha.
+		///É necessário uma string como entrada e lança uma exceção caso esta não seja válida.
+		this->texto.setTexto(texto);
+	}
 
 	string getTexto() const{
 		/// Método responsável por retornar o conteúdo textual da resenha. Retorna uma string.

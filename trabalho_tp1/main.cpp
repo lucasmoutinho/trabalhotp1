@@ -14,15 +14,18 @@ int main(){
 
     IUCadastro *cntrCadastro;
     cntrCadastro = new CTRLCadastro();
-    IUCadastrolivro *cntrCadastrolivro;
-    cntrCadastrolivro = new CTRLCadastrolivro();
 
     ILNCadastro *stubLNCadastro;
     stubLNCadastro = new STUBCadastro();
+
+    cntrCadastro->setCntrLNCadastro(stubLNCadastro);
+
+    IUCadastrolivro *cntrCadastrolivro;
+    cntrCadastrolivro = new CTRLCadastrolivro();
+
     ILNCadastrolivro *stubLNCadastrolivro;
     stubLNCadastrolivro = new STUBCadastrolivro();
 
-    cntrCadastro->setCntrLNCadastro(stubLNCadastro);
     cntrCadastrolivro->setCntrLNCadastrolivro(stubLNCadastrolivro);
 
     int SAIDA = 0;

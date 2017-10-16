@@ -144,20 +144,20 @@ int main(){
 
 // getchar();
 
-    IUCadastro *CTRCadastro;
-    CTRCadastro = new CTRLCadastro();
+    IUCadastro *cntrCadastro;
+    cntrCadastro = new CTRLCadastro();
 
-    ILNCadastro *STUBLNCadastro;
-    STUBLNCadastro = new STUBCadastro();
+    ILNCadastro *stubLNCadastro;
+    stubLNCadastro = new STUBCadastro();
 
-    CTRCadastro->setCntrLNCadastro(STUBLNCadastro);
+    cntrCadastro->setCntrLNCadastro(stubLNCadastro);
 
     Resultado resultado;
 
     while(true){
 
         try{
-            resultado = CTRCadastro->cadastrar();
+            resultado = cntrCadastro->cadastrar();
             if(resultado.getValor() == Resultado::SUCESSO_CADASTRO){
                 break;
             }

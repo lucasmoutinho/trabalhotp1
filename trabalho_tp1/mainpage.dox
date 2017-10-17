@@ -6,6 +6,8 @@ Este sistema representa a base para a construção de um programa que concretiza
 de livros por meio de estantes virtuais. Nesta parte inicial foram projetados todas as entidades
 e domínios que serão utilizados para a implementação futura; assim como um conjunto de testes de 
 unidade para averiguar a correta implementação destes.
+Agora foram acrescentados as interfaces de usuário e das lógicas de negócio das várias funcioanlidades
+que estão disponíveis no sistemas, fazendo a ligação entre as controladoras e os STUBS.
 
 ## ALUNOS:
 - Lucas da Silva Moutinho - 15/0015747

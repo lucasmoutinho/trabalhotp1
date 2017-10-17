@@ -49,4 +49,17 @@ public:
 
 };
 
+class STUBRegistroresenha:public ILNRegistroresenha{
+public:
+
+    STUBRegistroresenha();
+    virtual ~STUBRegistroresenha();
+
+    static const string TRIGGER_FALHA_REGISTRO_RESENHA;
+    static const string TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA;
+
+    Resultado registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error);
+
+};
+
 #endif

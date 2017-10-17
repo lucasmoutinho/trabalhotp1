@@ -76,4 +76,27 @@ public:
 
 };
 
+class IURegistroresenha;
+class ILNRegistroresenha;
+
+class IURegistroresenha{
+public:
+
+    IURegistroresenha();
+    virtual ~IURegistroresenha();
+
+    virtual Resultado registrarresenha() throw(runtime_error) = 0;
+
+    virtual void setCntrLNRegistroresenha(ILNRegistroresenha*) = 0;
+};
+
+class ILNRegistroresenha{
+public:
+
+    virtual ~ILNRegistroresenha();
+
+    virtual Resultado registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error) = 0;
+
+};
+
 #endif

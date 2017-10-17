@@ -102,3 +102,37 @@ Resultado STUBAutenticacao::autenticar(Apelido apelido, Senha senha) throw(runti
 
     return resultado;
 }
+
+STUBRegistroresenha::STUBRegistroresenha(){
+}
+
+STUBRegistroresenha::~STUBRegistroresenha(){
+}
+
+const string STUBRegistroresenha::TRIGGER_FALHA_REGISTRO_RESENHA = "BANANA";
+const string STUBRegistroresenha::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA = "LARANJA";
+
+Resultado STUBRegistroresenha::registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error){
+
+    Resultado resultado;
+
+    cout << endl << endl << "**************************************************" << endl;
+    cout << "Resenha registrada" << endl;
+    cout << "Autor :  " << autor.getNome() << endl;
+    cout << "Titulo :  " << titulo.getTitulo() << endl;
+    cout << "Texto :  " << texto.getTexto() << endl;
+    cout << "**************************************************" << endl << endl;
+
+
+    if(titulo.getTitulo() == TRIGGER_FALHA_REGISTRO_RESENHA){
+        resultado.setValor(Resultado::FALHA_REGISTRO_RESENHA);
+    }
+    else if(titulo.getTitulo() == TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA){
+        throw runtime_error("Erro de Sistema");
+    }
+    else{
+        resultado.setValor(Resultado::SUCESSO_REGISTRO_RESENHA); 
+    }
+
+    return resultado;
+}

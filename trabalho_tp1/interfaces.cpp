@@ -26,3 +26,12 @@ IUAutenticacao::~IUAutenticacao(){
 
 ILNAutenticacao::~ILNAutenticacao(){
 }
+
+IURegistroresenha::IURegistroresenha(){
+}
+
+IURegistroresenha::~IURegistroresenha(){
+}
+
+ILNRegistroresenha::~ILNRegistroresenha(){
+}

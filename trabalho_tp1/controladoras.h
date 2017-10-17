@@ -75,4 +75,26 @@ void inline CTRLAutenticacao::setCntrLNAutenticacao(ILNAutenticacao *LNAutentica
     this->LNAutenticacao = LNAutenticacao;
 }
 
+class CTRLRegistroresenha:public IURegistroresenha{
+public:
+
+    CTRLRegistroresenha();
+    virtual ~CTRLRegistroresenha();
+
+    Resultado registrarresenha() throw(runtime_error);
+    
+    const static int FALHA_AO_REGISTRAR_RESENHA = 0;
+    const static int SUCESSO_AO_REGISTAR_RESENHA = 1;
+
+    void setCntrLNRegistroresenha(ILNRegistroresenha*);
+
+private:
+
+    ILNRegistroresenha *LNRegistroresenha;
+};
+
+void inline CTRLRegistroresenha::setCntrLNRegistroresenha(ILNRegistroresenha *LNRegistroresenha){
+    this->LNRegistroresenha = LNRegistroresenha;
+}
+
 #endif

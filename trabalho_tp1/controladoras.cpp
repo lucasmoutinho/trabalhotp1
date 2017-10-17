@@ -45,7 +45,7 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
     resultado = LNCadastro->cadastrar(nome,apelido,senha,telefone);
 
     if(resultado.getValor() == Resultado::FALHA_CADASTRO){
-        cout << endl << "Falha ao cadastrar" << endl << endl;
+        cout << endl << "Falha ao cadastrar usuario" << endl << endl;
     }
 
     return resultado;
@@ -142,7 +142,53 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
     resultado = LNAutenticacao->autenticar(apelido, senha);
 
     if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
-        cout << endl << "Falha ao cadastrar livro" << endl << endl;
+        cout << endl << "Falha ao autenticar usuario" << endl << endl;
+    }
+
+    return resultado;
+}
+
+CTRLRegistroresenha::CTRLRegistroresenha(){
+}
+
+CTRLRegistroresenha::~CTRLRegistroresenha(){
+}
+
+Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
+
+    Resultado resultado;
+    Nome autor;
+    Titulo titulo;
+    Texto texto;
+    string entrada_autor;
+    string entrada_titulo;
+    string entrada_texto;
+
+    while(true){
+
+        try{
+            cout << "**************************************************" << endl;
+            cout << "Informe o Autor :" << endl;
+            cin >> entrada_autor;
+            autor.setNome(entrada_autor);
+            cout << "Informe a Titulo :" << endl;
+            cin >> entrada_titulo;
+            titulo.setTitulo(entrada_titulo);
+            cout << "Informe o Texto :" << endl;
+            cin >> entrada_texto;
+            texto.setTexto(entrada_texto);
+            cout << endl << "**************************************************" << endl;
+            break;
+        }
+        catch (const invalid_argument &exp){
+            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+        }
+    }
+
+    resultado = LNRegistroresenha->registrarresenha(autor, titulo, texto);
+
+    if(resultado.getValor() == Resultado::FALHA_REGISTRO_RESENHA){
+        cout << endl << "Falha ao registrar resenha" << endl << endl;
     }
 
     return resultado;

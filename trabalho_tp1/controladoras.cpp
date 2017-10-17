@@ -8,7 +8,7 @@ CTRLCadastro::~CTRLCadastro(){
 }
 
 Resultado CTRLCadastro::cadastrar() throw(runtime_error){
-    ///Método de cadastramento de usuário da controladora
+    ///Método de cadastramento de usuario da controladora
 
     Resultado resultado;
     Nome nome;
@@ -41,7 +41,7 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -99,7 +99,7 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -142,7 +142,7 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -190,7 +190,7 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -210,7 +210,7 @@ CTRLBuscarusuario::~CTRLBuscarusuario(){
 }
 
 Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
-    ///Método de busca de usuários da controladora
+    ///Método de busca de usuarios da controladora
 
     Resultado resultado;
     Apelido apelido;
@@ -228,18 +228,18 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
     resultado = LNBuscarusuario->buscarusuario(apelido);
 
     if(resultado.getValor() == Resultado::FALHA_BUSCA_USUARIO){
-        cout << endl << "Falha ao buscar usuário" << endl << endl;
+        cout << endl << "Falha ao buscar usuario" << endl << endl;
     }
     else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO){
         cout << endl << "**************************************************" << endl;
-        cout << "Usuário encontrado" << endl;
+        cout << "Usuario encontrado" << endl;
         cout << "Nome :  " << "Joao" << endl;
         cout << "Apelido :  " << apelido.getApelido() << endl;
         cout << "Telefone :  " << "(61)-123456789" << endl;
@@ -247,7 +247,7 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
     }
     else if(resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
-        cout << "Usuário não encontrado" << endl;
+        cout << "Usuario nao encontrado" << endl;
         cout << "**************************************************" << endl << endl;
     }
 
@@ -279,7 +279,7 @@ Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -300,7 +300,7 @@ Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
     }
     else if(resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
-        cout << "Livro não encontrado" << endl;
+        cout << "Livro nao encontrado" << endl;
         cout << "**************************************************" << endl << endl;
     }
 
@@ -332,7 +332,7 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -355,7 +355,7 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
     }
     else if(resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
-        cout << "Livro não disponivel para troca" << endl;
+        cout << "Livro nao disponivel para troca" << endl;
         cout << "**************************************************" << endl << endl;
     }
 
@@ -369,7 +369,7 @@ CTRLComandosusuarioautenticado::~CTRLComandosusuarioautenticado(){
 }
 
 void CTRLComandosusuarioautenticado::comandosusuarioautenticado() throw(runtime_error){
-    ///Método de comandos de usuário da controladora
+    ///Método de comandos de usuario da controladora
 
     ComandoIUusuarioautenticado* comando;
     int opcao;

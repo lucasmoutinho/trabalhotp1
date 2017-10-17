@@ -4,7 +4,7 @@ ComandoIUusuarioautenticado::~ComandoIUusuarioautenticado(){
 }
 
 void ComandoIUUsuarioincluir::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
-    ///Método de comando de inclusão da controladora
+    ///Método de comando de inclusao da controladora
 
     Resultado resultado;
     Titulo titulo;
@@ -42,7 +42,7 @@ void ComandoIUUsuarioincluir::comandosusuarioautenticado(ILNComandosusuarioauten
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -54,7 +54,7 @@ void ComandoIUUsuarioincluir::comandosusuarioautenticado(ILNComandosusuarioauten
 }
 
 void ComandoIUUsuarioexcluir::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
-    ///Método de comando de exclusão da controladora
+    ///Método de comando de exclusao da controladora
 
     Resultado resultado;
     Titulo titulo;
@@ -72,7 +72,7 @@ void ComandoIUUsuarioexcluir::comandosusuarioautenticado(ILNComandosusuarioauten
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -112,7 +112,7 @@ void ComandoIUUsuarioregistrarresenha::comandosusuarioautenticado(ILNComandosusu
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -142,7 +142,7 @@ void ComandoIUUsuariotrocarlivro::comandosusuarioautenticado(ILNComandosusuarioa
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -165,7 +165,7 @@ void ComandoIUUsuariotrocarlivro::comandosusuarioautenticado(ILNComandosusuarioa
     }
     else if(resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
-        cout << "Livro não disponivel para troca" << endl;
+        cout << "Livro nao disponivel para troca" << endl;
         cout << "**************************************************" << endl << endl;
     }
 }
@@ -189,7 +189,7 @@ void ComandoIUUsuariobuscarlivro::comandosusuarioautenticado(ILNComandosusuarioa
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
@@ -210,13 +210,13 @@ void ComandoIUUsuariobuscarlivro::comandosusuarioautenticado(ILNComandosusuarioa
     }
     else if(resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
-        cout << "Livro não encontrado" << endl;
+        cout << "Livro nao encontrado" << endl;
         cout << "**************************************************" << endl << endl;
     }
 }
 
 void ComandoIUUsuariobuscarusuario::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
-    ///Método de comando de busca de usuário da controladora
+    ///Método de comando de busca de usuario da controladora
     
     Resultado resultado;
     Apelido apelido;
@@ -234,18 +234,18 @@ void ComandoIUUsuariobuscarusuario::comandosusuarioautenticado(ILNComandosusuari
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
         }
     }
 
     resultado = cntrLNComandosusuarioautenticado->buscarusuario(apelido);
 
     if(resultado.getValor() == Resultado::FALHA_BUSCA_USUARIO){
-        cout << endl << "Falha ao buscar usuário" << endl << endl;
+        cout << endl << "Falha ao buscar usuario" << endl << endl;
     }
     else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO){
         cout << endl << "**************************************************" << endl;
-        cout << "Usuário encontrado" << endl;
+        cout << "Usuario encontrado" << endl;
         cout << "Nome :  " << "Joao" << endl;
         cout << "Apelido :  " << apelido.getApelido() << endl;
         cout << "Telefone :  " << "(61)-123456789" << endl;
@@ -253,7 +253,7 @@ void ComandoIUUsuariobuscarusuario::comandosusuarioautenticado(ILNComandosusuari
     }
     else if(resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
-        cout << "Usuário não encontrado" << endl;
+        cout << "Usuario nao encontrado" << endl;
         cout << "**************************************************" << endl << endl;
     }
 }

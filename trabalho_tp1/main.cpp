@@ -171,6 +171,8 @@ int main(){
 
     ///Apresentação do sistema
 
+    cout << endl << "APRESENTACAO DO SISTEMA" << endl << endl; 
+
     cout << "**************************************************" << endl;
     cout << "Bem vindo a biblioteca do Trabalho de TP1 - UNB" << endl;
     cout << "Informe a opcao desejada entre as disponíveis abaixo:" << endl;

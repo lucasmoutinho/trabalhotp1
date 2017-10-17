@@ -10,6 +10,7 @@
 - HTML: contém a documentação feita utilizando-se da ferramenta doxygen
 - OBJ: contém os objetos
 - Códigos fonte encontram-se na pasta principal 'trabalho_tp1'
+- Diagrama de módulos do ASTAH se encontra na pasta principal 'trabalho_tp1'
 
 ## PROJETO CODEBLOCKS:
 - trabalho_tp1.cbp

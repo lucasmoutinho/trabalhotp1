@@ -11,6 +11,7 @@
 
 using namespace std;
 
+///Classe controladora do cadastro de usuário
 class CTRLCadastro:public IUCadastro{
 public:
 
@@ -27,9 +28,11 @@ private:
 };
 
 void inline CTRLCadastro::setCntrLNCadastro(ILNCadastro *LNCadastro){
+    ///Método responsável por fazer a ligação entre controladora de cadastro de usuário e lógica de negócio
     this->LNCadastro = LNCadastro;
 }
 
+///Classe controladora do cadastro de livro
 class CTRLCadastrolivro:public IUCadastrolivro{
 public:
 
@@ -46,9 +49,11 @@ private:
 };
 
 void inline CTRLCadastrolivro::setCntrLNCadastrolivro(ILNCadastrolivro *LNCadastrolivro){
+     ///Método responsável por fazer a ligação entre controladora de cadastro de livro e lógica de negócio
     this->LNCadastrolivro = LNCadastrolivro;
 }
 
+///Classe controladora da autenticação
 class CTRLAutenticacao:public IUAutenticacao{
 public:
 
@@ -65,9 +70,11 @@ private:
 };
 
 void inline CTRLAutenticacao::setCntrLNAutenticacao(ILNAutenticacao *LNAutenticacao){
+    ///Método responsável por fazer a ligação entre controladora de autenticação e lógica de negócio
     this->LNAutenticacao = LNAutenticacao;
 }
 
+///Classe controladora do registro de resenhas
 class CTRLRegistroresenha:public IURegistroresenha{
 public:
 
@@ -84,9 +91,11 @@ private:
 };
 
 void inline CTRLRegistroresenha::setCntrLNRegistroresenha(ILNRegistroresenha *LNRegistroresenha){
+    ///Método responsável por fazer a ligação entre controladora de registro de resenhas e lógica de negócio
     this->LNRegistroresenha = LNRegistroresenha;
 }
 
+///Classe controladora da busca de usuários
 class CTRLBuscarusuario:public IUBuscarusuario{
 public:
 
@@ -103,9 +112,11 @@ private:
 };
 
 void inline CTRLBuscarusuario::setCntrLNBuscarusuario(ILNBuscarusuario *LNBuscarusuario){
+    ///Método responsável por fazer a ligação entre controladora de busca de usuários e lógica de negócio
     this->LNBuscarusuario = LNBuscarusuario;
 }
 
+///Classe controladora da busca de livros
 class CTRLBuscarlivro:public IUBuscarlivro{
 public:
 
@@ -122,9 +133,11 @@ private:
 };
 
 void inline CTRLBuscarlivro::setCntrLNBuscarlivro(ILNBuscarlivro *LNBuscarlivro){
+    ///Método responsável por fazer a ligação entre controladora de busca de livro e lógica de negócio
     this->LNBuscarlivro = LNBuscarlivro;
 }
 
+///Classe controladora da troca de livros
 class CTRLTrocarlivro:public IUTrocarlivro{
 public:
 
@@ -141,9 +154,11 @@ private:
 };
 
 void inline CTRLTrocarlivro::setCntrLNTrocarlivro(ILNTrocarlivro *LNTrocarlivro){
+    ///Método responsável por fazer a ligação entre controladora de troca de livro e lógica de negócio
     this->LNTrocarlivro = LNTrocarlivro;
 }
 
+///Classe controladora dos comandos de um usuário autenticado
 class CTRLComandosusuarioautenticado:public IUComandosusuarioautenticado{
 public:
 
@@ -168,6 +183,7 @@ private:
 };
 
 void inline CTRLComandosusuarioautenticado::setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado){
+    ///Método responsável por fazer a ligação entre controladora de comandos de um usuário autenticado e lógica de negócio
     this->cntrLNComandosusuarioautenticado = cntrLNComandosusuarioautenticado;
 }
 

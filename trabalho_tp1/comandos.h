@@ -12,6 +12,7 @@
 
 using namespace std;
 
+///Classe de execução dos comandos de um usuário autenticado
 class ComandoIUusuarioautenticado{
 public:
 
@@ -21,6 +22,7 @@ public:
 
 };
 
+///Classe do comando de inclusão de um usuário autenticado
 class ComandoIUUsuarioincluir:public ComandoIUusuarioautenticado{
 public:
 
@@ -28,6 +30,7 @@ public:
 
 };
 
+///Classe do comando de exclusão de um usuário autenticado
 class ComandoIUUsuarioexcluir:public ComandoIUusuarioautenticado{
 public:
 
@@ -35,6 +38,7 @@ public:
 
 };
 
+///Classe do comando de registro de resenha de um usuário autenticado
 class ComandoIUUsuarioregistrarresenha:public ComandoIUusuarioautenticado{
 public:
 
@@ -42,6 +46,7 @@ public:
 
 };
 
+///Classe do comando de troca de livros de um usuário autenticado
 class ComandoIUUsuariotrocarlivro:public ComandoIUusuarioautenticado{
 public:
 
@@ -49,6 +54,7 @@ public:
 
 };
 
+///Classe do comando de busca de livros um usuário autenticado
 class ComandoIUUsuariobuscarlivro:public ComandoIUusuarioautenticado{
 public:
 
@@ -56,6 +62,7 @@ public:
 
 };
 
+///Classe do comando de busca de usuarios de um usuário autenticado
 class ComandoIUUsuariobuscarusuario:public ComandoIUusuarioautenticado{
 public:
 

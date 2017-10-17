@@ -181,6 +181,7 @@ int main(){
     cin >> opcao_escolhida;
     cout << endl;
 
+    ///opcao a ser escolhida
     while(opcao_escolhida != SAIDA){
 
         switch(opcao_escolhida){

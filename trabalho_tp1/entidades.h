@@ -176,7 +176,7 @@ public:
 	}
 };
 
-
+///Classe que representa a entidade Resultados, esta que contém valores a serem validados pelas STUBS/CONTROLADORAS respectivas.
 class Resultado{
 protected:
 
@@ -203,10 +203,13 @@ public:
 	const static int TROCA_NAO_ENCONTRADO = 16;
 
 	void setValor(int valor){
+		///Método responsável por armazenar o valor de validação.
+		///É necessário um valor inteiro como entrada.
 		this->valor = valor;
 	}
 
 	int getValor() const{
+		/// Método responsável por retornar o valor de validação. Retorna um inteiro.
 		return valor;
 	}
 };

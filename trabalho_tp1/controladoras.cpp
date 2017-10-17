@@ -7,6 +7,7 @@ CTRLCadastro::~CTRLCadastro(){
 }
 
 Resultado CTRLCadastro::cadastrar() throw(runtime_error){
+    ///Método de cadastramento de usuário da controladora
 
     Resultado resultado;
     Nome nome;
@@ -59,6 +60,7 @@ CTRLCadastrolivro::~CTRLCadastrolivro(){
 }
 
 Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
+    ///Método de cadastramento de livro da controladora
 
     Resultado resultado;
     Titulo titulo;
@@ -116,6 +118,7 @@ CTRLAutenticacao::~CTRLAutenticacao(){
 }
 
 Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
+    ///Método de autenticação da controladora
 
     Resultado resultado;
     Apelido apelido;
@@ -158,6 +161,7 @@ CTRLRegistroresenha::~CTRLRegistroresenha(){
 }
 
 Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
+    ///Método de registramento de resenha da controladora
 
     Resultado resultado;
     Nome autor;
@@ -205,6 +209,7 @@ CTRLBuscarusuario::~CTRLBuscarusuario(){
 }
 
 Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
+    ///Método de busca de usuários da controladora
 
     Resultado resultado;
     Apelido apelido;
@@ -255,6 +260,7 @@ CTRLBuscarlivro::~CTRLBuscarlivro(){
 }
 
 Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
+    ///Método de busca de livros da controladora
 
     Resultado resultado;
     Titulo titulo;
@@ -307,6 +313,7 @@ CTRLTrocarlivro::~CTRLTrocarlivro(){
 }
 
 Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
+    ///Método de troca de livros da controladora
 
     Resultado resultado;
     Titulo titulo;
@@ -361,6 +368,7 @@ CTRLComandosusuarioautenticado::~CTRLComandosusuarioautenticado(){
 }
 
 void CTRLComandosusuarioautenticado::comandosusuarioautenticado() throw(runtime_error){
+    ///Método de comandos de usuário da controladora
 
     ComandoIUusuarioautenticado* comando;
     int opcao;

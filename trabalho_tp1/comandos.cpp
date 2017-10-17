@@ -4,6 +4,7 @@ ComandoIUusuarioautenticado::~ComandoIUusuarioautenticado(){
 }
 
 void ComandoIUUsuarioincluir::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
+    ///Método de comando de inclusão da controladora
 
     Resultado resultado;
     Titulo titulo;
@@ -53,7 +54,8 @@ void ComandoIUUsuarioincluir::comandosusuarioautenticado(ILNComandosusuarioauten
 }
 
 void ComandoIUUsuarioexcluir::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
-    
+    ///Método de comando de exclusão da controladora
+
     Resultado resultado;
     Titulo titulo;
     string entrada_titulo;
@@ -82,7 +84,8 @@ void ComandoIUUsuarioexcluir::comandosusuarioautenticado(ILNComandosusuarioauten
 }
 
 void ComandoIUUsuarioregistrarresenha::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
-    
+    ///Método de comando de registro de resenhas da controladora
+
     Resultado resultado;
     Nome autor;
     Titulo titulo;
@@ -121,7 +124,8 @@ void ComandoIUUsuarioregistrarresenha::comandosusuarioautenticado(ILNComandosusu
 }
 
 void ComandoIUUsuariotrocarlivro::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
-    
+    ///Método de comando de troca de livros da controladora
+
     Resultado resultado;
     Titulo titulo;
     string entrada_titulo;
@@ -167,7 +171,8 @@ void ComandoIUUsuariotrocarlivro::comandosusuarioautenticado(ILNComandosusuarioa
 }
 
 void ComandoIUUsuariobuscarlivro::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
-    
+    ///Método de comando de busca de livros da controladora
+
     Resultado resultado;
     Titulo titulo;
     string entrada_titulo;
@@ -211,6 +216,7 @@ void ComandoIUUsuariobuscarlivro::comandosusuarioautenticado(ILNComandosusuarioa
 }
 
 void ComandoIUUsuariobuscarusuario::comandosusuarioautenticado(ILNComandosusuarioautenticado* cntrLNComandosusuarioautenticado) throw(runtime_error){
+    ///Método de comando de busca de usuário da controladora
     
     Resultado resultado;
     Apelido apelido;

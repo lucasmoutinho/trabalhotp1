@@ -10,6 +10,7 @@ using namespace std;
 class IUCadastro;
 class ILNCadastro;
 
+///Classe que representa a interface de usuario do cadastro.
 class IUCadastro{
 public:
 
@@ -21,6 +22,7 @@ public:
     virtual void setCntrLNCadastro(ILNCadastro*) = 0;
 };
 
+///Classe que representa a interface da logica de negócio do cadastro.
 class ILNCadastro{
 public:
 
@@ -33,6 +35,7 @@ public:
 class IUCadastrolivro;
 class ILNCadastrolivro;
 
+///Classe que representa a interface de usuario do cadastro do livro.
 class IUCadastrolivro{
 public:
 
@@ -44,6 +47,7 @@ public:
     virtual void setCntrLNCadastrolivro(ILNCadastrolivro*) = 0;
 };
 
+///Classe que representa a interface da logica de negócio do cadastro do livro.
 class ILNCadastrolivro{
 public:
 
@@ -56,6 +60,7 @@ public:
 class IUAutenticacao;
 class ILNAutenticacao;
 
+///Classe que representa a interface de usuario da autenticação.
 class IUAutenticacao{
 public:
 
@@ -67,6 +72,7 @@ public:
     virtual void setCntrLNAutenticacao(ILNAutenticacao*) = 0;
 };
 
+///Classe que representa a interface da lógica de negócio da autenticação.
 class ILNAutenticacao{
 public:
 
@@ -79,6 +85,7 @@ public:
 class IURegistroresenha;
 class ILNRegistroresenha;
 
+///Classe que representa a interface de usuario do registro de resenhas.
 class IURegistroresenha{
 public:
 
@@ -90,6 +97,7 @@ public:
     virtual void setCntrLNRegistroresenha(ILNRegistroresenha*) = 0;
 };
 
+///Classe que representa a interface da lógica de negócios do registro de resenhas.
 class ILNRegistroresenha{
 public:
 
@@ -102,6 +110,7 @@ public:
 class IUBuscarusuario;
 class ILNBuscarusuario;
 
+///Classe que representa a interface de usuario da busca de usuários.
 class IUBuscarusuario{
 public:
 
@@ -113,6 +122,7 @@ public:
     virtual void setCntrLNBuscarusuario(ILNBuscarusuario*) = 0;
 };
 
+///Classe que representa a interface da lógica de negócios da busca de usuários.
 class ILNBuscarusuario{
 public:
 
@@ -125,6 +135,7 @@ public:
 class IUBuscarlivro;
 class ILNBuscarlivro;
 
+///Classe que representa a interface de usuario da busca de livros.
 class IUBuscarlivro{
 public:
 
@@ -136,6 +147,7 @@ public:
     virtual void setCntrLNBuscarlivro(ILNBuscarlivro*) = 0;
 };
 
+///Classe que representa a interface da lógica de negócios da busca de livros.
 class ILNBuscarlivro{
 public:
 
@@ -148,6 +160,7 @@ public:
 class IUTrocarlivro;
 class ILNTrocarlivro;
 
+///Classe que representa a interface de usuario da troca de livros.
 class IUTrocarlivro{
 public:
 
@@ -159,6 +172,7 @@ public:
     virtual void setCntrLNTrocarlivro(ILNTrocarlivro*) = 0;
 };
 
+///Classe que representa a interface da lógica de negócios da troca de livros.
 class ILNTrocarlivro{
 public:
 
@@ -171,6 +185,7 @@ public:
 class IUComandosusuarioautenticado;
 class ILNComandosusuarioautenticado;
 
+///Classe que representa a interface de usuario dos comandos de um usuário autenticado.
 class IUComandosusuarioautenticado{
 public:
 
@@ -182,6 +197,7 @@ public:
     virtual void setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado*) = 0;
 };
 
+///Classe que representa a interface da lógica de negócios enolvendo os comandos de um usuário autenticado.
 class ILNComandosusuarioautenticado{
 public:
 

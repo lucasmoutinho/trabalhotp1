@@ -10,6 +10,7 @@
 
 using namespace std;
 
+///Classe que representa o STUB de cadastro de usuários
 class STUBCadastro:public ILNCadastro{
 public:
 
@@ -23,6 +24,7 @@ public:
 
 };
 
+///Classe que representa o STUB de cadastro de livros
 class STUBCadastrolivro:public ILNCadastrolivro{
 public:
 
@@ -36,6 +38,7 @@ public:
 
 };
 
+///Classe que representa o STUB de autenticação
 class STUBAutenticacao:public ILNAutenticacao{
 public:
 
@@ -49,6 +52,7 @@ public:
 
 };
 
+///Classe que representa o STUB de cadastro de registro de resenhas
 class STUBRegistroresenha:public ILNRegistroresenha{
 public:
 
@@ -62,6 +66,7 @@ public:
 
 };
 
+///Classe que representa o STUB de busca por usuários
 class STUBBuscarusuario:public ILNBuscarusuario{
 public:
 
@@ -76,6 +81,7 @@ public:
 
 };
 
+///Classe que representa o STUB de busca por livros
 class STUBBuscarlivro:public ILNBuscarlivro{
 public:
 
@@ -90,6 +96,7 @@ public:
 
 };
 
+///Classe que representa o STUB de troca de livros
 class STUBTrocarlivro:public ILNTrocarlivro{
 public:
 
@@ -104,6 +111,7 @@ public:
 
 };
 
+///Classe que representa o STUB de comandos de um usuário autenticado
 class STUBComandosusuarioautenticado:public ILNComandosusuarioautenticado{
 public:
 

@@ -1,0 +1,47 @@
+\hypertarget{classILNComandosusuarioautenticado}{}\section{I\+L\+N\+Comandosusuarioautenticado Class Reference}
+\label{classILNComandosusuarioautenticado}\index{I\+L\+N\+Comandosusuarioautenticado@{I\+L\+N\+Comandosusuarioautenticado}}
+
+
+Classe que representa a interface da lógica de negócios enolvendo os comandos de um usuário autenticado.  
+
+
+
+
+{\ttfamily \#include $<$interfaces.\+h$>$}
+
+Inheritance diagram for I\+L\+N\+Comandosusuarioautenticado\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classILNComandosusuarioautenticado}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classILNComandosusuarioautenticado_a2d9c44258dd4f034f92b9d90cce4d5a0}\label{classILNComandosusuarioautenticado_a2d9c44258dd4f034f92b9d90cce4d5a0}} 
+virtual \hyperlink{classResultado}{Resultado} {\bfseries incluir} (\hyperlink{classTitulo}{Titulo} titulo, \hyperlink{classNome}{Nome} autor, \hyperlink{classData}{Data} data, \hyperlink{classCodigo}{Codigo} codigo, \hyperlink{classGenero}{Genero} genero)=0  throw (runtime\+\_\+error)
+\item 
+\mbox{\Hypertarget{classILNComandosusuarioautenticado_af1f5d25942fbc18841838b60bba0b868}\label{classILNComandosusuarioautenticado_af1f5d25942fbc18841838b60bba0b868}} 
+virtual \hyperlink{classResultado}{Resultado} {\bfseries remover} (\hyperlink{classTitulo}{Titulo} titulo)=0  throw (runtime\+\_\+error)
+\item 
+\mbox{\Hypertarget{classILNComandosusuarioautenticado_a6350b5c4f52ec300899638627d31e676}\label{classILNComandosusuarioautenticado_a6350b5c4f52ec300899638627d31e676}} 
+virtual \hyperlink{classResultado}{Resultado} {\bfseries registrarresenha} (\hyperlink{classNome}{Nome} autor, \hyperlink{classTitulo}{Titulo} titulo, \hyperlink{classTexto}{Texto} texto)=0  throw (runtime\+\_\+error)
+\item 
+\mbox{\Hypertarget{classILNComandosusuarioautenticado_a4147962a17bad6c64af5444bcc83bc6d}\label{classILNComandosusuarioautenticado_a4147962a17bad6c64af5444bcc83bc6d}} 
+virtual \hyperlink{classResultado}{Resultado} {\bfseries trocarlivro} (\hyperlink{classTitulo}{Titulo} titulo)=0  throw (runtime\+\_\+error)
+\item 
+\mbox{\Hypertarget{classILNComandosusuarioautenticado_a11ba81d307ab0c6fc0029b32e0c56acc}\label{classILNComandosusuarioautenticado_a11ba81d307ab0c6fc0029b32e0c56acc}} 
+virtual \hyperlink{classResultado}{Resultado} {\bfseries buscarlivro} (\hyperlink{classTitulo}{Titulo} titulo)=0  throw (runtime\+\_\+error)
+\item 
+\mbox{\Hypertarget{classILNComandosusuarioautenticado_ab8134fdea0245c440b7856c5ec45f343}\label{classILNComandosusuarioautenticado_ab8134fdea0245c440b7856c5ec45f343}} 
+virtual \hyperlink{classResultado}{Resultado} {\bfseries buscarusuario} (\hyperlink{classApelido}{Apelido} apelido)=0  throw (runtime\+\_\+error)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que representa a interface da lógica de negócios enolvendo os comandos de um usuário autenticado. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+interfaces.\+h\item 
+interfaces.\+cpp\end{DoxyCompactItemize}

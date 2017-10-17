@@ -12,6 +12,8 @@ using namespace std;
 
 int main(){
 
+    ///Cadastro Usuário
+
     IUCadastro *cntrCadastro;
     cntrCadastro = new CTRLCadastro();
 
@@ -20,6 +22,8 @@ int main(){
 
     cntrCadastro->setCntrLNCadastro(stubLNCadastro);
 
+    ///Cadastro Livro
+
     IUCadastrolivro *cntrCadastrolivro;
     cntrCadastrolivro = new CTRLCadastrolivro();
 
@@ -27,6 +31,16 @@ int main(){
     stubLNCadastrolivro = new STUBCadastrolivro();
 
     cntrCadastrolivro->setCntrLNCadastrolivro(stubLNCadastrolivro);
+
+    ///Autenticação
+
+    IUAutenticacao *cntrAutenticacao;
+    cntrAutenticacao = new CTRLAutenticacao();
+
+    ILNAutenticacao *stubLNAutenticacao;
+    stubLNAutenticacao = new STUBAutenticacao();
+
+    cntrAutenticacao->setCntrLNAutenticacao(stubLNAutenticacao);
 
     int SAIDA = 0;
     int opcao_escolhida;
@@ -51,10 +65,17 @@ int main(){
     cout << "Trigger de falha (data) = " << STUBCadastrolivro::TRIGGER_FALHA_CADASTRO_LIVRO << endl;
     cout << "Trigger de erro de sistema (data) = " << STUBCadastrolivro::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO << endl << endl;
 
+    cout << endl << "VALORES DOS TRIGGERS (autenticação):" << endl;
+    cout << "Apelido inválido = " << Apelido::APELIDO_INVALIDO<< endl;
+    cout << "Senha inválida = " << Senha::SENHA_INVALIDO<< endl;
+    cout << "Trigger de falha (senha) = " << STUBAutenticacao::TRIGGER_FALHA_AUTENTICACAO << endl;
+    cout << "Trigger de erro de sistema (senha) = " << STUBAutenticacao::TRIGGER_ERRO_SISTEMA_AUTENTICACAO << endl << endl;
+
     cout << "**************************************************" << endl;
     cout << "Bem vindo à biblioteca do Trabalho de TP1 - UNB" << endl;
     cout << "Informe a opção desejada entre as disponíveis abaixo:" << endl;
     cout << "Saída - 0" << endl << "Cadastro - 1" << endl << "Cadastro livro - 2" << endl;
+    cout << "Autenticacao - 3" << endl;
     cout << "**************************************************" << endl << endl;
     cin >> opcao_escolhida;
     cout << endl;
@@ -91,12 +112,28 @@ int main(){
                     }
                 }
                 break;
+
+            case 3:
+            
+                while(true){
+                    try{
+                        resultado = cntrAutenticacao->autenticar();
+                        if(resultado.getValor() == Resultado::SUCESSO_AUTENTICACAO){
+                            break;
+                        }
+                    }
+                    catch(const runtime_error &exp){
+                        cout << "Erro de Sistema" << endl;
+                    }
+                }
+                break;
         }
 
         cout << endl;
         cout << "**************************************************" << endl;
         cout << "Informe a operação desejada" << endl;
         cout << "Saída - 0" << endl << "Cadastro - 1" << endl << "Cadastro livro - 2" << endl;
+        cout << "Autenticacao - 3" << endl;
         cout << "**************************************************" << endl << endl;
         cin >> opcao_escolhida;
         cout << endl;
@@ -110,6 +147,8 @@ int main(){
     delete cntrCadastrolivro;
     delete stubLNCadastro;
     delete stubLNCadastrolivro;
+    delete cntrAutenticacao;
+    delete stubLNAutenticacao;
 
     return 0;
 }

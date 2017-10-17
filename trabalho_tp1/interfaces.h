@@ -7,8 +7,8 @@
 
 using namespace std;
 
-class ILNCadastro;
 class IUCadastro;
+class ILNCadastro;
 
 class IUCadastro{
 public:
@@ -24,14 +24,14 @@ public:
 class ILNCadastro{
 public:
 
-    virtual Resultado cadastrar(Nome nome, Apelido apelido, Senha senha, Telefone telefone) throw(runtime_error) = 0;
-
     virtual ~ILNCadastro();
+
+    virtual Resultado cadastrar(Nome nome, Apelido apelido, Senha senha, Telefone telefone) throw(runtime_error) = 0;
 
 };
 
-class ILNCadastrolivro;
 class IUCadastrolivro;
+class ILNCadastrolivro;
 
 class IUCadastrolivro{
 public:
@@ -47,9 +47,33 @@ public:
 class ILNCadastrolivro{
 public:
 
+    virtual ~ILNCadastrolivro();
+
     virtual Resultado cadastrarlivro(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error) = 0;
 
-    virtual ~ILNCadastrolivro();
+};
+
+class IUAutenticacao;
+class ILNAutenticacao;
+
+class IUAutenticacao{
+public:
+
+    IUAutenticacao();
+    virtual ~IUAutenticacao();
+
+    virtual Resultado autenticar() throw(runtime_error) = 0;
+
+    virtual void setCntrLNAutenticacao(ILNAutenticacao*) = 0;
+};
+
+class ILNAutenticacao{
+public:
+
+    virtual ~ILNAutenticacao();
+
+    virtual Resultado autenticar(Apelido apelido, Senha senha) throw(runtime_error) = 0;
+
 };
 
 #endif

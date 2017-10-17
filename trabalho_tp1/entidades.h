@@ -188,6 +188,8 @@ public:
 	const static int SUCESSO_CADASTRO = 1;
 	const static int FALHA_CADASTRO_LIVRO = 2;
 	const static int SUCESSO_CADASTRO_LIVRO = 3;
+	const static int FALHA_AUTENTICACAO = 4;
+	const static int SUCESSO_AUTENTICACAO = 5;
 
 	void setValor(int valor){
 		this->valor = valor;

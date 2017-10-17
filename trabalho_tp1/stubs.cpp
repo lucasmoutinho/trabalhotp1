@@ -69,3 +69,36 @@ Resultado STUBCadastrolivro::cadastrarlivro(Titulo titulo, Nome autor, Data data
 
     return resultado;
 }
+
+STUBAutenticacao::STUBAutenticacao(){
+}
+
+STUBAutenticacao::~STUBAutenticacao(){
+}
+
+const string STUBAutenticacao::TRIGGER_FALHA_AUTENTICACAO = "malu";
+const string STUBAutenticacao::TRIGGER_ERRO_SISTEMA_AUTENTICACAO = "cao";
+
+Resultado STUBAutenticacao::autenticar(Apelido apelido, Senha senha) throw(runtime_error){
+
+    Resultado resultado;
+
+    cout << endl << endl << "**************************************************" << endl;
+    cout << "Usuario Autenticado" << endl;
+    cout << "Apelido :  " << apelido.getApelido() << endl;
+    cout << "Senha :  " << senha.getSenha() << endl;
+    cout << "**************************************************" << endl << endl;
+
+
+    if(senha.getSenha() == TRIGGER_FALHA_AUTENTICACAO){
+        resultado.setValor(Resultado::FALHA_AUTENTICACAO);
+    }
+    else if(senha.getSenha() == TRIGGER_ERRO_SISTEMA_AUTENTICACAO){
+        throw runtime_error("Erro de Sistema");
+    }
+    else{
+        resultado.setValor(Resultado::SUCESSO_AUTENTICACAO); 
+    }
+
+    return resultado;
+}

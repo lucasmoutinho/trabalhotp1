@@ -53,4 +53,26 @@ void inline CTRLCadastrolivro::setCntrLNCadastrolivro(ILNCadastrolivro *LNCadast
     this->LNCadastrolivro = LNCadastrolivro;
 }
 
+class CTRLAutenticacao:public IUAutenticacao{
+public:
+
+    CTRLAutenticacao();
+    virtual ~CTRLAutenticacao();
+
+    Resultado autenticar() throw(runtime_error);
+    
+    const static int FALHA_AO_AUTENTICAR = 0;
+    const static int SUCESSO_AO_AUTENTICAR = 1;
+
+    void setCntrLNAutenticacao(ILNAutenticacao*);
+
+private:
+
+    ILNAutenticacao *LNAutenticacao;
+};
+
+void inline CTRLAutenticacao::setCntrLNAutenticacao(ILNAutenticacao *LNAutenticacao){
+    this->LNAutenticacao = LNAutenticacao;
+}
+
 #endif

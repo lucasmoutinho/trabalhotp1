@@ -36,4 +36,17 @@ public:
 
 };
 
+class STUBAutenticacao:public ILNAutenticacao{
+public:
+
+    STUBAutenticacao();
+    virtual ~STUBAutenticacao();
+
+    static const string TRIGGER_FALHA_AUTENTICACAO;
+    static const string TRIGGER_ERRO_SISTEMA_AUTENTICACAO;
+
+    Resultado autenticar(Apelido apelido, Senha senha) throw(runtime_error);
+
+};
+
 #endif

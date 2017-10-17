@@ -18,3 +18,11 @@ IUCadastrolivro::~IUCadastrolivro(){
 ILNCadastrolivro::~ILNCadastrolivro(){
 }
 
+IUAutenticacao::IUAutenticacao(){
+}
+
+IUAutenticacao::~IUAutenticacao(){
+}
+
+ILNAutenticacao::~ILNAutenticacao(){
+}

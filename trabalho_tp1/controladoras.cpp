@@ -51,7 +51,6 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
     return resultado;
 }
 
-
 CTRLCadastrolivro::CTRLCadastrolivro(){
 }
 
@@ -102,6 +101,47 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
     resultado = LNCadastrolivro->cadastrarlivro(titulo, autor, data, codigo, genero);
 
     if(resultado.getValor() == Resultado::FALHA_CADASTRO_LIVRO){
+        cout << endl << "Falha ao cadastrar livro" << endl << endl;
+    }
+
+    return resultado;
+}
+
+CTRLAutenticacao::CTRLAutenticacao(){
+}
+
+CTRLAutenticacao::~CTRLAutenticacao(){
+}
+
+Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
+
+    Resultado resultado;
+    Apelido apelido;
+    Senha senha;
+    string entrada_apelido;
+    string entrada_senha;
+
+    while(true){
+
+        try{
+            cout << "**************************************************" << endl;
+            cout << "Informe o Apelido :" << endl;
+            cin >> entrada_apelido;
+            apelido.setApelido(entrada_apelido);
+            cout << "Informe a Senha :" << endl;
+            cin >> entrada_senha;
+            senha.setSenha(entrada_senha);
+            cout << endl << "**************************************************" << endl;
+            break;
+        }
+        catch (const invalid_argument &exp){
+            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+        }
+    }
+
+    resultado = LNAutenticacao->autenticar(apelido, senha);
+
+    if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
         cout << endl << "Falha ao cadastrar livro" << endl << endl;
     }
 

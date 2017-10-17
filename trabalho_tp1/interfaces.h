@@ -28,7 +28,7 @@ public:
 
     virtual ~ILNCadastro();
 
-    virtual Resultado cadastrar(Nome nome, Apelido apelido, Senha senha, Telefone telefone) throw(runtime_error) = 0;
+    virtual Resultado cadastrar(const Nome&,const Apelido&,const Senha&,const Telefone&) throw(runtime_error) = 0;
 
 };
 
@@ -53,7 +53,7 @@ public:
 
     virtual ~ILNCadastrolivro();
 
-    virtual Resultado cadastrarlivro(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error) = 0;
+    virtual Resultado cadastrarlivro(const Titulo&,const Nome&,const Data&,const Codigo&,const Genero&) throw(runtime_error) = 0;
 
 };
 
@@ -78,7 +78,7 @@ public:
 
     virtual ~ILNAutenticacao();
 
-    virtual Resultado autenticar(Apelido apelido, Senha senha) throw(runtime_error) = 0;
+    virtual Resultado autenticar(const Apelido&,const Senha&) throw(runtime_error) = 0;
 
 };
 
@@ -103,7 +103,7 @@ public:
 
     virtual ~ILNRegistroresenha();
 
-    virtual Resultado registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error) = 0;
+    virtual Resultado registrarresenha(const Nome&,const Titulo&,const Texto&) throw(runtime_error) = 0;
 
 };
 
@@ -128,7 +128,7 @@ public:
 
     virtual ~ILNBuscarusuario();
 
-    virtual Resultado buscarusuario(Apelido apelido) throw(runtime_error) = 0;
+    virtual Resultado buscarusuario(const Apelido&) throw(runtime_error) = 0;
 
 };
 
@@ -153,7 +153,7 @@ public:
 
     virtual ~ILNBuscarlivro();
 
-    virtual Resultado buscarlivro(Titulo titulo) throw(runtime_error) = 0;
+    virtual Resultado buscarlivro(const Titulo&) throw(runtime_error) = 0;
 
 };
 
@@ -178,7 +178,7 @@ public:
 
     virtual ~ILNTrocarlivro();
 
-    virtual Resultado trocarlivro(Titulo titulo) throw(runtime_error) = 0;
+    virtual Resultado trocarlivro(const Titulo&) throw(runtime_error) = 0;
 
 };
 
@@ -203,12 +203,12 @@ public:
 
     virtual ~ILNComandosusuarioautenticado();
 
-    virtual Resultado incluir(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error) = 0;
-    virtual Resultado remover(Titulo titulo) throw(runtime_error) = 0;
-    virtual Resultado registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error) = 0;
-    virtual Resultado trocarlivro(Titulo titulo) throw(runtime_error) = 0;
-    virtual Resultado buscarlivro(Titulo titulo) throw(runtime_error) = 0;
-    virtual Resultado buscarusuario(Apelido apelido) throw(runtime_error) = 0;
+    virtual Resultado incluir(const Titulo&,const Nome&,const Data&,const Codigo&,const Genero&) throw(runtime_error) = 0;
+    virtual Resultado remover(const Titulo&) throw(runtime_error) = 0;
+    virtual Resultado registrarresenha(const Nome&,const Titulo&,const Texto&) throw(runtime_error) = 0;
+    virtual Resultado trocarlivro(const Titulo&) throw(runtime_error) = 0;
+    virtual Resultado buscarlivro(const Titulo&) throw(runtime_error) = 0;
+    virtual Resultado buscarusuario(const Apelido&) throw(runtime_error) = 0;
 
 };
 

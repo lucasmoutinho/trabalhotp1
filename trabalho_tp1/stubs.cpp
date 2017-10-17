@@ -9,7 +9,7 @@ STUBCadastro::~STUBCadastro(){
 const string STUBCadastro::TRIGGER_FALHA_CADASTRO = "Lucas";
 const string STUBCadastro::TRIGGER_ERRO_SISTEMA_CADASTRO = "Caio";
 
-Resultado STUBCadastro::cadastrar(Nome nome, Apelido apelido, Senha senha, Telefone telefone) throw(runtime_error){
+Resultado STUBCadastro::cadastrar(const Nome &nome,const Apelido &apelido,const Senha &senha,const Telefone &telefone) throw(runtime_error){
     ///Método de implementação do STUB do cadastro de usuários
 
     Resultado resultado;
@@ -44,7 +44,7 @@ STUBCadastrolivro::~STUBCadastrolivro(){
 const string STUBCadastrolivro::TRIGGER_FALHA_CADASTRO_LIVRO = "12/12/12";
 const string STUBCadastrolivro::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO = "12/11/12";
 
-Resultado STUBCadastrolivro::cadastrarlivro(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error){
+Resultado STUBCadastrolivro::cadastrarlivro(const Titulo &titulo,const Nome &autor,const Data &data,const Codigo &codigo,const Genero &genero) throw(runtime_error){
     ///Método de implementação do STUB do cadastro de livros
 
     Resultado resultado;
@@ -81,7 +81,7 @@ STUBAutenticacao::~STUBAutenticacao(){
 const string STUBAutenticacao::TRIGGER_FALHA_AUTENTICACAO = "malu";
 const string STUBAutenticacao::TRIGGER_ERRO_SISTEMA_AUTENTICACAO = "cao";
 
-Resultado STUBAutenticacao::autenticar(Apelido apelido, Senha senha) throw(runtime_error){
+Resultado STUBAutenticacao::autenticar(const Apelido &apelido,const Senha &senha) throw(runtime_error){
     ///Método de implementação do STUB do cadastro de autenticação
 
     Resultado resultado;
@@ -115,7 +115,7 @@ STUBRegistroresenha::~STUBRegistroresenha(){
 const string STUBRegistroresenha::TRIGGER_FALHA_REGISTRO_RESENHA = "BANANA";
 const string STUBRegistroresenha::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA = "LARANJA";
 
-Resultado STUBRegistroresenha::registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error){
+Resultado STUBRegistroresenha::registrarresenha(const Nome &autor,const Titulo &titulo,const Texto &texto) throw(runtime_error){
     ///Método de implementação do STUB do registro de resenhas
 
     Resultado resultado;
@@ -151,7 +151,7 @@ const string STUBBuscarusuario::TRIGGER_FALHA_BUSCAR_USUARIO = "luca";
 const string STUBBuscarusuario::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO = "caio";
 const string STUBBuscarusuario::USUARIO_CADASTRADO = "jon";
 
-Resultado STUBBuscarusuario::buscarusuario(Apelido apelido) throw(runtime_error){
+Resultado STUBBuscarusuario::buscarusuario(const Apelido &apelido) throw(runtime_error){
     ///Método de implementação do STUB da busca de usuários
 
     Resultado resultado;
@@ -188,7 +188,7 @@ const string STUBBuscarlivro::TRIGGER_FALHA_BUSCAR_LIVRO = "forrest";
 const string STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO = "gump";
 const string STUBBuscarlivro::LIVRO_CADASTRADO = "Lobinho";
 
-Resultado STUBBuscarlivro::buscarlivro(Titulo titulo) throw(runtime_error){
+Resultado STUBBuscarlivro::buscarlivro(const Titulo &titulo) throw(runtime_error){
     ///Método de implementação do STUB da busca de livros
 
     Resultado resultado;
@@ -225,7 +225,7 @@ const string STUBTrocarlivro::TRIGGER_FALHA_TROCAR_LIVRO = "forrest";
 const string STUBTrocarlivro::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO = "gump";
 const string STUBTrocarlivro::LIVRO_DISPONIVEL_TROCA = "Lobinho";
 
-Resultado STUBTrocarlivro::trocarlivro(Titulo titulo) throw(runtime_error){
+Resultado STUBTrocarlivro::trocarlivro(const Titulo &titulo) throw(runtime_error){
     ///Método de implementação do STUB da troca de livros
 
     Resultado resultado;
@@ -272,7 +272,7 @@ const string STUBComandosusuarioautenticado::TRIGGER_FALHA_TROCAR_LIVRO = "forre
 const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO = "gump";
 const string STUBComandosusuarioautenticado::LIVRO_DISPONIVEL_TROCA = "Lobinho";
 
-Resultado STUBComandosusuarioautenticado::incluir(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error){
+Resultado STUBComandosusuarioautenticado::incluir(const Titulo &titulo,const Nome &autor,const Data &data,const Codigo &codigo,const Genero &genero) throw(runtime_error){
     ///Método de implementação do STUB do comando de inclusão de um usuário autenticado
 
     Resultado resultado;
@@ -300,7 +300,7 @@ Resultado STUBComandosusuarioautenticado::incluir(Titulo titulo, Nome autor, Dat
     return resultado;
 }
 
-Resultado STUBComandosusuarioautenticado::remover(Titulo titulo) throw(runtime_error){
+Resultado STUBComandosusuarioautenticado::remover(const Titulo &titulo) throw(runtime_error){
     ///Método de implementação do STUB do comando de exclusão de um usuário autenticado
 
     Resultado resultado;
@@ -324,7 +324,7 @@ Resultado STUBComandosusuarioautenticado::remover(Titulo titulo) throw(runtime_e
     return resultado;
 }
 
-Resultado STUBComandosusuarioautenticado::registrarresenha(Nome autor,Titulo titulo, Texto texto) throw(runtime_error){
+Resultado STUBComandosusuarioautenticado::registrarresenha(const Nome &autor,const Titulo &titulo,const Texto &texto) throw(runtime_error){
     ///Método de implementação do STUB do comando de registro de resenhas de um usuário autenticado
 
     Resultado resultado;
@@ -350,7 +350,7 @@ Resultado STUBComandosusuarioautenticado::registrarresenha(Nome autor,Titulo tit
     return resultado;
 }
 
-Resultado STUBComandosusuarioautenticado::trocarlivro(Titulo titulo) throw(runtime_error){
+Resultado STUBComandosusuarioautenticado::trocarlivro(const Titulo &titulo) throw(runtime_error){
     ///Método de implementação do STUB do comando de troca de livros de um usuário autenticado
 
     Resultado resultado;
@@ -377,7 +377,7 @@ Resultado STUBComandosusuarioautenticado::trocarlivro(Titulo titulo) throw(runti
     return resultado;
 }
 
-Resultado STUBComandosusuarioautenticado::buscarlivro(Titulo titulo) throw(runtime_error){
+Resultado STUBComandosusuarioautenticado::buscarlivro(const Titulo &titulo) throw(runtime_error){
     ///Método de implementação do STUB do comando de busca de livros de um usuário autenticado
 
     Resultado resultado;
@@ -404,7 +404,7 @@ Resultado STUBComandosusuarioautenticado::buscarlivro(Titulo titulo) throw(runti
     return resultado;
 }
 
-Resultado STUBComandosusuarioautenticado::buscarusuario(Apelido apelido) throw(runtime_error){
+Resultado STUBComandosusuarioautenticado::buscarusuario(const Apelido &apelido) throw(runtime_error){
     ///Método de implementação do STUB do comando de busca de usuários de um usuário autenticado
     
     Resultado resultado;

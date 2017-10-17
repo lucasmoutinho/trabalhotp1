@@ -20,7 +20,7 @@ public:
     static const string TRIGGER_FALHA_CADASTRO;
     static const string TRIGGER_ERRO_SISTEMA_CADASTRO;
 
-    Resultado cadastrar(Nome nome, Apelido apelido, Senha senha, Telefone telefone) throw(runtime_error);
+    Resultado cadastrar(const Nome&, const Apelido&, const Senha&,const Telefone&) throw(runtime_error);
 
 };
 
@@ -34,7 +34,7 @@ public:
     static const string TRIGGER_FALHA_CADASTRO_LIVRO;
     static const string TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO;
 
-    Resultado cadastrarlivro(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error);
+    Resultado cadastrarlivro(const Titulo&, const Nome&, const Data&, const Codigo&, const Genero&) throw(runtime_error);
 
 };
 
@@ -48,7 +48,7 @@ public:
     static const string TRIGGER_FALHA_AUTENTICACAO;
     static const string TRIGGER_ERRO_SISTEMA_AUTENTICACAO;
 
-    Resultado autenticar(Apelido apelido, Senha senha) throw(runtime_error);
+    Resultado autenticar(const Apelido&, const Senha&) throw(runtime_error);
 
 };
 
@@ -62,7 +62,7 @@ public:
     static const string TRIGGER_FALHA_REGISTRO_RESENHA;
     static const string TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA;
 
-    Resultado registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error);
+    Resultado registrarresenha(const Nome&, const Titulo&, const Texto&) throw(runtime_error);
 
 };
 
@@ -77,7 +77,7 @@ public:
     static const string TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO;
     static const string USUARIO_CADASTRADO;
 
-    Resultado buscarusuario(Apelido apelido) throw(runtime_error);
+    Resultado buscarusuario(const Apelido&) throw(runtime_error);
 
 };
 
@@ -92,7 +92,7 @@ public:
     static const string TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO;
     static const string LIVRO_CADASTRADO;
 
-    Resultado buscarlivro(Titulo titulo) throw(runtime_error);
+    Resultado buscarlivro(const Titulo&) throw(runtime_error);
 
 };
 
@@ -107,7 +107,7 @@ public:
     static const string TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO;
     static const string LIVRO_DISPONIVEL_TROCA;
 
-    Resultado trocarlivro(Titulo titulo) throw(runtime_error);
+    Resultado trocarlivro(const Titulo&) throw(runtime_error);
 
 };
 
@@ -132,12 +132,12 @@ public:
     static const string LIVRO_CADASTRADO;
     static const string USUARIO_CADASTRADO;
 
-    Resultado incluir(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error);
-    Resultado remover(Titulo titulo) throw(runtime_error);
-    Resultado registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error);
-    Resultado trocarlivro(Titulo titulo) throw(runtime_error);
-    Resultado buscarlivro(Titulo titulo) throw(runtime_error);
-    Resultado buscarusuario(Apelido apelido) throw(runtime_error);
+    Resultado incluir(const Titulo&, const Nome&, const Data&, const Codigo&, const Genero&) throw(runtime_error);
+    Resultado remover(const Titulo&) throw(runtime_error);
+    Resultado registrarresenha(const Nome&, const Titulo&, const Texto&) throw(runtime_error);
+    Resultado trocarlivro(const Titulo&) throw(runtime_error);
+    Resultado buscarlivro(const Titulo&) throw(runtime_error);
+    Resultado buscarusuario(const Apelido&) throw(runtime_error);
 
 };
 

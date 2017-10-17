@@ -13,7 +13,7 @@ using namespace std;
 
 int main(){
 
-    ///Cadastro Usuário
+    ///Cadastro Usuario
 
     IUCadastro *cntrCadastro;
     cntrCadastro = new CTRLCadastro();
@@ -137,13 +137,13 @@ int main(){
     cout << "Nome invalido = " << Nome::NOME_INVALIDO << endl;
     cout << "Trigger de falha (apelido) = " << STUBBuscarusuario::TRIGGER_FALHA_BUSCAR_USUARIO << endl;
     cout << "Trigger de erro de sistema (apelido) = " << STUBBuscarusuario::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO << endl;
-    cout << "Usuario já cadastrado (apelido) = " << STUBBuscarusuario::USUARIO_CADASTRADO << endl << endl;
+    cout << "Usuario ja cadastrado (apelido) = " << STUBBuscarusuario::USUARIO_CADASTRADO << endl << endl;
 
     cout << endl << "VALORES DOS TRIGGERS (buscar livro):" << endl;
     cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
     cout << "Trigger de falha (titulo) = " << STUBBuscarlivro::TRIGGER_FALHA_BUSCAR_LIVRO << endl;
     cout << "Trigger de erro de sistema (titulo) = " << STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
-    cout << "Livro já cadastrado (titulo) = " << STUBBuscarlivro::LIVRO_CADASTRADO << endl << endl;
+    cout << "Livro ja cadastrado (titulo) = " << STUBBuscarlivro::LIVRO_CADASTRADO << endl << endl;
 
     cout << endl << "VALORES DOS TRIGGERS (trocar livro):" << endl;
     cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
@@ -166,8 +166,8 @@ int main(){
     cout << "Trigger de falha (senha) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA << endl;
     cout << "Trigger de erro de sistema (senha) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl;
     cout << "Livro disponivel para troca (titulo) = " << STUBComandosusuarioautenticado::LIVRO_DISPONIVEL_TROCA << endl ;
-    cout << "Usuario já cadastrado (apelido) = " << STUBComandosusuarioautenticado::USUARIO_CADASTRADO << endl;
-    cout << "Livro já cadastrado (titulo) = " << STUBComandosusuarioautenticado::LIVRO_CADASTRADO << endl << endl;
+    cout << "Usuario ja cadastrado (apelido) = " << STUBComandosusuarioautenticado::USUARIO_CADASTRADO << endl;
+    cout << "Livro ja cadastrado (titulo) = " << STUBComandosusuarioautenticado::LIVRO_CADASTRADO << endl << endl;
 
     ///Apresentação do sistema
 

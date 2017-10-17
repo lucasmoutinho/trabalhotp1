@@ -353,3 +353,72 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
 
     return resultado;
 }
+
+CTRLComandosusuarioautenticado::CTRLComandosusuarioautenticado(){
+}
+
+CTRLComandosusuarioautenticado::~CTRLComandosusuarioautenticado(){
+}
+
+void CTRLComandosusuarioautenticado::comandosusuarioautenticado() throw(runtime_error){
+
+    ComandoIUusuarioautenticado* comando;
+    int opcao;
+
+    while(true){
+
+        cout << "**************************************************" << endl;
+        cout << "Selecione uma opcao, entre as abaixo, como usuario autenticado :" << endl;
+        cout << "Incluir livro - " << INCLUIR <<  endl;
+        cout << "Remover livro - " << REMOVER <<  endl;
+        cout << "Registrar resenha - " << REGISTRAR_RESENHA <<  endl;
+        cout << "Trocar livro - " << TROCAR_LIVRO <<  endl;
+        cout << "Buscar livro - " << BUSCAR_LIVRO <<  endl;
+        cout << "Buscar usuario - " << BUSCAR_USUARIO <<  endl;
+        cout << "Retornar ao menu - " << RETORNAR_MENU <<  endl;
+        cout << "**************************************************" << endl << endl;
+        cin >> opcao;
+
+        switch(opcao){
+            case INCLUIR:   
+                comando = new ComandoIUUsuarioincluir();
+                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
+                delete comando;
+                break;
+            case REMOVER:   
+                comando = new ComandoIUUsuarioexcluir();
+                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
+                delete comando;
+                break;
+            case REGISTRAR_RESENHA:   
+                comando = new ComandoIUUsuarioregistrarresenha();
+                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
+                delete comando;
+                break;
+            case TROCAR_LIVRO:   
+                comando = new ComandoIUUsuariotrocarlivro();
+                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
+                delete comando;
+                break;
+            case BUSCAR_LIVRO:   
+                comando = new ComandoIUUsuariobuscarlivro();
+                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
+                delete comando;
+                break;
+            case BUSCAR_USUARIO:   
+                comando = new ComandoIUUsuariobuscarusuario();
+                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
+                delete comando;
+                break;
+            case RETORNAR_MENU:
+                break;
+            default:
+                cout << "Valor invalido, informe novamente" << endl;
+                break;
+        }
+
+        if(opcao == RETORNAR_MENU){
+            break;
+        }
+    }
+}

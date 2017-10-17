@@ -168,4 +168,32 @@ public:
 
 };
 
+class IUComandosusuarioautenticado;
+class ILNComandosusuarioautenticado;
+
+class IUComandosusuarioautenticado{
+public:
+
+    IUComandosusuarioautenticado();
+    virtual ~IUComandosusuarioautenticado();
+
+    virtual void comandosusuarioautenticado() throw(runtime_error) = 0;
+
+    virtual void setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado*) = 0;
+};
+
+class ILNComandosusuarioautenticado{
+public:
+
+    virtual ~ILNComandosusuarioautenticado();
+
+    virtual Resultado incluir(Titulo titulo, Nome autor, Data data, Codigo codigo, Genero genero) throw(runtime_error) = 0;
+    virtual Resultado remover(Titulo titulo) throw(runtime_error) = 0;
+    virtual Resultado registrarresenha(Nome autor, Titulo titulo, Texto texto) throw(runtime_error) = 0;
+    virtual Resultado trocarlivro(Titulo titulo) throw(runtime_error) = 0;
+    virtual Resultado buscarlivro(Titulo titulo) throw(runtime_error) = 0;
+    virtual Resultado buscarusuario(Apelido apelido) throw(runtime_error) = 0;
+
+};
+
 #endif

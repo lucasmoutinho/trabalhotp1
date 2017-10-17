@@ -4,6 +4,7 @@
 #include "dominios.h"
 #include "entidades.h"
 #include "interfaces.h"
+#include "comandos.h"
 #include <iostream>
 #include <stdexcept>
 #include <stdio.h>
@@ -17,9 +18,6 @@ public:
     virtual ~CTRLCadastro();
 
     Resultado cadastrar() throw(runtime_error);
-
-    const static int FALHA_AO_CADASTRAR = 0;
-    const static int SUCESSO_AO_CADASTRAR = 1;
 
     void setCntrLNCadastro(ILNCadastro*);
 
@@ -39,9 +37,6 @@ public:
     virtual ~CTRLCadastrolivro();
 
     Resultado cadastrarlivro() throw(runtime_error);
-    
-    const static int FALHA_AO_CADASTRAR_LIVRO = 0;
-    const static int SUCESSO_AO_CADASTRAR_LIVRO = 1;
 
     void setCntrLNCadastrolivro(ILNCadastrolivro*);
 
@@ -61,9 +56,6 @@ public:
     virtual ~CTRLAutenticacao();
 
     Resultado autenticar() throw(runtime_error);
-    
-    const static int FALHA_AO_AUTENTICAR = 0;
-    const static int SUCESSO_AO_AUTENTICAR = 1;
 
     void setCntrLNAutenticacao(ILNAutenticacao*);
 
@@ -83,9 +75,6 @@ public:
     virtual ~CTRLRegistroresenha();
 
     Resultado registrarresenha() throw(runtime_error);
-    
-    const static int FALHA_AO_REGISTRAR_RESENHA = 0;
-    const static int SUCESSO_AO_REGISTRAR_RESENHA = 1;
 
     void setCntrLNRegistroresenha(ILNRegistroresenha*);
 
@@ -105,9 +94,6 @@ public:
     virtual ~CTRLBuscarusuario();
 
     Resultado buscarusuario() throw(runtime_error);
-    
-    const static int FALHA_AO_BUSCAR_USUARIO = 0;
-    const static int SUCESSO_AO_BUSCAR_USUARIO = 1;
 
     void setCntrLNBuscarusuario(ILNBuscarusuario*);
 
@@ -127,9 +113,6 @@ public:
     virtual ~CTRLBuscarlivro();
 
     Resultado buscarlivro() throw(runtime_error);
-    
-    const static int FALHA_AO_BUSCAR_LIVRO = 0;
-    const static int SUCESSO_AO_BUSCAR_LIVRO = 1;
 
     void setCntrLNBuscarlivro(ILNBuscarlivro*);
 
@@ -149,9 +132,6 @@ public:
     virtual ~CTRLTrocarlivro();
 
     Resultado trocarlivro() throw(runtime_error);
-    
-    const static int FALHA_AO_TROCAR_LIVRO = 0;
-    const static int SUCESSO_AO_TROCAR_LIVRO = 1;
 
     void setCntrLNTrocarlivro(ILNTrocarlivro*);
 
@@ -162,6 +142,33 @@ private:
 
 void inline CTRLTrocarlivro::setCntrLNTrocarlivro(ILNTrocarlivro *LNTrocarlivro){
     this->LNTrocarlivro = LNTrocarlivro;
+}
+
+class CTRLComandosusuarioautenticado:public IUComandosusuarioautenticado{
+public:
+
+    CTRLComandosusuarioautenticado();
+    virtual ~CTRLComandosusuarioautenticado();
+
+    void comandosusuarioautenticado() throw(runtime_error);
+
+    void setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado*);
+
+private:
+
+    const static int INCLUIR = 0;
+    const static int REMOVER = 1;
+    const static int REGISTRAR_RESENHA = 2;
+    const static int TROCAR_LIVRO = 3;
+    const static int BUSCAR_LIVRO = 4;
+    const static int BUSCAR_USUARIO = 5;
+    const static int RETORNAR_MENU = 6;
+
+    ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado;
+};
+
+void inline CTRLComandosusuarioautenticado::setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado){
+    this->cntrLNComandosusuarioautenticado = cntrLNComandosusuarioautenticado;
 }
 
 #endif

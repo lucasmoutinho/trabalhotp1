@@ -193,3 +193,52 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
 
     return resultado;
 }
+
+CTRLBuscarusuario::CTRLBuscarusuario(){
+}
+
+CTRLBuscarusuario::~CTRLBuscarusuario(){
+}
+
+Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
+
+    Resultado resultado;
+    Apelido apelido;
+    string entrada_apelido;
+
+    while(true){
+
+        try{
+            cout << "**************************************************" << endl;
+            cout << "Informe o Apelido do usuario que deseja encontrar :" << endl;
+            cin >> entrada_apelido;
+            apelido.setApelido(entrada_apelido);
+            cout << endl << "**************************************************" << endl;
+            break;
+        }
+        catch (const invalid_argument &exp){
+            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+        }
+    }
+
+    resultado = LNBuscarusuario->buscarusuario(apelido);
+
+    if(resultado.getValor() == Resultado::FALHA_BUSCA_USUARIO){
+        cout << endl << "Falha ao buscar usuário" << endl << endl;
+    }
+    else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO){
+        cout << endl << "**************************************************" << endl;
+        cout << "Usuário encontrado" << endl;
+        cout << "Nome :  " << "Joao" << endl;
+        cout << "Apelido :  " << apelido.getApelido() << endl;
+        cout << "Telefone :  " << "(61)-123456789" << endl;
+        cout << "**************************************************" << endl << endl;
+    }
+    else if(resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO){
+        cout << endl << "**************************************************" << endl;
+        cout << "Usuário não encontrado" << endl;
+        cout << "**************************************************" << endl << endl;
+    }
+
+    return resultado;
+}

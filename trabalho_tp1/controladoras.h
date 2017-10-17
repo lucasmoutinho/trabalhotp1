@@ -84,7 +84,7 @@ public:
     Resultado registrarresenha() throw(runtime_error);
     
     const static int FALHA_AO_REGISTRAR_RESENHA = 0;
-    const static int SUCESSO_AO_REGISTAR_RESENHA = 1;
+    const static int SUCESSO_AO_REGISTRAR_RESENHA = 1;
 
     void setCntrLNRegistroresenha(ILNRegistroresenha*);
 
@@ -95,6 +95,28 @@ private:
 
 void inline CTRLRegistroresenha::setCntrLNRegistroresenha(ILNRegistroresenha *LNRegistroresenha){
     this->LNRegistroresenha = LNRegistroresenha;
+}
+
+class CTRLBuscarusuario:public IUBuscarusuario{
+public:
+
+    CTRLBuscarusuario();
+    virtual ~CTRLBuscarusuario();
+
+    Resultado buscarusuario() throw(runtime_error);
+    
+    const static int FALHA_AO_BUSCAR_USUARIO = 0;
+    const static int SUCESSO_AO_BUSCAR_USUARIO = 1;
+
+    void setCntrLNBuscarusuario(ILNBuscarusuario*);
+
+private:
+
+    ILNBuscarusuario *LNBuscarusuario;
+};
+
+void inline CTRLBuscarusuario::setCntrLNBuscarusuario(ILNBuscarusuario *LNBuscarusuario){
+    this->LNBuscarusuario = LNBuscarusuario;
 }
 
 #endif

@@ -136,3 +136,39 @@ Resultado STUBRegistroresenha::registrarresenha(Nome autor, Titulo titulo, Texto
 
     return resultado;
 }
+
+STUBBuscarusuario::STUBBuscarusuario(){
+}
+
+STUBBuscarusuario::~STUBBuscarusuario(){
+}
+
+const string STUBBuscarusuario::TRIGGER_FALHA_BUSCAR_USUARIO = "luca";
+const string STUBBuscarusuario::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO = "caio";
+const string STUBBuscarusuario::USUARIO_CADASTRADO = "jon";
+
+Resultado STUBBuscarusuario::buscarusuario(Apelido apelido) throw(runtime_error){
+
+    Resultado resultado;
+
+    cout << endl << endl << "**************************************************" << endl;
+    cout << "Usuário pesquisado" << endl;
+    cout << "Apelido :  " << apelido.getApelido() << endl;
+    cout << "**************************************************" << endl << endl;
+
+
+    if(apelido.getApelido() == TRIGGER_FALHA_BUSCAR_USUARIO){
+        resultado.setValor(Resultado::FALHA_BUSCA_USUARIO);
+    }
+    else if(apelido.getApelido() == TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO){
+        throw runtime_error("Erro de Sistema");
+    }
+    else if(apelido.getApelido() == USUARIO_CADASTRADO){
+        resultado.setValor(Resultado::SUCESSO_BUSCA_USUARIO); 
+    }
+    else{
+        resultado.setValor(Resultado::USUARIO_NAO_ENCONTRADO);
+    }
+
+    return resultado;
+}

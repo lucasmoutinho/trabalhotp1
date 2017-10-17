@@ -35,3 +35,12 @@ IURegistroresenha::~IURegistroresenha(){
 
 ILNRegistroresenha::~ILNRegistroresenha(){
 }
+
+IUBuscarusuario::IUBuscarusuario(){
+}
+
+IUBuscarusuario::~IUBuscarusuario(){
+}
+
+ILNBuscarusuario::~ILNBuscarusuario(){
+}

@@ -62,4 +62,19 @@ public:
 
 };
 
+class STUBBuscarusuario:public ILNBuscarusuario{
+public:
+
+    STUBBuscarusuario();
+    virtual ~STUBBuscarusuario();
+
+    static const string TRIGGER_FALHA_BUSCAR_USUARIO;
+    static const string TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO;
+    static const string USUARIO_CADASTRADO;
+
+    Resultado buscarusuario(Apelido apelido) throw(runtime_error);
+
+};
+
+
 #endif

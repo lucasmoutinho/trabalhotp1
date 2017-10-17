@@ -192,6 +192,9 @@ public:
 	const static int SUCESSO_AUTENTICACAO = 5;
 	const static int FALHA_REGISTRO_RESENHA = 6;
 	const static int SUCESSO_REGISTRO_RESENHA = 7;
+	const static int FALHA_BUSCA_USUARIO = 8;
+	const static int SUCESSO_BUSCA_USUARIO = 9;
+	const static int USUARIO_NAO_ENCONTRADO = 10;
 
 	void setValor(int valor){
 		this->valor = valor;

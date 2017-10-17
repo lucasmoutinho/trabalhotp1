@@ -99,4 +99,27 @@ public:
 
 };
 
+class IUBuscarusuario;
+class ILNBuscarusuario;
+
+class IUBuscarusuario{
+public:
+
+    IUBuscarusuario();
+    virtual ~IUBuscarusuario();
+
+    virtual Resultado buscarusuario() throw(runtime_error) = 0;
+
+    virtual void setCntrLNBuscarusuario(ILNBuscarusuario*) = 0;
+};
+
+class ILNBuscarusuario{
+public:
+
+    virtual ~ILNBuscarusuario();
+
+    virtual Resultado buscarusuario(Apelido apelido) throw(runtime_error) = 0;
+
+};
+
 #endif

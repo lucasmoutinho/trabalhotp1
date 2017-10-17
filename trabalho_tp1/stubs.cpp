@@ -208,3 +208,39 @@ Resultado STUBBuscarlivro::buscarlivro(Titulo titulo) throw(runtime_error){
 
     return resultado;
 }
+
+STUBTrocarlivro::STUBTrocarlivro(){
+}
+
+STUBTrocarlivro::~STUBTrocarlivro(){
+}
+
+const string STUBTrocarlivro::TRIGGER_FALHA_TROCAR_LIVRO = "forrest";
+const string STUBTrocarlivro::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO = "gump";
+const string STUBTrocarlivro::LIVRO_DISPONIVEL_TROCA = "Lobinho";
+
+Resultado STUBTrocarlivro::trocarlivro(Titulo titulo) throw(runtime_error){
+
+    Resultado resultado;
+
+    cout << endl << endl << "**************************************************" << endl;
+    cout << "Livro pesquisado" << endl;
+    cout << "Titulo :  " << titulo.getTitulo() << endl;
+    cout << "**************************************************" << endl << endl;
+
+
+    if(titulo.getTitulo() == TRIGGER_FALHA_TROCAR_LIVRO){
+        resultado.setValor(Resultado::FALHA_TROCA_LIVRO);
+    }
+    else if(titulo.getTitulo() == TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO){
+        throw runtime_error("Erro de Sistema");
+    }
+    else if(titulo.getTitulo() == LIVRO_DISPONIVEL_TROCA){
+        resultado.setValor(Resultado::SUCESSO_TROCA_LIVRO); 
+    }
+    else{
+        resultado.setValor(Resultado::TROCA_NAO_ENCONTRADO);
+    }
+
+    return resultado;
+}

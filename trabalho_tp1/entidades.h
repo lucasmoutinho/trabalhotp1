@@ -198,6 +198,9 @@ public:
 	const static int FALHA_BUSCA_LIVRO = 11;
 	const static int SUCESSO_BUSCA_LIVRO = 12;
 	const static int LIVRO_NAO_ENCONTRADO = 13;
+	const static int FALHA_TROCA_LIVRO = 14;
+	const static int SUCESSO_TROCA_LIVRO = 15;
+	const static int TROCA_NAO_ENCONTRADO = 16;
 
 	void setValor(int valor){
 		this->valor = valor;

@@ -70,7 +70,17 @@ int main(){
     ILNBuscarlivro *stubLNBuscarlivro;
     stubLNBuscarlivro = new STUBBuscarlivro();
 
-    cntrBuscarlivro->setCntrLNBuscarlivro(stubLNBuscarlivro);  
+    cntrBuscarlivro->setCntrLNBuscarlivro(stubLNBuscarlivro);
+
+    ///Trocar livro
+
+    IUTrocarlivro *cntrTrocarlivro;
+    cntrTrocarlivro = new CTRLTrocarlivro();
+
+    ILNTrocarlivro *stubLNTrocarlivro;
+    stubLNTrocarlivro = new STUBTrocarlivro();
+
+    cntrTrocarlivro->setCntrLNTrocarlivro(stubLNTrocarlivro);  
 
     ///Variaveis e constantes da main
 
@@ -124,6 +134,18 @@ int main(){
     cout << "Trigger de erro de sistema (titulo) = " << STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
     cout << "Livro já cadastrado (titulo) = " << STUBBuscarlivro::LIVRO_CADASTRADO << endl << endl;
 
+    cout << endl << "VALORES DOS TRIGGERS (buscar livro):" << endl;
+    cout << "Titulo inválido = " << Titulo::TITULO_INVALIDO << endl;
+    cout << "Trigger de falha (titulo) = " << STUBBuscarlivro::TRIGGER_FALHA_BUSCAR_LIVRO << endl;
+    cout << "Trigger de erro de sistema (titulo) = " << STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
+    cout << "Livro já cadastrado (titulo) = " << STUBBuscarlivro::LIVRO_CADASTRADO << endl << endl;
+
+    cout << endl << "VALORES DOS TRIGGERS (trocar livro):" << endl;
+    cout << "Titulo inválido = " << Titulo::TITULO_INVALIDO << endl;
+    cout << "Trigger de falha (titulo) = " << STUBTrocarlivro::TRIGGER_FALHA_TROCAR_LIVRO << endl;
+    cout << "Trigger de erro de sistema (titulo) = " << STUBTrocarlivro::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO << endl;
+    cout << "Livro disponivel para troca (titulo) = " << STUBTrocarlivro::LIVRO_DISPONIVEL_TROCA << endl << endl;
+
     ///Apresentação do sistema
 
     cout << "**************************************************" << endl;
@@ -131,7 +153,7 @@ int main(){
     cout << "Informe a opção desejada entre as disponíveis abaixo:" << endl;
     cout << "Saída - 0" << endl << "Cadastro usuario - 1" << endl << "Cadastro livro - 2" << endl;
     cout << "Autenticacao - 3" << endl << "Registro resenha - 4" << endl << "Buscar usuario - 5" << endl;
-    cout << "Buscar livro - 6" << endl;
+    cout << "Buscar livro - 6" << endl << "Troca de livro - 7" << endl; 
     cout << "**************************************************" << endl << endl;
     cin >> opcao_escolhida;
     cout << endl;
@@ -214,12 +236,27 @@ int main(){
                 }
                 break;
 
-                case 6:
+            case 6:
+            
+                while(true){
+                    try{
+                        resultado = cntrBuscarlivro->buscarlivro();
+                        if(resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO){
+                            break;
+                        }
+                    }
+                    catch(const runtime_error &exp){
+                        cout << "Erro de Sistema" << endl;
+                    }
+                }
+                break;
+
+                case 7:
                 
                     while(true){
                         try{
-                            resultado = cntrBuscarlivro->buscarlivro();
-                            if(resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO){
+                            resultado = cntrTrocarlivro->trocarlivro();
+                            if(resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO){
                                 break;
                             }
                         }
@@ -235,7 +272,7 @@ int main(){
         cout << "Informe a operação desejada" << endl;
         cout << "Saída - 0" << endl << "Cadastro - 1" << endl << "Cadastro livro - 2" << endl;
         cout << "Autenticacao - 3" << endl << "Registro resenha - 4" << endl << "Buscar usuario - 5" << endl;
-        cout << "Buscar livro - 6" << endl;
+        cout << "Buscar livro - 6" << endl << "Troca de livro - 7" << endl; 
         cout << "**************************************************" << endl << endl;
         cin >> opcao_escolhida;
         cout << endl;
@@ -259,6 +296,8 @@ int main(){
     delete stubLNBuscarusuario;
     delete cntrBuscarlivro;
     delete stubLNBuscarlivro;
+    delete cntrTrocarlivro;
+    delete stubLNTrocarlivro;
 
     return 0;
 }

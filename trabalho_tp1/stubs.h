@@ -90,4 +90,18 @@ public:
 
 };
 
+class STUBTrocarlivro:public ILNTrocarlivro{
+public:
+
+    STUBTrocarlivro();
+    virtual ~STUBTrocarlivro();
+
+    static const string TRIGGER_FALHA_TROCAR_LIVRO;
+    static const string TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO;
+    static const string LIVRO_DISPONIVEL_TROCA;
+
+    Resultado trocarlivro(Titulo titulo) throw(runtime_error);
+
+};
+
 #endif

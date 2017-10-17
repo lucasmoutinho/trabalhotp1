@@ -142,4 +142,26 @@ void inline CTRLBuscarlivro::setCntrLNBuscarlivro(ILNBuscarlivro *LNBuscarlivro)
     this->LNBuscarlivro = LNBuscarlivro;
 }
 
+class CTRLTrocarlivro:public IUTrocarlivro{
+public:
+
+    CTRLTrocarlivro();
+    virtual ~CTRLTrocarlivro();
+
+    Resultado trocarlivro() throw(runtime_error);
+    
+    const static int FALHA_AO_TROCAR_LIVRO = 0;
+    const static int SUCESSO_AO_TROCAR_LIVRO = 1;
+
+    void setCntrLNTrocarlivro(ILNTrocarlivro*);
+
+private:
+
+    ILNTrocarlivro *LNTrocarlivro;
+};
+
+void inline CTRLTrocarlivro::setCntrLNTrocarlivro(ILNTrocarlivro *LNTrocarlivro){
+    this->LNTrocarlivro = LNTrocarlivro;
+}
+
 #endif

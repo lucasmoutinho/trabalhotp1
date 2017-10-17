@@ -145,4 +145,27 @@ public:
 
 };
 
+class IUTrocarlivro;
+class ILNTrocarlivro;
+
+class IUTrocarlivro{
+public:
+
+    IUTrocarlivro();
+    virtual ~IUTrocarlivro();
+
+    virtual Resultado trocarlivro() throw(runtime_error) = 0;
+
+    virtual void setCntrLNTrocarlivro(ILNTrocarlivro*) = 0;
+};
+
+class ILNTrocarlivro{
+public:
+
+    virtual ~ILNTrocarlivro();
+
+    virtual Resultado trocarlivro(Titulo titulo) throw(runtime_error) = 0;
+
+};
+
 #endif

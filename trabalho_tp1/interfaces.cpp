@@ -53,3 +53,12 @@ IUBuscarlivro::~IUBuscarlivro(){
 
 ILNBuscarlivro::~ILNBuscarlivro(){
 }
+
+IUTrocarlivro::IUTrocarlivro(){
+}
+
+IUTrocarlivro::~IUTrocarlivro(){
+}
+
+ILNTrocarlivro::~ILNTrocarlivro(){
+}

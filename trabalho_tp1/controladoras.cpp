@@ -299,3 +299,57 @@ Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
 
     return resultado;
 }
+
+CTRLTrocarlivro::CTRLTrocarlivro(){
+}
+
+CTRLTrocarlivro::~CTRLTrocarlivro(){
+}
+
+Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
+
+    Resultado resultado;
+    Titulo titulo;
+    string entrada_titulo;
+
+    while(true){
+
+        try{
+            getchar();
+            cout << "**************************************************" << endl;
+            cout << "Informe o Título do livro que deseja trocar :" << endl;
+            getline(cin, entrada_titulo);
+            titulo.setTitulo(entrada_titulo);
+            cout << endl << "**************************************************" << endl;
+            break;
+        }
+        catch (const invalid_argument &exp){
+            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+        }
+    }
+
+    resultado = LNTrocarlivro->trocarlivro(titulo);
+
+    if(resultado.getValor() == Resultado::FALHA_TROCA_LIVRO){
+        cout << endl << "Falha ao buscar titulo do livro para troca" << endl << endl;
+    }
+    else if(resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO){
+        cout << endl << "**************************************************" << endl;
+        cout << "Livro disponivel para troca" << endl;
+        cout << "Titulo do livro :  " << titulo.getTitulo() << endl;
+        cout << "Lista de usuarios com exemplares e que desejam a troca:" << endl;
+        cout << "USER1 :  " << "Lucas" << endl;
+        cout << "USER2 :  " << "Joao" << endl;
+        cout << "USER3 :  " << "Nato" << endl;
+        cout << "USER4 :  " << "Pedro" << endl;
+        cout << "USER5 :  " << "Caio" << endl;
+        cout << "**************************************************" << endl << endl;
+    }
+    else if(resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO){
+        cout << endl << "**************************************************" << endl;
+        cout << "Livro não disponivel para troca" << endl;
+        cout << "**************************************************" << endl << endl;
+    }
+
+    return resultado;
+}

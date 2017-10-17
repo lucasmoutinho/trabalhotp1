@@ -48,7 +48,8 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
     resultado = LNCadastro->cadastrar(nome,apelido,senha,telefone);
 
     if(resultado.getValor() == Resultado::FALHA_CADASTRO){
-        cout << endl << "Falha ao cadastrar usuario" << endl << endl;
+        cout << endl << "Falha ao cadastrar usuario" << endl;
+        cout << "Pressione Enter para continuar" << endl << endl;
     }
 
     return resultado;
@@ -106,7 +107,8 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
     resultado = LNCadastrolivro->cadastrarlivro(titulo, autor, data, codigo, genero);
 
     if(resultado.getValor() == Resultado::FALHA_CADASTRO_LIVRO){
-        cout << endl << "Falha ao cadastrar livro" << endl << endl;
+        cout << endl << "Falha ao cadastrar livro" << endl;
+        cout << "Pressione Enter para continuar" << endl << endl;
     }
 
     return resultado;
@@ -149,7 +151,8 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
     resultado = LNAutenticacao->autenticar(apelido, senha);
 
     if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
-        cout << endl << "Falha ao autenticar usuario" << endl << endl;
+        cout << endl << "Falha ao autenticar usuario" << endl;
+        cout << "Pressione Enter para continuar" << endl << endl;
     }
 
     return resultado;
@@ -197,7 +200,8 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
     resultado = LNRegistroresenha->registrarresenha(autor, titulo, texto);
 
     if(resultado.getValor() == Resultado::FALHA_REGISTRO_RESENHA){
-        cout << endl << "Falha ao registrar resenha" << endl << endl;
+        cout << endl << "Falha ao registrar resenha" << endl;
+        cout << "Pressione Enter para continuar" << endl << endl;
     }
 
     return resultado;
@@ -235,7 +239,8 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
     resultado = LNBuscarusuario->buscarusuario(apelido);
 
     if(resultado.getValor() == Resultado::FALHA_BUSCA_USUARIO){
-        cout << endl << "Falha ao buscar usuario" << endl << endl;
+        cout << endl << "Falha ao buscar usuario" << endl;
+        cout << "Pressione Enter para continuar" << endl << endl;
     }
     else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO){
         cout << endl << "**************************************************" << endl;
@@ -286,7 +291,8 @@ Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
     resultado = LNBuscarlivro->buscarlivro(titulo);
 
     if(resultado.getValor() == Resultado::FALHA_BUSCA_LIVRO){
-        cout << endl << "Falha ao buscar livro" << endl << endl;
+        cout << endl << "Falha ao buscar livro" << endl;
+        cout << "Pressione Enter para continuar" << endl << endl;
     }
     else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO){
         cout << endl << "**************************************************" << endl;
@@ -339,7 +345,8 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
     resultado = LNTrocarlivro->trocarlivro(titulo);
 
     if(resultado.getValor() == Resultado::FALHA_TROCA_LIVRO){
-        cout << endl << "Falha ao buscar titulo do livro para troca" << endl << endl;
+        cout << endl << "Falha ao buscar titulo do livro para troca" << endl;
+        cout << "Pressione Enter para continuar" << endl << endl;
     }
     else if(resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO){
         cout << endl << "**************************************************" << endl;
@@ -378,13 +385,13 @@ void CTRLComandosusuarioautenticado::comandosusuarioautenticado() throw(runtime_
 
         cout << "**************************************************" << endl;
         cout << "Selecione uma opcao, entre as abaixo, como usuario autenticado :" << endl;
+        cout << "Retornar ao menu - " << RETORNAR_MENU <<  endl;
         cout << "Incluir livro - " << INCLUIR <<  endl;
         cout << "Remover livro - " << REMOVER <<  endl;
         cout << "Registrar resenha - " << REGISTRAR_RESENHA <<  endl;
         cout << "Trocar livro - " << TROCAR_LIVRO <<  endl;
         cout << "Buscar livro - " << BUSCAR_LIVRO <<  endl;
         cout << "Buscar usuario - " << BUSCAR_USUARIO <<  endl;
-        cout << "Retornar ao menu - " << RETORNAR_MENU <<  endl;
         cout << "**************************************************" << endl << endl;
         cin >> opcao;
 

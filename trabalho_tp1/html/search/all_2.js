@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['cadastrar',['cadastrar',['../classCTRLCadastro.html#a22e15e47f34bb629a27204be76abf69c',1,'CTRLCadastro::cadastrar()'],['../classSTUBCadastro.html#a030d1572eee2691495fc4401c052d99b',1,'STUBCadastro::cadastrar()']]],
-  ['cadastrarlivro',['cadastrarlivro',['../classCTRLCadastrolivro.html#ad932abd7bd49e2a5fbf4ba137c4df381',1,'CTRLCadastrolivro::cadastrarlivro()'],['../classSTUBCadastrolivro.html#aadf0031014810edcaac8c456bafceb48',1,'STUBCadastrolivro::cadastrarlivro()']]],
+  ['cadastrar',['cadastrar',['../classCTRLCadastro.html#a22e15e47f34bb629a27204be76abf69c',1,'CTRLCadastro::cadastrar()'],['../classSTUBCadastro.html#ad9c280c37447e41f6d6cc77adacf83a6',1,'STUBCadastro::cadastrar()']]],
+  ['cadastrarlivro',['cadastrarlivro',['../classCTRLCadastrolivro.html#ad932abd7bd49e2a5fbf4ba137c4df381',1,'CTRLCadastrolivro::cadastrarlivro()'],['../classSTUBCadastrolivro.html#ae0ef9f6f0a4ea7c397285b4a609bf07b',1,'STUBCadastrolivro::cadastrarlivro()']]],
   ['codigo',['Codigo',['../classCodigo.html',1,'']]],
   ['comandoiuusuarioautenticado',['ComandoIUusuarioautenticado',['../classComandoIUusuarioautenticado.html',1,'']]],
   ['comandoiuusuariobuscarlivro',['ComandoIUUsuariobuscarlivro',['../classComandoIUUsuariobuscarlivro.html',1,'']]],

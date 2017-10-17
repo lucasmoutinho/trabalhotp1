@@ -171,13 +171,13 @@ public:
 
 private:
 
-    const static int INCLUIR = 0;
-    const static int REMOVER = 1;
-    const static int REGISTRAR_RESENHA = 2;
-    const static int TROCAR_LIVRO = 3;
-    const static int BUSCAR_LIVRO = 4;
-    const static int BUSCAR_USUARIO = 5;
-    const static int RETORNAR_MENU = 6;
+    const static int RETORNAR_MENU = 0;
+    const static int INCLUIR = 1;
+    const static int REMOVER = 2;
+    const static int REGISTRAR_RESENHA = 3;
+    const static int TROCAR_LIVRO = 4;
+    const static int BUSCAR_LIVRO = 5;
+    const static int BUSCAR_USUARIO = 6;
 
     ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado;
 };

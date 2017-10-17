@@ -196,6 +196,7 @@ int main(){
                     }
                     catch(const runtime_error &exp){
                         cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
                     }
                 }
                 break;
@@ -211,6 +212,7 @@ int main(){
                     }
                     catch(const runtime_error &exp){
                         cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
                     }
                 }
                 break;
@@ -226,6 +228,7 @@ int main(){
                     }
                     catch(const runtime_error &exp){
                         cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
                     }
                 }
                 break;
@@ -241,6 +244,7 @@ int main(){
                     }
                     catch(const runtime_error &exp){
                         cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
                     }
                 }
                 break;
@@ -256,6 +260,7 @@ int main(){
                     }
                     catch(const runtime_error &exp){
                         cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
                     }
                 }
                 break;
@@ -271,6 +276,7 @@ int main(){
                     }
                     catch(const runtime_error &exp){
                         cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
                     }
                 }
                 break;
@@ -286,6 +292,7 @@ int main(){
                         }
                         catch(const runtime_error &exp){
                             cout << "Erro de Sistema" << endl;
+                            cout << "Pressione Enter para continuar" << endl;
                         }
                     }
                     break;
@@ -299,6 +306,7 @@ int main(){
                         }
                         catch(const runtime_error &exp){
                             cout << "Erro de Sistema" << endl;
+                            cout << "Pressione Enter para continuar" << endl;
                         }
                     }
                     break;

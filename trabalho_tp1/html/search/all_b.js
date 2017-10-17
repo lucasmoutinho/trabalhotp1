@@ -4,7 +4,7 @@ var searchData=
   ['telefone',['Telefone',['../classTelefone.html',1,'']]],
   ['texto',['Texto',['../classTexto.html',1,'']]],
   ['titulo',['Titulo',['../classTitulo.html',1,'']]],
-  ['trocarlivro',['trocarlivro',['../classCTRLTrocarlivro.html#ab0bd103af757427e4272e44dfbe47a49',1,'CTRLTrocarlivro::trocarlivro()'],['../classSTUBTrocarlivro.html#ab88f0806c4f92ecf3069c4b036f5b7ef',1,'STUBTrocarlivro::trocarlivro()'],['../classSTUBComandosusuarioautenticado.html#a21a724886a8e5ff41cb44557a8904f74',1,'STUBComandosusuarioautenticado::trocarlivro()']]],
+  ['trocarlivro',['trocarlivro',['../classCTRLTrocarlivro.html#ab0bd103af757427e4272e44dfbe47a49',1,'CTRLTrocarlivro::trocarlivro()'],['../classSTUBTrocarlivro.html#ac94fcf8594839d0edff8f2c9ab556d21',1,'STUBTrocarlivro::trocarlivro()'],['../classSTUBComandosusuarioautenticado.html#a435e243be205e8898efb085ff40aedc2',1,'STUBComandosusuarioautenticado::trocarlivro()']]],
   ['tuapelido',['TUApelido',['../classTUApelido.html',1,'']]],
   ['tucodigo',['TUCodigo',['../classTUCodigo.html',1,'']]],
   ['tudata',['TUData',['../classTUData.html',1,'']]],

@@ -18,17 +18,17 @@ Inheritance diagram for S\+T\+U\+B\+Comandosusuarioautenticado\+:\begin{figure}[
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_ab51b67eeaf6f9e8c97740472eb7efc64}{incluir} (\hyperlink{classTitulo}{Titulo} titulo, \hyperlink{classNome}{Nome} autor, \hyperlink{classData}{Data} data, \hyperlink{classCodigo}{Codigo} codigo, \hyperlink{classGenero}{Genero} genero)  throw (runtime\+\_\+error)
+\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_ac9e1818a8953c75e8c608f2eac526d4d}{incluir} (const \hyperlink{classTitulo}{Titulo} \&, const \hyperlink{classNome}{Nome} \&, const \hyperlink{classData}{Data} \&, const \hyperlink{classCodigo}{Codigo} \&, const \hyperlink{classGenero}{Genero} \&)  throw (runtime\+\_\+error)
 \item 
-\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_ade03e70408581ca1185da788b862f66c}{remover} (\hyperlink{classTitulo}{Titulo} titulo)  throw (runtime\+\_\+error)
+\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_a80c1a29ca48ebb60f6ba0d417946d595}{remover} (const \hyperlink{classTitulo}{Titulo} \&)  throw (runtime\+\_\+error)
 \item 
-\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_a4bac787ff5d5361dd74b6025820f02f5}{registrarresenha} (\hyperlink{classNome}{Nome} autor, \hyperlink{classTitulo}{Titulo} titulo, \hyperlink{classTexto}{Texto} texto)  throw (runtime\+\_\+error)
+\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_a39e1508359209fe795a91817f0c96e20}{registrarresenha} (const \hyperlink{classNome}{Nome} \&, const \hyperlink{classTitulo}{Titulo} \&, const \hyperlink{classTexto}{Texto} \&)  throw (runtime\+\_\+error)
 \item 
-\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_a21a724886a8e5ff41cb44557a8904f74}{trocarlivro} (\hyperlink{classTitulo}{Titulo} titulo)  throw (runtime\+\_\+error)
+\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_a435e243be205e8898efb085ff40aedc2}{trocarlivro} (const \hyperlink{classTitulo}{Titulo} \&)  throw (runtime\+\_\+error)
 \item 
-\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_a2befe1be25e27594d0eec3c767c3a145}{buscarlivro} (\hyperlink{classTitulo}{Titulo} titulo)  throw (runtime\+\_\+error)
+\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_a12f684d2240412050e6eee54ebdd1a57}{buscarlivro} (const \hyperlink{classTitulo}{Titulo} \&)  throw (runtime\+\_\+error)
 \item 
-\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_ab8b5ce430c1c47e95e1e7be8f7b26dda}{buscarusuario} (\hyperlink{classApelido}{Apelido} apelido)  throw (runtime\+\_\+error)
+\hyperlink{classResultado}{Resultado} \hyperlink{classSTUBComandosusuarioautenticado_ad156d9cd3554e120bc8fff5916955465}{buscarusuario} (const \hyperlink{classApelido}{Apelido} \&)  throw (runtime\+\_\+error)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -78,61 +78,61 @@ static const string {\bfseries U\+S\+U\+A\+R\+I\+O\+\_\+\+C\+A\+D\+A\+S\+T\+R\+A
 Classe que representa o S\+T\+UB de comandos de um usuário autenticado. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_a2befe1be25e27594d0eec3c767c3a145}\label{classSTUBComandosusuarioautenticado_a2befe1be25e27594d0eec3c767c3a145}} 
+\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_a12f684d2240412050e6eee54ebdd1a57}\label{classSTUBComandosusuarioautenticado_a12f684d2240412050e6eee54ebdd1a57}} 
 \index{S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}!buscarlivro@{buscarlivro}}
 \index{buscarlivro@{buscarlivro}!S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}}
 \subsubsection{\texorpdfstring{buscarlivro()}{buscarlivro()}}
-{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::buscarlivro (\begin{DoxyParamCaption}\item[{\hyperlink{classTitulo}{Titulo}}]{titulo }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::buscarlivro (\begin{DoxyParamCaption}\item[{const \hyperlink{classTitulo}{Titulo} \&}]{titulo }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
 
 Método de implementação do S\+T\+UB do comando de busca de livros de um usuário autenticado 
 
 Implements \hyperlink{classILNComandosusuarioautenticado}{I\+L\+N\+Comandosusuarioautenticado}.
 
-\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_ab8b5ce430c1c47e95e1e7be8f7b26dda}\label{classSTUBComandosusuarioautenticado_ab8b5ce430c1c47e95e1e7be8f7b26dda}} 
+\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_ad156d9cd3554e120bc8fff5916955465}\label{classSTUBComandosusuarioautenticado_ad156d9cd3554e120bc8fff5916955465}} 
 \index{S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}!buscarusuario@{buscarusuario}}
 \index{buscarusuario@{buscarusuario}!S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}}
 \subsubsection{\texorpdfstring{buscarusuario()}{buscarusuario()}}
-{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::buscarusuario (\begin{DoxyParamCaption}\item[{\hyperlink{classApelido}{Apelido}}]{apelido }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::buscarusuario (\begin{DoxyParamCaption}\item[{const \hyperlink{classApelido}{Apelido} \&}]{apelido }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
 
 Método de implementação do S\+T\+UB do comando de busca de usuários de um usuário autenticado 
 
 Implements \hyperlink{classILNComandosusuarioautenticado}{I\+L\+N\+Comandosusuarioautenticado}.
 
-\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_ab51b67eeaf6f9e8c97740472eb7efc64}\label{classSTUBComandosusuarioautenticado_ab51b67eeaf6f9e8c97740472eb7efc64}} 
+\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_ac9e1818a8953c75e8c608f2eac526d4d}\label{classSTUBComandosusuarioautenticado_ac9e1818a8953c75e8c608f2eac526d4d}} 
 \index{S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}!incluir@{incluir}}
 \index{incluir@{incluir}!S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}}
 \subsubsection{\texorpdfstring{incluir()}{incluir()}}
-{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::incluir (\begin{DoxyParamCaption}\item[{\hyperlink{classTitulo}{Titulo}}]{titulo,  }\item[{\hyperlink{classNome}{Nome}}]{autor,  }\item[{\hyperlink{classData}{Data}}]{data,  }\item[{\hyperlink{classCodigo}{Codigo}}]{codigo,  }\item[{\hyperlink{classGenero}{Genero}}]{genero }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::incluir (\begin{DoxyParamCaption}\item[{const \hyperlink{classTitulo}{Titulo} \&}]{titulo,  }\item[{const \hyperlink{classNome}{Nome} \&}]{autor,  }\item[{const \hyperlink{classData}{Data} \&}]{data,  }\item[{const \hyperlink{classCodigo}{Codigo} \&}]{codigo,  }\item[{const \hyperlink{classGenero}{Genero} \&}]{genero }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
 
 Método de implementação do S\+T\+UB do comando de inclusão de um usuário autenticado 
 
 Implements \hyperlink{classILNComandosusuarioautenticado}{I\+L\+N\+Comandosusuarioautenticado}.
 
-\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_a4bac787ff5d5361dd74b6025820f02f5}\label{classSTUBComandosusuarioautenticado_a4bac787ff5d5361dd74b6025820f02f5}} 
+\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_a39e1508359209fe795a91817f0c96e20}\label{classSTUBComandosusuarioautenticado_a39e1508359209fe795a91817f0c96e20}} 
 \index{S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}!registrarresenha@{registrarresenha}}
 \index{registrarresenha@{registrarresenha}!S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}}
 \subsubsection{\texorpdfstring{registrarresenha()}{registrarresenha()}}
-{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::registrarresenha (\begin{DoxyParamCaption}\item[{\hyperlink{classNome}{Nome}}]{autor,  }\item[{\hyperlink{classTitulo}{Titulo}}]{titulo,  }\item[{\hyperlink{classTexto}{Texto}}]{texto }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::registrarresenha (\begin{DoxyParamCaption}\item[{const \hyperlink{classNome}{Nome} \&}]{autor,  }\item[{const \hyperlink{classTitulo}{Titulo} \&}]{titulo,  }\item[{const \hyperlink{classTexto}{Texto} \&}]{texto }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
 
 Método de implementação do S\+T\+UB do comando de registro de resenhas de um usuário autenticado 
 
 Implements \hyperlink{classILNComandosusuarioautenticado}{I\+L\+N\+Comandosusuarioautenticado}.
 
-\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_ade03e70408581ca1185da788b862f66c}\label{classSTUBComandosusuarioautenticado_ade03e70408581ca1185da788b862f66c}} 
+\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_a80c1a29ca48ebb60f6ba0d417946d595}\label{classSTUBComandosusuarioautenticado_a80c1a29ca48ebb60f6ba0d417946d595}} 
 \index{S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}!remover@{remover}}
 \index{remover@{remover}!S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}}
 \subsubsection{\texorpdfstring{remover()}{remover()}}
-{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::remover (\begin{DoxyParamCaption}\item[{\hyperlink{classTitulo}{Titulo}}]{titulo }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::remover (\begin{DoxyParamCaption}\item[{const \hyperlink{classTitulo}{Titulo} \&}]{titulo }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
 
 Método de implementação do S\+T\+UB do comando de exclusão de um usuário autenticado 
 
 Implements \hyperlink{classILNComandosusuarioautenticado}{I\+L\+N\+Comandosusuarioautenticado}.
 
-\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_a21a724886a8e5ff41cb44557a8904f74}\label{classSTUBComandosusuarioautenticado_a21a724886a8e5ff41cb44557a8904f74}} 
+\mbox{\Hypertarget{classSTUBComandosusuarioautenticado_a435e243be205e8898efb085ff40aedc2}\label{classSTUBComandosusuarioautenticado_a435e243be205e8898efb085ff40aedc2}} 
 \index{S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}!trocarlivro@{trocarlivro}}
 \index{trocarlivro@{trocarlivro}!S\+T\+U\+B\+Comandosusuarioautenticado@{S\+T\+U\+B\+Comandosusuarioautenticado}}
 \subsubsection{\texorpdfstring{trocarlivro()}{trocarlivro()}}
-{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::trocarlivro (\begin{DoxyParamCaption}\item[{\hyperlink{classTitulo}{Titulo}}]{titulo }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} S\+T\+U\+B\+Comandosusuarioautenticado\+::trocarlivro (\begin{DoxyParamCaption}\item[{const \hyperlink{classTitulo}{Titulo} \&}]{titulo }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
 
 Método de implementação do S\+T\+UB do comando de troca de livros de um usuário autenticado 
 

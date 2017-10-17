@@ -52,7 +52,7 @@ int main(){
     stubLNRegistroresenha = new STUBRegistroresenha();
 
     cntrRegistroresenha->setCntrLNRegistroresenha(stubLNRegistroresenha);
-    
+
     ///Buscar usuario
 
     IUBuscarusuario *cntrBuscarusuario;
@@ -91,7 +91,7 @@ int main(){
     ILNComandosusuarioautenticado *stubLNComandosusuarioautenticado;
     stubLNComandosusuarioautenticado = new STUBComandosusuarioautenticado();
 
-    cntrComandosusuarioautenticado->setCntrLNComandosusuarioautenticado(stubLNComandosusuarioautenticado); 
+    cntrComandosusuarioautenticado->setCntrLNComandosusuarioautenticado(stubLNComandosusuarioautenticado);
 
     ///Variaveis e constantes da main
 
@@ -164,10 +164,10 @@ int main(){
     cout << "Trigger de falha (senha) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA << endl;
     cout << "Trigger de erro de sistema (senha) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl;
     cout << "Trigger de falha (senha) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA << endl;
-    cout << "Trigger de erro de sistema (senha) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl << endl;
+    cout << "Trigger de erro de sistema (senha) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl;
     cout << "Livro disponivel para troca (titulo) = " << STUBComandosusuarioautenticado::LIVRO_DISPONIVEL_TROCA << endl ;
     cout << "Usuario já cadastrado (apelido) = " << STUBComandosusuarioautenticado::USUARIO_CADASTRADO << endl;
-    cout << "Livro já cadastrado (titulo) = " << STUBComandosusuarioautenticado::LIVRO_CADASTRADO << endl;
+    cout << "Livro já cadastrado (titulo) = " << STUBComandosusuarioautenticado::LIVRO_CADASTRADO << endl << endl;
 
     ///Apresentação do sistema
 
@@ -176,7 +176,7 @@ int main(){
     cout << "Informe a opção desejada entre as disponíveis abaixo:" << endl;
     cout << "Saída - 0" << endl << "Cadastro usuario - 1" << endl << "Cadastro livro - 2" << endl;
     cout << "Autenticacao - 3" << endl << "Registro resenha - 4" << endl << "Buscar usuario - 5" << endl;
-    cout << "Buscar livro - 6" << endl << "Troca de livro - 7" << endl << "Comandos de usuario - 8" << endl; 
+    cout << "Buscar livro - 6" << endl << "Troca de livro - 7" << endl << "Comandos de usuario - 8" << endl;
     cout << "**************************************************" << endl << endl;
     cin >> opcao_escolhida;
     cout << endl;
@@ -216,7 +216,7 @@ int main(){
                 break;
 
             case 3:
-            
+
                 while(true){
                     try{
                         resultado = cntrAutenticacao->autenticar();
@@ -231,7 +231,7 @@ int main(){
                 break;
 
             case 4:
-            
+
                 while(true){
                     try{
                         resultado = cntrRegistroresenha->registrarresenha();
@@ -246,7 +246,7 @@ int main(){
                 break;
 
             case 5:
-            
+
                 while(true){
                     try{
                         resultado = cntrBuscarusuario->buscarusuario();
@@ -261,7 +261,7 @@ int main(){
                 break;
 
             case 6:
-            
+
                 while(true){
                     try{
                         resultado = cntrBuscarlivro->buscarlivro();
@@ -276,7 +276,7 @@ int main(){
                 break;
 
                 case 7:
-                
+
                     while(true){
                         try{
                             resultado = cntrTrocarlivro->trocarlivro();
@@ -291,7 +291,7 @@ int main(){
                     break;
 
                 case 8:
-                
+
                     while(true){
                         try{
                             cntrComandosusuarioautenticado->comandosusuarioautenticado();
@@ -309,7 +309,7 @@ int main(){
         cout << "Informe a operação desejada" << endl;
         cout << "Saída - 0" << endl << "Cadastro - 1" << endl << "Cadastro livro - 2" << endl;
         cout << "Autenticacao - 3" << endl << "Registro resenha - 4" << endl << "Buscar usuario - 5" << endl;
-        cout << "Buscar livro - 6" << endl << "Troca de livro - 7" << endl << "Comandos de usuario - 8" << endl; 
+        cout << "Buscar livro - 6" << endl << "Troca de livro - 7" << endl << "Comandos de usuario - 8" << endl;
         cout << "**************************************************" << endl << endl;
         cin >> opcao_escolhida;
         cout << endl;

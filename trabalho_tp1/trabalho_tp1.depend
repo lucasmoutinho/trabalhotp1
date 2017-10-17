@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1505275470 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/dominios.cpp
+1508176503 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/dominios.cpp
 	"dominios.h"
 
 1508176503 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/dominios.h
@@ -8,15 +8,15 @@
 	<stdexcept>
 	<cctype>
 
-1505272283 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidades.cpp
+1508187585 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidades.cpp
 	"entidades.h"
 
-1508188245 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidades.h
+1508238546 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidades.h
 	"dominios.h"
 	<string>
 	<stdexcept>
 
-1508168823 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/main.cpp
+1508236797 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/main.cpp
 	<iostream>
 	<cstdio>
 	"dominios.h"
@@ -25,6 +25,7 @@
 	"TUentidades.h"
 	"interfaces.h"
 	"controladoras.h"
+	"comandos.h"
 	"stubs.h"
 
 1505272283 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUdominios.h
@@ -45,22 +46,25 @@
 1505272283 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUentidades.cpp
 	"TUentidades.h"
 
-1508169872 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.cpp
+1508239218 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.cpp
 	"controladoras.h"
+	"comandos.h"
 
-1508169384 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.h
+1508237603 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.h
 	"dominios.h"
 	"entidades.h"
 	"interfaces.h"
+	"comandos.h"
 	<iostream>
 	<stdexcept>
+	<stdio.h>
 
-1508169490 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
+1508237073 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
 	"dominios.h"
 	"entidades.h"
 	<stdexcept>
 
-1508169677 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.h
+1508238107 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.h
 	"dominios.h"
 	"entidades.h"
 	"controladoras.h"
@@ -68,9 +72,21 @@
 	<stdexcept>
 	<string>
 
-1508169935 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.cpp
+1508236720 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.cpp
 	"interfaces.h"
 
-1508170018 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.cpp
+1508238311 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.cpp
 	"stubs.h"
+
+1508237893 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/comandos.h
+	"interfaces.h"
+	"dominios.h"
+	"entidades.h"
+	"controladoras.h"
+	<stdexcept>
+	<iostream>
+	<cstdlib>
+
+1508238004 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/comandos.cpp
+	"comandos.h"
 

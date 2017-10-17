@@ -1,4 +1,5 @@
 #include "controladoras.h"
+#include "comandos.h"
 
 CTRLCadastro::CTRLCadastro(){
 }
@@ -388,32 +389,32 @@ void CTRLComandosusuarioautenticado::comandosusuarioautenticado() throw(runtime_
         cin >> opcao;
 
         switch(opcao){
-            case INCLUIR:   
+            case INCLUIR:
                 comando = new ComandoIUUsuarioincluir();
                 comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
                 delete comando;
                 break;
-            case REMOVER:   
+            case REMOVER:
                 comando = new ComandoIUUsuarioexcluir();
                 comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
                 delete comando;
                 break;
-            case REGISTRAR_RESENHA:   
+            case REGISTRAR_RESENHA:
                 comando = new ComandoIUUsuarioregistrarresenha();
                 comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
                 delete comando;
                 break;
-            case TROCAR_LIVRO:   
+            case TROCAR_LIVRO:
                 comando = new ComandoIUUsuariotrocarlivro();
                 comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
                 delete comando;
                 break;
-            case BUSCAR_LIVRO:   
+            case BUSCAR_LIVRO:
                 comando = new ComandoIUUsuariobuscarlivro();
                 comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
                 delete comando;
                 break;
-            case BUSCAR_USUARIO:   
+            case BUSCAR_USUARIO:
                 comando = new ComandoIUUsuariobuscarusuario();
                 comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
                 delete comando;

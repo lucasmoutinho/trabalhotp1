@@ -122,4 +122,27 @@ public:
 
 };
 
+class IUBuscarlivro;
+class ILNBuscarlivro;
+
+class IUBuscarlivro{
+public:
+
+    IUBuscarlivro();
+    virtual ~IUBuscarlivro();
+
+    virtual Resultado buscarlivro() throw(runtime_error) = 0;
+
+    virtual void setCntrLNBuscarlivro(ILNBuscarlivro*) = 0;
+};
+
+class ILNBuscarlivro{
+public:
+
+    virtual ~ILNBuscarlivro();
+
+    virtual Resultado buscarlivro(Titulo titulo) throw(runtime_error) = 0;
+
+};
+
 #endif

@@ -21,18 +21,19 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
     while(true){
 
         try{
+            getchar();
             cout << "**************************************************" << endl;
             cout << "Informe o Nome :" << endl;
-            cin >> entrada_nome;
+            getline(cin, entrada_nome);
             nome.setNome(entrada_nome);
             cout << "Informe o Apelido :" << endl;
-            cin >> entrada_apelido;
+            getline(cin, entrada_apelido);
             apelido.setApelido(entrada_apelido);
             cout << "Informe a Senha :" << endl;
-            cin >> entrada_senha;
+            getline(cin, entrada_senha);
             senha.setSenha(entrada_senha);
             cout << "Informe o Telefone :" << endl;
-            cin >> entrada_telefone;
+            getline(cin, entrada_telefone);
             telefone.setTelefone(entrada_telefone);
             cout << endl << "**************************************************" << endl;
             break;
@@ -74,21 +75,22 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
     while(true){
 
         try{
+            getchar();
             cout << "**************************************************" << endl;
             cout << "Informe o Titulo :" << endl;
-            cin >> entrada_titulo;
+            getline(cin, entrada_titulo);
             titulo.setTitulo(entrada_titulo);
             cout << "Informe o Autor :" << endl;
-            cin >> entrada_autor;
+            getline(cin, entrada_autor);
             autor.setNome(entrada_autor);
             cout << "Informe a Data :" << endl;
-            cin >> entrada_data;
+            getline(cin, entrada_data);
             data.setData(entrada_data);
             cout << "Informe o Codigo :" << endl;
-            cin >> entrada_codigo;
+            getline(cin, entrada_codigo);
             codigo.setCodigo(entrada_codigo);
             cout << "Informe o Genero :" << endl;
-            cin >> entrada_genero;
+            getline(cin, entrada_genero);
             genero.setGenero(entrada_genero);
             cout << endl << "**************************************************" << endl;
             break;
@@ -124,12 +126,13 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
     while(true){
 
         try{
+            getchar();
             cout << "**************************************************" << endl;
             cout << "Informe o Apelido :" << endl;
-            cin >> entrada_apelido;
+            getline(cin, entrada_apelido);;
             apelido.setApelido(entrada_apelido);
             cout << "Informe a Senha :" << endl;
-            cin >> entrada_senha;
+            getline(cin, entrada_senha);;
             senha.setSenha(entrada_senha);
             cout << endl << "**************************************************" << endl;
             break;
@@ -167,15 +170,16 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
     while(true){
 
         try{
+            getchar();
             cout << "**************************************************" << endl;
             cout << "Informe o Autor :" << endl;
-            cin >> entrada_autor;
+            getline(cin, entrada_autor);;
             autor.setNome(entrada_autor);
             cout << "Informe a Titulo :" << endl;
-            cin >> entrada_titulo;
+            getline(cin, entrada_titulo);;
             titulo.setTitulo(entrada_titulo);
             cout << "Informe o Texto :" << endl;
-            cin >> entrada_texto;
+            getline(cin, entrada_texto);
             texto.setTexto(entrada_texto);
             cout << endl << "**************************************************" << endl;
             break;
@@ -209,9 +213,10 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
     while(true){
 
         try{
+            getchar();
             cout << "**************************************************" << endl;
             cout << "Informe o Apelido do usuario que deseja encontrar :" << endl;
-            cin >> entrada_apelido;
+            getline(cin, entrada_apelido);
             apelido.setApelido(entrada_apelido);
             cout << endl << "**************************************************" << endl;
             break;
@@ -237,6 +242,58 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
     else if(resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
         cout << "Usuário não encontrado" << endl;
+        cout << "**************************************************" << endl << endl;
+    }
+
+    return resultado;
+}
+
+CTRLBuscarlivro::CTRLBuscarlivro(){
+}
+
+CTRLBuscarlivro::~CTRLBuscarlivro(){
+}
+
+Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
+
+    Resultado resultado;
+    Titulo titulo;
+    string entrada_titulo;
+
+    while(true){
+
+        try{
+            getchar();
+            cout << "**************************************************" << endl;
+            cout << "Informe o Título do livro que deseja encontrar :" << endl;
+            getline(cin, entrada_titulo);
+            titulo.setTitulo(entrada_titulo);
+            cout << endl << "**************************************************" << endl;
+            break;
+        }
+        catch (const invalid_argument &exp){
+            cout << endl << "Entrada(s) inválida(s), informe novamente." << endl << endl;
+        }
+    }
+
+    resultado = LNBuscarlivro->buscarlivro(titulo);
+
+    if(resultado.getValor() == Resultado::FALHA_BUSCA_LIVRO){
+        cout << endl << "Falha ao buscar livro" << endl << endl;
+    }
+    else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO){
+        cout << endl << "**************************************************" << endl;
+        cout << "Livro encontrado" << endl;
+        cout << "Titulo :  " << titulo.getTitulo() << endl;
+        cout << "Autor :  " << "Lucas" << endl;
+        cout << "Data de publicacao :  " << "10/10/10" << endl;
+        cout << "Genero literario :  " << "EPOPEIA" << endl;
+        cout << "Resenhas acerca do livro :  " << "Nenhuma" << endl;
+        cout << "**************************************************" << endl << endl;
+    }
+    else if(resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO){
+        cout << endl << "**************************************************" << endl;
+        cout << "Livro não encontrado" << endl;
         cout << "**************************************************" << endl << endl;
     }
 

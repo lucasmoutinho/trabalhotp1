@@ -6,6 +6,7 @@
 #include "interfaces.h"
 #include <iostream>
 #include <stdexcept>
+#include <stdio.h>
 
 using namespace std;
 
@@ -117,6 +118,28 @@ private:
 
 void inline CTRLBuscarusuario::setCntrLNBuscarusuario(ILNBuscarusuario *LNBuscarusuario){
     this->LNBuscarusuario = LNBuscarusuario;
+}
+
+class CTRLBuscarlivro:public IUBuscarlivro{
+public:
+
+    CTRLBuscarlivro();
+    virtual ~CTRLBuscarlivro();
+
+    Resultado buscarlivro() throw(runtime_error);
+    
+    const static int FALHA_AO_BUSCAR_LIVRO = 0;
+    const static int SUCESSO_AO_BUSCAR_LIVRO = 1;
+
+    void setCntrLNBuscarlivro(ILNBuscarlivro*);
+
+private:
+
+    ILNBuscarlivro *LNBuscarlivro;
+};
+
+void inline CTRLBuscarlivro::setCntrLNBuscarlivro(ILNBuscarlivro *LNBuscarlivro){
+    this->LNBuscarlivro = LNBuscarlivro;
 }
 
 #endif

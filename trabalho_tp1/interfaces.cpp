@@ -44,3 +44,12 @@ IUBuscarusuario::~IUBuscarusuario(){
 
 ILNBuscarusuario::~ILNBuscarusuario(){
 }
+
+IUBuscarlivro::IUBuscarlivro(){
+}
+
+IUBuscarlivro::~IUBuscarlivro(){
+}
+
+ILNBuscarlivro::~ILNBuscarlivro(){
+}

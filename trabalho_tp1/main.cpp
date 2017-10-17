@@ -60,7 +60,17 @@ int main(){
     ILNBuscarusuario *stubLNBuscarusuario;
     stubLNBuscarusuario = new STUBBuscarusuario();
 
-    cntrBuscarusuario->setCntrLNBuscarusuario(stubLNBuscarusuario);  
+    cntrBuscarusuario->setCntrLNBuscarusuario(stubLNBuscarusuario);
+
+    ///Buscar livro
+
+    IUBuscarlivro *cntrBuscarlivro;
+    cntrBuscarlivro = new CTRLBuscarlivro();
+
+    ILNBuscarlivro *stubLNBuscarlivro;
+    stubLNBuscarlivro = new STUBBuscarlivro();
+
+    cntrBuscarlivro->setCntrLNBuscarlivro(stubLNBuscarlivro);  
 
     ///Variaveis e constantes da main
 
@@ -108,6 +118,12 @@ int main(){
     cout << "Trigger de erro de sistema (apelido) = " << STUBBuscarusuario::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO << endl;
     cout << "Usuario já cadastrado (apelido) = " << STUBBuscarusuario::USUARIO_CADASTRADO << endl << endl;
 
+    cout << endl << "VALORES DOS TRIGGERS (buscar livro):" << endl;
+    cout << "Titulo inválido = " << Titulo::TITULO_INVALIDO << endl;
+    cout << "Trigger de falha (titulo) = " << STUBBuscarlivro::TRIGGER_FALHA_BUSCAR_LIVRO << endl;
+    cout << "Trigger de erro de sistema (titulo) = " << STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
+    cout << "Livro já cadastrado (titulo) = " << STUBBuscarlivro::LIVRO_CADASTRADO << endl << endl;
+
     ///Apresentação do sistema
 
     cout << "**************************************************" << endl;
@@ -115,6 +131,7 @@ int main(){
     cout << "Informe a opção desejada entre as disponíveis abaixo:" << endl;
     cout << "Saída - 0" << endl << "Cadastro usuario - 1" << endl << "Cadastro livro - 2" << endl;
     cout << "Autenticacao - 3" << endl << "Registro resenha - 4" << endl << "Buscar usuario - 5" << endl;
+    cout << "Buscar livro - 6" << endl;
     cout << "**************************************************" << endl << endl;
     cin >> opcao_escolhida;
     cout << endl;
@@ -196,6 +213,21 @@ int main(){
                     }
                 }
                 break;
+
+                case 6:
+                
+                    while(true){
+                        try{
+                            resultado = cntrBuscarlivro->buscarlivro();
+                            if(resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO){
+                                break;
+                            }
+                        }
+                        catch(const runtime_error &exp){
+                            cout << "Erro de Sistema" << endl;
+                        }
+                    }
+                    break;
         }
 
         cout << endl;
@@ -203,6 +235,7 @@ int main(){
         cout << "Informe a operação desejada" << endl;
         cout << "Saída - 0" << endl << "Cadastro - 1" << endl << "Cadastro livro - 2" << endl;
         cout << "Autenticacao - 3" << endl << "Registro resenha - 4" << endl << "Buscar usuario - 5" << endl;
+        cout << "Buscar livro - 6" << endl;
         cout << "**************************************************" << endl << endl;
         cin >> opcao_escolhida;
         cout << endl;
@@ -224,6 +257,8 @@ int main(){
     delete stubLNRegistroresenha;
     delete cntrBuscarusuario;
     delete stubLNBuscarusuario;
+    delete cntrBuscarlivro;
+    delete stubLNBuscarlivro;
 
     return 0;
 }

@@ -195,6 +195,9 @@ public:
 	const static int FALHA_BUSCA_USUARIO = 8;
 	const static int SUCESSO_BUSCA_USUARIO = 9;
 	const static int USUARIO_NAO_ENCONTRADO = 10;
+	const static int FALHA_BUSCA_LIVRO = 11;
+	const static int SUCESSO_BUSCA_LIVRO = 12;
+	const static int LIVRO_NAO_ENCONTRADO = 13;
 
 	void setValor(int valor){
 		this->valor = valor;

@@ -172,3 +172,39 @@ Resultado STUBBuscarusuario::buscarusuario(Apelido apelido) throw(runtime_error)
 
     return resultado;
 }
+
+STUBBuscarlivro::STUBBuscarlivro(){
+}
+
+STUBBuscarlivro::~STUBBuscarlivro(){
+}
+
+const string STUBBuscarlivro::TRIGGER_FALHA_BUSCAR_LIVRO = "forrest";
+const string STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO = "gump";
+const string STUBBuscarlivro::LIVRO_CADASTRADO = "Lobinho";
+
+Resultado STUBBuscarlivro::buscarlivro(Titulo titulo) throw(runtime_error){
+
+    Resultado resultado;
+
+    cout << endl << endl << "**************************************************" << endl;
+    cout << "Livro pesquisado" << endl;
+    cout << "Titulo :  " << titulo.getTitulo() << endl;
+    cout << "**************************************************" << endl << endl;
+
+
+    if(titulo.getTitulo() == TRIGGER_FALHA_BUSCAR_LIVRO){
+        resultado.setValor(Resultado::FALHA_BUSCA_LIVRO);
+    }
+    else if(titulo.getTitulo() == TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO){
+        throw runtime_error("Erro de Sistema");
+    }
+    else if(titulo.getTitulo() == LIVRO_CADASTRADO){
+        resultado.setValor(Resultado::SUCESSO_BUSCA_LIVRO); 
+    }
+    else{
+        resultado.setValor(Resultado::LIVRO_NAO_ENCONTRADO);
+    }
+
+    return resultado;
+}

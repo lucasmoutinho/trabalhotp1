@@ -76,5 +76,18 @@ public:
 
 };
 
+class STUBBuscarlivro:public ILNBuscarlivro{
+public:
+
+    STUBBuscarlivro();
+    virtual ~STUBBuscarlivro();
+
+    static const string TRIGGER_FALHA_BUSCAR_LIVRO;
+    static const string TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO;
+    static const string LIVRO_CADASTRADO;
+
+    Resultado buscarlivro(Titulo titulo) throw(runtime_error);
+
+};
 
 #endif

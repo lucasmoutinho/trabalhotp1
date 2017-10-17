@@ -41,7 +41,8 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
         }
     }
 
@@ -100,7 +101,8 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
         }
     }
 
@@ -144,7 +146,8 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
         }
     }
 
@@ -193,7 +196,8 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
         }
     }
 
@@ -232,7 +236,8 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
         }
     }
 
@@ -284,7 +289,8 @@ Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
         }
     }
 
@@ -338,7 +344,8 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
             break;
         }
         catch (const invalid_argument &exp){
-            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl << endl;
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
         }
     }
 
@@ -429,7 +436,7 @@ void CTRLComandosusuarioautenticado::comandosusuarioautenticado() throw(runtime_
             case RETORNAR_MENU:
                 break;
             default:
-                cout << "Valor invalido, informe novamente" << endl;
+                cout << "Valor invalido, informe novamente" << endl << endl;
                 break;
         }
 

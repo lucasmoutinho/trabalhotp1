@@ -112,8 +112,8 @@ STUBRegistroresenha::STUBRegistroresenha(){
 STUBRegistroresenha::~STUBRegistroresenha(){
 }
 
-const string STUBRegistroresenha::TRIGGER_FALHA_REGISTRO_RESENHA = "BANANA";
-const string STUBRegistroresenha::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA = "LARANJA";
+const string STUBRegistroresenha::TRIGGER_FALHA_REGISTRO_RESENHA = "forrest";
+const string STUBRegistroresenha::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA = "gump";
 
 Resultado STUBRegistroresenha::registrarresenha(const Nome &autor,const Titulo &titulo,const Texto &texto) throw(runtime_error){
     ///Método de implementação do STUB do registro de resenhas
@@ -260,8 +260,8 @@ STUBComandosusuarioautenticado::~STUBComandosusuarioautenticado(){
 
 const string STUBComandosusuarioautenticado::TRIGGER_FALHA_CADASTRO_LIVRO = "forrest";
 const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO = "gump";
-const string STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA = "BANANA";
-const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA = "LARANJA";
+const string STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA = "forrest";
+const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA = "gump";
 const string STUBComandosusuarioautenticado::TRIGGER_FALHA_BUSCAR_USUARIO = "luca";
 const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO = "caio";
 const string STUBComandosusuarioautenticado::USUARIO_CADASTRADO = "jon";

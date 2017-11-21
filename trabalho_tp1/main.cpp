@@ -8,6 +8,7 @@
 #include "controladoras.h"
 #include "comandos.h"
 #include "stubs.h"
+#include "containers.h"
 
 using namespace std;
 
@@ -21,7 +22,10 @@ int main(){
     ILNCadastro *stubLNCadastro;
     stubLNCadastro = new STUBCadastro();
 
-    cntrCadastro->setCntrLNCadastro(stubLNCadastro);
+    ContainerUsuario *ContUsuario;
+    ContUsuario = new ContainerUsuario();
+
+    cntrCadastro->setContainer(ContUsuario);
 
     ///Cadastro Livro
 

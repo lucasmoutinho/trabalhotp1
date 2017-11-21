@@ -21,15 +21,21 @@ public:
     Resultado cadastrar() throw(runtime_error);
 
     void setCntrLNCadastro(ILNCadastro*);
+    void setContainer(ContainerUsuario*);
 
-private:
+  private:
 
     ILNCadastro *LNCadastro;
+    ContainerUsuario *ContUsuario;
 };
 
 void inline CTRLCadastro::setCntrLNCadastro(ILNCadastro *LNCadastro){
     ///Método responsável por fazer a ligação entre controladora de cadastro de usuário e lógica de negócio
     this->LNCadastro = LNCadastro;
+}
+
+void inline CTRLCadastro::setContainer(ContainerUsuario *ContUsuario){
+    this->ContUsuario = ContUsuario;
 }
 
 ///Classe controladora do cadastro de livro

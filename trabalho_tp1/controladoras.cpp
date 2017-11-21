@@ -15,6 +15,7 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
     Apelido apelido;
     Senha senha;
     Telefone telefone;
+    Usuario usuario;
     string entrada_nome;
     string entrada_apelido;
     string entrada_senha;
@@ -46,7 +47,12 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
         }
     }
 
-    resultado = LNCadastro->cadastrar(nome,apelido,senha,telefone);
+    usuario.setNome(nome.getNome());
+    usuario.setApelido(apelido.getApelido());
+    usuario.setSenha(senha.getSenha());
+    usuario.setTelefone(telefone.getTelefone());
+
+    resultado = ContUsuario->cadastrar(usuario);
 
     if(resultado.getValor() == Resultado::FALHA_CADASTRO){
         cout << endl << "Falha ao cadastrar usuario" << endl;

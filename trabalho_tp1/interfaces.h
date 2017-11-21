@@ -3,6 +3,7 @@
 
 #include "dominios.h"
 #include "entidades.h"
+#include "containers.h"
 #include <stdexcept>
 
 using namespace std;
@@ -20,6 +21,7 @@ public:
     virtual Resultado cadastrar() throw(runtime_error) = 0;
 
     virtual void setCntrLNCadastro(ILNCadastro*) = 0;
+    virtual void setContainer(ContainerUsuario*) = 0;
 };
 
 ///Classe que representa a interface da logica de negócio do cadastro.

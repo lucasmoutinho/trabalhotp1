@@ -206,32 +206,32 @@ void inline CTRLTrocarlivro::setContainer(ContainerLivro *ContLivro)
 }
 
 ///Classe controladora dos comandos de um usuário autenticado
-class CTRLComandosusuarioautenticado:public IUComandosusuarioautenticado{
-public:
+// class CTRLComandosusuarioautenticado:public IUComandosusuarioautenticado{
+// public:
 
-    CTRLComandosusuarioautenticado();
-    virtual ~CTRLComandosusuarioautenticado();
+//     CTRLComandosusuarioautenticado();
+//     virtual ~CTRLComandosusuarioautenticado();
 
-    void comandosusuarioautenticado() throw(runtime_error);
+//     void comandosusuarioautenticado() throw(runtime_error);
 
-    void setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado*);
+//     void setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado*);
 
-private:
+// private:
 
-    const static int RETORNAR_MENU = 0;
-    const static int INCLUIR = 1;
-    const static int REMOVER = 2;
-    const static int REGISTRAR_RESENHA = 3;
-    const static int TROCAR_LIVRO = 4;
-    const static int BUSCAR_LIVRO = 5;
-    const static int BUSCAR_USUARIO = 6;
+//     const static int RETORNAR_MENU = 0;
+//     const static int INCLUIR = 1;
+//     const static int REMOVER = 2;
+//     const static int REGISTRAR_RESENHA = 3;
+//     const static int TROCAR_LIVRO = 4;
+//     const static int BUSCAR_LIVRO = 5;
+//     const static int BUSCAR_USUARIO = 6;
 
-    ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado;
-};
+//     ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado;
+// };
 
-void inline CTRLComandosusuarioautenticado::setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado){
-    ///Método responsável por fazer a ligação entre controladora de comandos de um usuário autenticado e lógica de negócio
-    this->cntrLNComandosusuarioautenticado = cntrLNComandosusuarioautenticado;
-}
+// void inline CTRLComandosusuarioautenticado::setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado){
+//     ///Método responsável por fazer a ligação entre controladora de comandos de um usuário autenticado e lógica de negócio
+//     this->cntrLNComandosusuarioautenticado = cntrLNComandosusuarioautenticado;
+// }
 
 #endif

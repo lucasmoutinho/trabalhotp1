@@ -314,20 +314,6 @@ int main(){
                         }
                     }
                     break;
-
-                case 8:
-
-                    while(true){
-                        try{
-                            cntrComandosusuarioautenticado->comandosusuarioautenticado();
-                            break;
-                        }
-                        catch(const runtime_error &exp){
-                            cout << "Erro de Sistema" << endl;
-                            cout << "Pressione Enter para continuar" << endl;
-                        }
-                    }
-                    break;
         }
 
         cout << endl;

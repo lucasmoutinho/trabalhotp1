@@ -14,6 +14,17 @@ using namespace std;
 
 int main(){
 
+    //Declaracao de Containers
+
+    ContainerUsuario *ContUsuario;
+    ContUsuario = new ContainerUsuario();
+
+    ContainerLivro *ContLivro;
+    ContLivro = new ContainerLivro();
+
+    ContainerResenha *ContResenha;
+    ContResenha = new ContainerResenha();
+
     ///Cadastro Usuario
 
     IUCadastro *cntrCadastro;
@@ -21,9 +32,6 @@ int main(){
 
     ILNCadastro *stubLNCadastro;
     stubLNCadastro = new STUBCadastro();
-
-    ContainerUsuario *ContUsuario;
-    ContUsuario = new ContainerUsuario();
 
     cntrCadastro->setContainer(ContUsuario);
 
@@ -34,9 +42,6 @@ int main(){
 
     ILNCadastrolivro *stubLNCadastrolivro;
     stubLNCadastrolivro = new STUBCadastrolivro();
-
-    ContainerLivro *ContLivro;
-    ContLivro = new ContainerLivro();
 
     cntrCadastrolivro->setContainer(ContLivro);
 

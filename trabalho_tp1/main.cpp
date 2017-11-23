@@ -63,7 +63,7 @@ int main(){
     ILNRegistroresenha *stubLNRegistroresenha;
     stubLNRegistroresenha = new STUBRegistroresenha();
 
-    cntrRegistroresenha->setCntrLNRegistroresenha(stubLNRegistroresenha);
+    cntrRegistroresenha->setContainer(ContResenha);
 
     ///Buscar usuario
 

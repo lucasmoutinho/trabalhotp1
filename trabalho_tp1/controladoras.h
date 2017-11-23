@@ -103,15 +103,22 @@ public:
     Resultado registrarresenha() throw(runtime_error);
 
     void setCntrLNRegistroresenha(ILNRegistroresenha*);
+    void setContainer(ContainerResenha *);
 
-private:
+  private:
 
     ILNRegistroresenha *LNRegistroresenha;
+    ContainerResenha *ContResenha;
 };
 
 void inline CTRLRegistroresenha::setCntrLNRegistroresenha(ILNRegistroresenha *LNRegistroresenha){
     ///Método responsável por fazer a ligação entre controladora de registro de resenhas e lógica de negócio
     this->LNRegistroresenha = LNRegistroresenha;
+}
+
+void inline CTRLRegistroresenha::setContainer(ContainerResenha *ContResenha)
+{
+    this->ContResenha = ContResenha;
 }
 
 ///Classe controladora da busca de usuários

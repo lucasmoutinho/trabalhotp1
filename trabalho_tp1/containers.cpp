@@ -15,6 +15,15 @@ Resultado ContainerUsuario::cadastrar(Usuario usuario){
   }
 
   container.push_back(usuario);
+
+  cout << endl<< endl<< "**************************************************" << endl;
+  cout << "Usuario Cadastrado" << endl;
+  cout << "Nome :  " << usuario.getNome() << endl;
+  cout << "Apelido :  " << usuario.getApelido() << endl;
+  cout << "Senha :  " << usuario.getSenha() << endl;
+  cout << "Telefone :  " << usuario.getTelefone() << endl;
+  cout << "**************************************************" << endl<< endl;
+
   resultado.setValor(Resultado::SUCESSO_CADASTRO);
   return resultado;
 }
@@ -35,6 +44,16 @@ Resultado ContainerLivro::cadastrar(Livro livro){
   }
 
   container.push_back(livro);
+
+  cout << endl<< endl<< "**************************************************" << endl;
+  cout << "Livro Cadastrado" << endl;
+  cout << "Titulo :  " << livro.getTitulo() << endl;
+  cout << "Autor :  " << livro.getAutor() << endl;
+  cout << "Data :  " << livro.getData() << endl;
+  cout << "Codigo :  " << livro.getCodigo() << endl;
+  cout << "Genero :  " << livro.getGenero() << endl;
+  cout << "**************************************************" << endl<< endl;
+
   resultado.setValor(Resultado::SUCESSO_CADASTRO_LIVRO);
   return resultado;
 }
@@ -53,10 +72,49 @@ Resultado ContainerUsuario::autenticar(Apelido apelido, Senha senha)
     {
 
       resultado.setValor(Resultado::SUCESSO_AUTENTICACAO);
+
+      cout << endl<< endl<< "**************************************************" << endl;
+      cout << "Usuario Autenticado com Sucesso" << endl;
+      cout << "Apelido :  " << apelido.getApelido() << endl;
+      cout << "Senha :  " << senha.getSenha() << endl;
+      cout << "**************************************************" << endl<< endl;
+
       return resultado;
     }
   }
 
   resultado.setValor(Resultado::FALHA_AUTENTICACAO);
+  return resultado;
+}
+
+Resultado ContainerResenha::cadastrar(Resenha resenha)
+{
+
+  Resultado resultado;
+  string chave1 = resenha.getTexto();
+  string chave2 = resenha.getAutor();
+  string chave3 = resenha.getTitulo();
+
+  for (list<Resenha>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
+  {
+
+    if (elemento->getTexto() == chave1 && elemento->getAutor() == chave2 && elemento->getTitulo() == chave3)
+    {
+
+      resultado.setValor(Resultado::FALHA_REGISTRO_RESENHA);
+      return resultado;
+    }
+  }
+
+  container.push_back(resenha);
+
+  cout << endl<< endl<< "**************************************************" << endl;
+  cout << "Resenha registrada" << endl;
+  cout << "Autor :  " << resenha.getAutor() << endl;
+  cout << "Titulo :  " << resenha.getTitulo() << endl;
+  cout << "Texto :  " << resenha.getTexto() << endl;
+  cout << "**************************************************" << endl<< endl;
+
+  resultado.setValor(Resultado::SUCESSO_REGISTRO_RESENHA);
   return resultado;
 }

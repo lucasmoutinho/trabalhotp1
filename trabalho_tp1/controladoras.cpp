@@ -187,6 +187,7 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
     Nome autor;
     Titulo titulo;
     Texto texto;
+    Resenha resenha;
     string entrada_autor;
     string entrada_titulo;
     string entrada_texto;
@@ -214,7 +215,11 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
         }
     }
 
-    resultado = LNRegistroresenha->registrarresenha(autor, titulo, texto);
+    resenha.setAutor(autor.getNome());
+    resenha.setTexto(texto.getTexto());
+    resenha.setTitulo(titulo.getTitulo());
+
+    resultado = ContResenha->cadastrar(resenha);
 
     if(resultado.getValor() == Resultado::FALHA_REGISTRO_RESENHA){
         cout << endl << "Falha ao registrar resenha" << endl;

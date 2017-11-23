@@ -99,6 +99,7 @@ public:
     virtual Resultado registrarresenha() throw(runtime_error) = 0;
 
     virtual void setCntrLNRegistroresenha(ILNRegistroresenha*) = 0;
+    virtual void setContainer(ContainerResenha *) = 0;
 };
 
 ///Classe que representa a interface da lógica de negócios do registro de resenhas.

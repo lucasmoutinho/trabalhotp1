@@ -118,3 +118,28 @@ Resultado ContainerResenha::cadastrar(Resenha resenha)
   resultado.setValor(Resultado::SUCESSO_REGISTRO_RESENHA);
   return resultado;
 }
+
+Resultado ContainerUsuario::buscar(Apelido apelido)
+{
+
+  Resultado resultado;
+  string chave = apelido.getApelido();
+
+  cout << endl<< endl<< "**************************************************" << endl;
+  cout << "Pesquisando usuario com apelido: " << apelido.getApelido() << endl;
+  cout << "**************************************************" << endl<< endl;
+
+  for (list<Usuario>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
+  {
+
+    if (elemento->getApelido() == chave)
+    {
+
+      resultado.setValor(Resultado::SUCESSO_BUSCA_USUARIO);
+      return resultado;
+    }
+  }
+
+  resultado.setValor(Resultado::FALHA_BUSCA_LIVRO);
+  return resultado;
+}

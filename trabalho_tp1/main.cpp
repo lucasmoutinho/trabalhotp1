@@ -73,7 +73,7 @@ int main(){
     ILNBuscarusuario *stubLNBuscarusuario;
     stubLNBuscarusuario = new STUBBuscarusuario();
 
-    cntrBuscarusuario->setCntrLNBuscarusuario(stubLNBuscarusuario);
+    cntrBuscarusuario->setContainer(ContUsuario);
 
     ///Buscar livro
 

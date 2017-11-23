@@ -18,6 +18,7 @@ public:
 
   Resultado cadastrar(Usuario);
   Resultado autenticar(Apelido, Senha);
+  Resultado buscar(Apelido);
 };
 
 class ContainerLivro

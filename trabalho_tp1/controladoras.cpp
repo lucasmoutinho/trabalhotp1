@@ -259,7 +259,7 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
         }
     }
 
-    resultado = LNBuscarusuario->buscarusuario(apelido);
+    resultado = ContUsuario->buscar(apelido);
 
     if(resultado.getValor() == Resultado::FALHA_BUSCA_USUARIO){
         cout << endl << "Falha ao buscar usuario" << endl;

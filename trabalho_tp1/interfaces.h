@@ -125,6 +125,7 @@ public:
     virtual Resultado buscarusuario() throw(runtime_error) = 0;
 
     virtual void setCntrLNBuscarusuario(ILNBuscarusuario*) = 0;
+    virtual void setContainer(ContainerUsuario *) = 0;
 };
 
 ///Classe que representa a interface da lógica de negócios da busca de usuários.

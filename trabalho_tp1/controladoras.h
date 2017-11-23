@@ -131,15 +131,22 @@ public:
     Resultado buscarusuario() throw(runtime_error);
 
     void setCntrLNBuscarusuario(ILNBuscarusuario*);
+    void setContainer(ContainerUsuario *);
 
-private:
+  private:
 
     ILNBuscarusuario *LNBuscarusuario;
+    ContainerUsuario *ContUsuario;
 };
 
 void inline CTRLBuscarusuario::setCntrLNBuscarusuario(ILNBuscarusuario *LNBuscarusuario){
     ///Método responsável por fazer a ligação entre controladora de busca de usuários e lógica de negócio
     this->LNBuscarusuario = LNBuscarusuario;
+}
+
+void inline CTRLBuscarusuario::setContainer(ContainerUsuario *ContUsuario)
+{
+    this->ContUsuario = ContUsuario;
 }
 
 ///Classe controladora da busca de livros

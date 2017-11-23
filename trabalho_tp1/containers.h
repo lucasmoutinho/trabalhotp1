@@ -15,6 +15,9 @@ private:
   list<Resenha> container;
 
 public:
+  ContainerResenha();
+  virtual ~ContainerResenha();
+
   Resultado cadastrar(Resenha);
 };
 
@@ -25,10 +28,20 @@ private:
   ContainerResenha *resenhas;
 
 public:
+  ContainerLivro();
+  virtual ~ContainerLivro();
+
   Resultado cadastrar(Livro);
   Resultado buscar(Titulo);
   Resultado trocar(Titulo);
+  void setContainer(ContainerResenha *);
+
 };
+
+void inline ContainerLivro::setContainer(ContainerResenha *resenhas)
+{
+  this->resenhas = resenhas;
+}
 
 class ContainerUsuario
 {
@@ -37,9 +50,19 @@ private:
   ContainerLivro *estante;
 
 public:
+  ContainerUsuario();
+  virtual ~ContainerUsuario();
+
   Resultado cadastrar(Usuario);
   Resultado autenticar(Apelido, Senha);
   Resultado buscar(Apelido);
+  void setContainer(ContainerLivro *);
+
 };
+
+void inline ContainerUsuario::setContainer(ContainerLivro *estante)
+{
+  this->estante = estante;
+}
 
 #endif

@@ -223,3 +223,27 @@ Resultado ContainerLivro::trocar(Titulo titulo)
   resultado.setValor(Resultado::FALHA_TROCA_LIVRO);
   return resultado;
 }
+
+ContainerUsuario::ContainerUsuario()
+{
+}
+
+ContainerUsuario::~ContainerUsuario()
+{
+}
+
+ContainerLivro::ContainerLivro()
+{
+}
+
+ContainerLivro::~ContainerLivro()
+{
+}
+
+ContainerResenha::ContainerResenha()
+{
+}
+
+ContainerResenha::~ContainerResenha()
+{
+}

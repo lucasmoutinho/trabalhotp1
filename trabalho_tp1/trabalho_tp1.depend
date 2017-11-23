@@ -31,15 +31,37 @@
 	"stubs.h"
 	"containers.h"
 
-1505272283 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUdominios.h
+1511469558 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUdominios.h
 	"dominios.h"
-	"entidades.h"
+	"entidadeUsuario.h"
+	"entidadeLivro.h"
+	"entidadeResenha.h"
+	"entidadeResultado.h"
+	"TUdominios.h"
+	"TUentidades.h"
+	"interfaces.h"
+	"controladoras.h"
+	"stubs.h"
+	"containerUsuario.h"
+	"containerLivro.h"
+	"containerResenha.h"
 	<string>
 	<stdexcept>
 
-1505272283 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUentidades.h
+1511469565 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUentidades.h
 	"dominios.h"
-	"entidades.h"
+	"entidadeUsuario.h"
+	"entidadeLivro.h"
+	"entidadeResenha.h"
+	"entidadeResultado.h"
+	"TUdominios.h"
+	"TUentidades.h"
+	"interfaces.h"
+	"controladoras.h"
+	"stubs.h"
+	"containerUsuario.h"
+	"containerLivro.h"
+	"containerResenha.h"
 	<string>
 	<stdexcept>
 
@@ -49,41 +71,58 @@
 1505272283 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUentidades.cpp
 	"TUentidades.h"
 
-1511454571 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.cpp
+1511467734 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.cpp
 	"controladoras.h"
 
-1511467074 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.h
+1511470193 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.h
 	"dominios.h"
-	"entidades.h"
-	"TUdominios.h"
-	"TUentidades.h"
+	"entidadeUsuario.h"
+	"entidadeLivro.h"
+	"entidadeResenha.h"
+	"entidadeResultado.h"
 	"interfaces.h"
-	"controladoras.h"
-	"stubs.h"
-	"containers.h"
+	"containerUsuario.h"
+	"containerLivro.h"
+	"containerResenha.h"
 	<iostream>
 	<stdexcept>
 	<stdio.h>
 	<cstdio>
 
-1511464475 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
+1511470179 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
 	"dominios.h"
-	"entidades.h"
-	"containers.h"
+	"entidadeUsuario.h"
+	"entidadeLivro.h"
+	"entidadeResenha.h"
+	"entidadeResultado.h"
+	"controladoras.h"
+	"containerUsuario.h"
+	"containerLivro.h"
+	"containerResenha.h"
 	<stdexcept>
 
-1508246589 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.h
+1511469572 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.h
 	"dominios.h"
-	"entidades.h"
+	"entidadeUsuario.h"
+	"entidadeLivro.h"
+	"entidadeResenha.h"
+	"entidadeResultado.h"
+	"TUdominios.h"
+	"TUentidades.h"
+	"interfaces.h"
 	"controladoras.h"
+	"stubs.h"
+	"containerUsuario.h"
+	"containerLivro.h"
+	"containerResenha.h"
 	<iostream>
 	<stdexcept>
 	<string>
 
-1508236720 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.cpp
+1511466219 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.cpp
 	"interfaces.h"
 
-1508277021 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.cpp
+1511467603 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.cpp
 	"stubs.h"
 
 1508244918 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/comandos.h
@@ -107,4 +146,78 @@
 
 1511458654 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containers.cpp
 	"containers.h"
+
+1511468365 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeUsuario.h
+	"dominios.h"
+	"containerLivro.h"
+	<iostream>
+	<list>
+	<string>
+	<stdexcept>
+
+1511468937 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerLivro.h
+	<iostream>
+	<list>
+	<string>
+	"entidadeLivro.h"
+	"entidadeResultado.h"
+	"dominios.h"
+
+1511468474 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeResultado.h
+	"dominios.h"
+	<iostream>
+	<list>
+	<string>
+	<stdexcept>
+
+1511468425 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeResenha.h
+	"dominios.h"
+	<iostream>
+	<list>
+	<string>
+	<stdexcept>
+
+1511469120 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerUsuario.h
+	<iostream>
+	<list>
+	<string>
+	"entidadeUsuario.h"
+	"dominios.h"
+
+1511468757 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerResenha.h
+	<iostream>
+	<list>
+	<string>
+	"entidadeResenha.h"
+	"entidadeResultado.h"
+	"dominios.h"
+
+1511469474 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeLivro.h
+	"dominios.h"
+	"containerResenha.h"
+	<iostream>
+	<list>
+	<string>
+	<stdexcept>
+
+1511469056 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerLivro.cpp
+	"containerLivro.h"
+
+1511468833 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerResenha.cpp
+	"containerResenha.h"
+
+1511469087 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerUsuario.cpp
+	"containerUsuario.h"
+
+1511468556 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeLivro.cpp
+	"entidadeLivro.h"
+
+1511468573 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeResenha.cpp
+	"entidadeResenha.h"
+
+1511468663 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeResultado.cpp
+	"entidadeResultado.h"
+
+1511468612 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeUsuario.cpp
+	"entidadeUsuario.h"
 

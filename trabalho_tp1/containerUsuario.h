@@ -5,6 +5,7 @@
 #include <list>
 #include <string>
 #include "entidadeUsuario.h"
+#include "entidadeResultado.h"
 #include "dominios.h"
 
 using namespace std;

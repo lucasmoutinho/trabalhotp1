@@ -23,23 +23,27 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="README.txt" />
-		<Unit filename="TUdominios.cpp" />
-		<Unit filename="TUdominios.h" />
-		<Unit filename="TUentidades.cpp" />
-		<Unit filename="TUentidades.h" />
-		<Unit filename="containers.cpp" />
-		<Unit filename="containers.h" />
+		<Unit filename="containerLivro.cpp" />
+		<Unit filename="containerLivro.h" />
+		<Unit filename="containerResenha.cpp" />
+		<Unit filename="containerResenha.h" />
+		<Unit filename="containerUsuario.cpp" />
+		<Unit filename="containerUsuario.h" />
 		<Unit filename="controladoras.cpp" />
 		<Unit filename="controladoras.h" />
 		<Unit filename="dominios.cpp" />
 		<Unit filename="dominios.h" />
-		<Unit filename="entidades.cpp" />
-		<Unit filename="entidades.h" />
+		<Unit filename="entidadeLivro.cpp" />
+		<Unit filename="entidadeLivro.h" />
+		<Unit filename="entidadeResenha.cpp" />
+		<Unit filename="entidadeResenha.h" />
+		<Unit filename="entidadeResultado.cpp" />
+		<Unit filename="entidadeResultado.h" />
+		<Unit filename="entidadeUsuario.cpp" />
+		<Unit filename="entidadeUsuario.h" />
 		<Unit filename="interfaces.cpp" />
 		<Unit filename="interfaces.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="stubs.cpp" />
-		<Unit filename="stubs.h" />
 		<Extensions>
 			<envvars />
 			<code_completion />

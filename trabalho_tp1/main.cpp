@@ -5,11 +5,8 @@
 #include "entidadeLivro.h"
 #include "entidadeResenha.h"
 #include "entidadeResultado.h"
-#include "TUdominios.h"
-#include "TUentidades.h"
 #include "interfaces.h"
 #include "controladoras.h"
-#include "stubs.h"
 #include "containerUsuario.h"
 #include "containerLivro.h"
 #include "containerResenha.h"
@@ -28,6 +25,6 @@ int main(){
     ///Deletando objetos criados anteriormente
 
     delete cntrInILNInterfaceUsuario;
-    
+
     return 0;
 }

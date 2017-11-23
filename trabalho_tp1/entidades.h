@@ -2,6 +2,9 @@
 #define __ENTIDADES_H_INCLUDED__
 
 #include "dominios.h"
+#include "containers.h"
+#include <iostream>
+#include <list>
 #include <string>
 #include <stdexcept>
 using namespace std;
@@ -14,8 +17,16 @@ private:
 	Apelido apelido;
 	Telefone telefone;
 	Senha senha;
+	ContainerLivro *estante;
 
 public:
+	Usuario();
+	virtual ~Usuario();
+
+	void setContainer(ContainerLivro *estante)
+	{
+		this->estante = estante;
+	}
 
 	void setNome(string nome) throw(invalid_argument){
 		///Método responsável por armazenar o nome de determinado usuário.
@@ -72,8 +83,15 @@ private:
 	Data data;
 	Codigo codigo;
 	Genero genero;
+	ContainerResenha *resenhas;
 
 public:
+	Livro();
+	virtual ~Livro();
+	
+	void setContainer(ContainerResenha *resenhas){
+		this->resenhas = resenhas;
+	}
 
 	void setTitulo(string titulo) throw(invalid_argument){
 		///Método responsável por armazenar o título de determinado livro.
@@ -141,6 +159,8 @@ private:
 	Texto texto;
 
 public:
+	Resenha();
+	virtual ~Resenha();
 
 	void setTitulo(string titulo) throw(invalid_argument){
 		///Método responsável por armazenar o título do livro da resenha.

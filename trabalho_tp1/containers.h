@@ -9,29 +9,6 @@
 
 using namespace std;
 
-class ContainerUsuario{
-private:
-
-  list<Usuario> container;
-
-public:
-
-  Resultado cadastrar(Usuario);
-  Resultado autenticar(Apelido, Senha);
-  Resultado buscar(Apelido);
-};
-
-class ContainerLivro
-{
-private:
-  list<Livro> container;
-
-public:
-  Resultado cadastrar(Livro);
-  Resultado buscar(Titulo);
-  Resultado trocar(Titulo);
-};
-
 class ContainerResenha
 {
 private:
@@ -39,6 +16,30 @@ private:
 
 public:
   Resultado cadastrar(Resenha);
+};
+
+class ContainerLivro
+{
+private:
+  list<Livro> container;
+  ContainerResenha *resenhas;
+
+public:
+  Resultado cadastrar(Livro);
+  Resultado buscar(Titulo);
+  Resultado trocar(Titulo);
+};
+
+class ContainerUsuario
+{
+private:
+  list<Usuario> container;
+  ContainerLivro *estante;
+
+public:
+  Resultado cadastrar(Usuario);
+  Resultado autenticar(Apelido, Senha);
+  Resultado buscar(Apelido);
 };
 
 #endif

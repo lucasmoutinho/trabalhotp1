@@ -113,77 +113,77 @@ int main(){
 
     ///Apresentação dos triggers e valores invalidos
 
-    cout << "APRESENTACAO DE VALORES INVALIDOS E TRIGGERS" << endl << endl;
+    // cout << "APRESENTACAO DE VALORES INVALIDOS E TRIGGERS" << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (cadastro usuario):" << endl;
-    cout << "Nome invalido = " << Nome::NOME_INVALIDO << endl;
-    cout << "Apelido invalido = " << Apelido::APELIDO_INVALIDO << endl;
-    cout << "Senha invalida = " << Senha::SENHA_INVALIDO << endl;
-    cout << "Telefone invalido = " << Telefone::TELEFONE_INVALIDO << endl;
-    cout << "Trigger de falha (apelido) = " << STUBCadastro::TRIGGER_FALHA_CADASTRO << endl;
-    cout << "Trigger de erro de sistema (apelido) = " << STUBCadastro::TRIGGER_ERRO_SISTEMA_CADASTRO << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (cadastro usuario):" << endl;
+    // cout << "Nome invalido = " << Nome::NOME_INVALIDO << endl;
+    // cout << "Apelido invalido = " << Apelido::APELIDO_INVALIDO << endl;
+    // cout << "Senha invalida = " << Senha::SENHA_INVALIDO << endl;
+    // cout << "Telefone invalido = " << Telefone::TELEFONE_INVALIDO << endl;
+    // cout << "Trigger de falha (apelido) = " << STUBCadastro::TRIGGER_FALHA_CADASTRO << endl;
+    // cout << "Trigger de erro de sistema (apelido) = " << STUBCadastro::TRIGGER_ERRO_SISTEMA_CADASTRO << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (cadastro livro):" << endl;
-    cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
-    cout << "Autor invalido = " << Nome::NOME_INVALIDO << endl;
-    cout << "Data invalida = " << Data::DATA_INVALIDO << endl;
-    cout << "Codigo invalido = " << Codigo::CODIGO_INVALIDO << endl;
-    cout << "Genero invalido = " << Genero::GENERO_INVALIDO << endl;
-    cout << "Trigger de falha (data) = " << STUBCadastrolivro::TRIGGER_FALHA_CADASTRO_LIVRO << endl;
-    cout << "Trigger de erro de sistema (data) = " << STUBCadastrolivro::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (cadastro livro):" << endl;
+    // cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
+    // cout << "Autor invalido = " << Nome::NOME_INVALIDO << endl;
+    // cout << "Data invalida = " << Data::DATA_INVALIDO << endl;
+    // cout << "Codigo invalido = " << Codigo::CODIGO_INVALIDO << endl;
+    // cout << "Genero invalido = " << Genero::GENERO_INVALIDO << endl;
+    // cout << "Trigger de falha (data) = " << STUBCadastrolivro::TRIGGER_FALHA_CADASTRO_LIVRO << endl;
+    // cout << "Trigger de erro de sistema (data) = " << STUBCadastrolivro::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (autenticacao):" << endl;
-    cout << "Apelido invalido = " << Apelido::APELIDO_INVALIDO<< endl;
-    cout << "Senha invalida = " << Senha::SENHA_INVALIDO<< endl;
-    cout << "Trigger de falha (senha) = " << STUBAutenticacao::TRIGGER_FALHA_AUTENTICACAO << endl;
-    cout << "Trigger de erro de sistema (senha) = " << STUBAutenticacao::TRIGGER_ERRO_SISTEMA_AUTENTICACAO << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (autenticacao):" << endl;
+    // cout << "Apelido invalido = " << Apelido::APELIDO_INVALIDO<< endl;
+    // cout << "Senha invalida = " << Senha::SENHA_INVALIDO<< endl;
+    // cout << "Trigger de falha (senha) = " << STUBAutenticacao::TRIGGER_FALHA_AUTENTICACAO << endl;
+    // cout << "Trigger de erro de sistema (senha) = " << STUBAutenticacao::TRIGGER_ERRO_SISTEMA_AUTENTICACAO << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (registro resenha):" << endl;
-    cout << "Autor invalido = " << Nome::NOME_INVALIDO << endl;
-    cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
-    cout << "Texto invalido = " << Texto::TEXTO_INVALIDO << endl;
-    cout << "Trigger de falha (titulo) = " << STUBRegistroresenha::TRIGGER_FALHA_REGISTRO_RESENHA << endl;
-    cout << "Trigger de erro de sistema (titulo) = " << STUBRegistroresenha::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (registro resenha):" << endl;
+    // cout << "Autor invalido = " << Nome::NOME_INVALIDO << endl;
+    // cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
+    // cout << "Texto invalido = " << Texto::TEXTO_INVALIDO << endl;
+    // cout << "Trigger de falha (titulo) = " << STUBRegistroresenha::TRIGGER_FALHA_REGISTRO_RESENHA << endl;
+    // cout << "Trigger de erro de sistema (titulo) = " << STUBRegistroresenha::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (buscar usuario):" << endl;
-    cout << "Nome invalido = " << Nome::NOME_INVALIDO << endl;
-    cout << "Trigger de falha (apelido) = " << STUBBuscarusuario::TRIGGER_FALHA_BUSCAR_USUARIO << endl;
-    cout << "Trigger de erro de sistema (apelido) = " << STUBBuscarusuario::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO << endl;
-    cout << "Usuario ja cadastrado (apelido) = " << STUBBuscarusuario::USUARIO_CADASTRADO << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (buscar usuario):" << endl;
+    // cout << "Nome invalido = " << Nome::NOME_INVALIDO << endl;
+    // cout << "Trigger de falha (apelido) = " << STUBBuscarusuario::TRIGGER_FALHA_BUSCAR_USUARIO << endl;
+    // cout << "Trigger de erro de sistema (apelido) = " << STUBBuscarusuario::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO << endl;
+    // cout << "Usuario ja cadastrado (apelido) = " << STUBBuscarusuario::USUARIO_CADASTRADO << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (buscar livro):" << endl;
-    cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
-    cout << "Trigger de falha (titulo) = " << STUBBuscarlivro::TRIGGER_FALHA_BUSCAR_LIVRO << endl;
-    cout << "Trigger de erro de sistema (titulo) = " << STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
-    cout << "Livro ja cadastrado (titulo) = " << STUBBuscarlivro::LIVRO_CADASTRADO << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (buscar livro):" << endl;
+    // cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
+    // cout << "Trigger de falha (titulo) = " << STUBBuscarlivro::TRIGGER_FALHA_BUSCAR_LIVRO << endl;
+    // cout << "Trigger de erro de sistema (titulo) = " << STUBBuscarlivro::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
+    // cout << "Livro ja cadastrado (titulo) = " << STUBBuscarlivro::LIVRO_CADASTRADO << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (trocar livro):" << endl;
-    cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
-    cout << "Trigger de falha (titulo) = " << STUBTrocarlivro::TRIGGER_FALHA_TROCAR_LIVRO << endl;
-    cout << "Trigger de erro de sistema (titulo) = " << STUBTrocarlivro::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO << endl;
-    cout << "Livro disponivel para troca (titulo) = " << STUBTrocarlivro::LIVRO_DISPONIVEL_TROCA << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (trocar livro):" << endl;
+    // cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
+    // cout << "Trigger de falha (titulo) = " << STUBTrocarlivro::TRIGGER_FALHA_TROCAR_LIVRO << endl;
+    // cout << "Trigger de erro de sistema (titulo) = " << STUBTrocarlivro::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO << endl;
+    // cout << "Livro disponivel para troca (titulo) = " << STUBTrocarlivro::LIVRO_DISPONIVEL_TROCA << endl << endl;
 
-    cout << endl << "VALORES DOS TRIGGERS (comandos de usuario autenticado):" << endl;
-    cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
-    cout << "Autor invalido = " << Nome::NOME_INVALIDO << endl;
-    cout << "Data invalida = " << Data::DATA_INVALIDO << endl;
-    cout << "Codigo invalido = " << Codigo::CODIGO_INVALIDO << endl;
-    cout << "Genero invalido = " << Genero::GENERO_INVALIDO << endl;
-    cout << "Texto invalido = " << Texto::TEXTO_INVALIDO << endl;
-    cout << "Nome invalido = " << Nome::NOME_INVALIDO << endl;
-    cout << "Trigger de falha no cadastro do livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_CADASTRO_LIVRO << endl;
-    cout << "Trigger de erro de sistema no cadastro do livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO << endl;
-    cout << "Trigger de falha no registro de resenha (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA << endl;
-    cout << "Trigger de erro de sistema registro de resenha (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl;
-    cout << "Trigger de falha na busca de usuario (apelido) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_BUSCAR_USUARIO << endl;
-    cout << "Trigger de erro de sistema na busca de usuario (apelido) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO << endl;
-    cout << "Trigger de falha na busca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_BUSCAR_LIVRO << endl;
-    cout << "Trigger de erro de sistema na busca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
-    cout << "Trigger de falha na troca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_TROCAR_LIVRO << endl;
-    cout << "Trigger de erro de sistema na troca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO << endl;
-    cout << "Livro disponivel para troca (titulo) = " << STUBComandosusuarioautenticado::LIVRO_DISPONIVEL_TROCA << endl ;
-    cout << "Usuario ja cadastrado (apelido) = " << STUBComandosusuarioautenticado::USUARIO_CADASTRADO << endl;
-    cout << "Livro ja cadastrado (titulo) = " << STUBComandosusuarioautenticado::LIVRO_CADASTRADO << endl << endl;
+    // cout << endl << "VALORES DOS TRIGGERS (comandos de usuario autenticado):" << endl;
+    // cout << "Titulo invalido = " << Titulo::TITULO_INVALIDO << endl;
+    // cout << "Autor invalido = " << Nome::NOME_INVALIDO << endl;
+    // cout << "Data invalida = " << Data::DATA_INVALIDO << endl;
+    // cout << "Codigo invalido = " << Codigo::CODIGO_INVALIDO << endl;
+    // cout << "Genero invalido = " << Genero::GENERO_INVALIDO << endl;
+    // cout << "Texto invalido = " << Texto::TEXTO_INVALIDO << endl;
+    // cout << "Nome invalido = " << Nome::NOME_INVALIDO << endl;
+    // cout << "Trigger de falha no cadastro do livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_CADASTRO_LIVRO << endl;
+    // cout << "Trigger de erro de sistema no cadastro do livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO << endl;
+    // cout << "Trigger de falha no registro de resenha (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA << endl;
+    // cout << "Trigger de erro de sistema registro de resenha (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA << endl;
+    // cout << "Trigger de falha na busca de usuario (apelido) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_BUSCAR_USUARIO << endl;
+    // cout << "Trigger de erro de sistema na busca de usuario (apelido) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO << endl;
+    // cout << "Trigger de falha na busca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_BUSCAR_LIVRO << endl;
+    // cout << "Trigger de erro de sistema na busca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO << endl;
+    // cout << "Trigger de falha na troca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_FALHA_TROCAR_LIVRO << endl;
+    // cout << "Trigger de erro de sistema na troca de livro (titulo) = " << STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO << endl;
+    // cout << "Livro disponivel para troca (titulo) = " << STUBComandosusuarioautenticado::LIVRO_DISPONIVEL_TROCA << endl ;
+    // cout << "Usuario ja cadastrado (apelido) = " << STUBComandosusuarioautenticado::USUARIO_CADASTRADO << endl;
+    // cout << "Livro ja cadastrado (titulo) = " << STUBComandosusuarioautenticado::LIVRO_CADASTRADO << endl << endl;
 
     ///Apresentação do sistema
 

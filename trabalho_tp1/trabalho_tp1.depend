@@ -18,18 +18,19 @@
 	<string>
 	<stdexcept>
 
-1511453931 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/main.cpp
+1511469661 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/main.cpp
 	<iostream>
 	<cstdio>
 	"dominios.h"
-	"entidades.h"
-	"TUdominios.h"
-	"TUentidades.h"
+	"entidadeUsuario.h"
+	"entidadeLivro.h"
+	"entidadeResenha.h"
+	"entidadeResultado.h"
 	"interfaces.h"
 	"controladoras.h"
-	"comandos.h"
-	"stubs.h"
-	"containers.h"
+	"containerUsuario.h"
+	"containerLivro.h"
+	"containerResenha.h"
 
 1511469558 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUdominios.h
 	"dominios.h"
@@ -71,10 +72,10 @@
 1505272283 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/TUentidades.cpp
 	"TUentidades.h"
 
-1511467734 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.cpp
+1511474388 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.cpp
 	"controladoras.h"
 
-1511470193 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.h
+1511472340 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/controladoras.h
 	"dominios.h"
 	"entidadeUsuario.h"
 	"entidadeLivro.h"
@@ -89,7 +90,7 @@
 	<stdio.h>
 	<cstdio>
 
-1511470510 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
+1511472253 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
 	"dominios.h"
 	"entidadeUsuario.h"
 	"entidadeLivro.h"
@@ -118,7 +119,7 @@
 	<stdexcept>
 	<string>
 
-1511466219 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.cpp
+1511472278 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.cpp
 	"interfaces.h"
 
 1511467603 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/stubs.cpp
@@ -154,7 +155,7 @@
 	<string>
 	<stdexcept>
 
-1511468937 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerLivro.h
+1511472643 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerLivro.h
 	<iostream>
 	<list>
 	<string>
@@ -162,7 +163,7 @@
 	"entidadeResultado.h"
 	"dominios.h"
 
-1511468474 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeResultado.h
+1511473116 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/entidadeResultado.h
 	"dominios.h"
 	<iostream>
 	<list>
@@ -200,7 +201,7 @@
 	<string>
 	<stdexcept>
 
-1511469056 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerLivro.cpp
+1511473461 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerLivro.cpp
 	"containerLivro.h"
 
 1511468833 source:/home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerResenha.cpp

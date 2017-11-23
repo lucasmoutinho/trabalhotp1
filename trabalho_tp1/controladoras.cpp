@@ -540,6 +540,10 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
 
                 while (true)
                 {
+
+                    if(opcao == DESLOGAR){
+                        break;
+                    }
                     try
                     {
                         resultado = cntrAutenticacao->autenticar();
@@ -549,7 +553,6 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                             cout << "**************************************************" << endl;
                             cout << "Bem vindo Fulano" << endl;
                             cout << "Escolha a opcao entre as abaixo :" << endl;
-                            cout << "Sair do sistema - " << SAIR<< endl;
                             cout << "Buscar Usuario - " << BUSCAR_USUARIO << endl;
                             cout << "Cadastrar Livro - " << CADASTRAR_LIVRO << endl;
                             cout << "Remover Livro - " << REMOVER_LIVRO << endl;
@@ -581,7 +584,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                     }
 
                                     break;
-                                
+
                                 case CADASTRAR_LIVRO:
 
                                     while (true)
@@ -708,13 +711,19 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                         cout << "Erro de Sistema" << endl;
                         cout << "Pressione Enter para continuar" << endl;
                     }
+
+                    if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
+                        opcao = DESLOGAR;
+                    }
                 }
 
                 break;
+
             default:
                 cout << "Valor invalido, informe novamente" << endl << endl;
                 break;
 
+            }
         if(opcao == SAIR){
             break;
         }
@@ -724,8 +733,8 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     delete cntrCadastrolivro;
     delete cntrAutenticacao;
     delete cntrRegistroresenha;
-    delete cntrBuscarusuario;
     delete cntrBuscarlivro;
+    delete cntrBuscarusuario;
     delete cntrTrocarlivro;
     delete cntrRemoverLivro;
 }

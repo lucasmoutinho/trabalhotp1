@@ -136,7 +136,7 @@ Resultado ContainerLivro::remover(Titulo titulo)
     {
 
       resultado.setValor(Resultado::SUCESSO_REMOVE_LIVRO);
-      container.remove(*elemento);
+      container.erase(elemento);
 
       cout << endl
            << "**************************************************" << endl;

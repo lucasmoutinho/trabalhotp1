@@ -164,7 +164,7 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
         }
     }
 
-    resultado = LNAutenticacao->autenticar(apelido, senha);
+    resultado = ContUsuario->autenticar(apelido, senha);
 
     if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
         cout << endl << "Falha ao autenticar usuario" << endl;

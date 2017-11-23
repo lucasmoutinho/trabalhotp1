@@ -48,7 +48,7 @@ int main(){
     ILNAutenticacao *stubLNAutenticacao;
     stubLNAutenticacao = new STUBAutenticacao();
 
-    cntrAutenticacao->setCntrLNAutenticacao(stubLNAutenticacao);
+    cntrAutenticacao->setContainer(ContUsuario);
 
     ///Registro Resenha
 

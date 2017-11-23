@@ -17,6 +17,7 @@ private:
 public:
 
   Resultado cadastrar(Usuario);
+  Resultado autenticar(Apelido, Senha);
 };
 
 class ContainerLivro

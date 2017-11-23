@@ -73,6 +73,7 @@ public:
     virtual Resultado autenticar() throw(runtime_error) = 0;
 
     virtual void setCntrLNAutenticacao(ILNAutenticacao*) = 0;
+    virtual void setContainer(ContainerUsuario*) = 0;
 };
 
 ///Classe que representa a interface da lógica de negócio da autenticação.

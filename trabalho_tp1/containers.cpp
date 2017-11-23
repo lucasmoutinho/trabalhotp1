@@ -38,3 +38,25 @@ Resultado ContainerLivro::cadastrar(Livro livro){
   resultado.setValor(Resultado::SUCESSO_CADASTRO_LIVRO);
   return resultado;
 }
+
+Resultado ContainerUsuario::autenticar(Apelido apelido, Senha senha)
+{
+
+  Resultado resultado;
+  string chave1 = apelido.getApelido();
+  string chave2 = senha.getSenha();
+
+  for (list<Usuario>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
+  {
+
+    if (elemento->getApelido() == chave1 && elemento->getSenha() == chave2)
+    {
+
+      resultado.setValor(Resultado::SUCESSO_AUTENTICACAO);
+      return resultado;
+    }
+  }
+
+  resultado.setValor(Resultado::FALHA_AUTENTICACAO);
+  return resultado;
+}

@@ -75,15 +75,21 @@ public:
     Resultado autenticar() throw(runtime_error);
 
     void setCntrLNAutenticacao(ILNAutenticacao*);
+    void setContainer(ContainerUsuario*);
 
-private:
+  private:
 
     ILNAutenticacao *LNAutenticacao;
+    ContainerUsuario *ContUsuario;
 };
 
 void inline CTRLAutenticacao::setCntrLNAutenticacao(ILNAutenticacao *LNAutenticacao){
     ///Método responsável por fazer a ligação entre controladora de autenticação e lógica de negócio
     this->LNAutenticacao = LNAutenticacao;
+}
+
+void inline CTRLAutenticacao::setContainer(ContainerUsuario *ContUsuario){
+    this->ContUsuario = ContUsuario;
 }
 
 ///Classe controladora do registro de resenhas

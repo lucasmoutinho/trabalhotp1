@@ -190,34 +190,19 @@ public:
 
 };
 
-class IUComandosusuarioautenticado;
-class ILNComandosusuarioautenticado;
+class IUInterfaceUsuario;
+class ILNInterfaceUsuario;
 
-///Classe que representa a interface de usuario dos comandos de um usuário autenticado.
-class IUComandosusuarioautenticado{
-public:
+///Classe que representa a interface de usuario da troca de livros.
+class IUInterfaceUsuario
+{
+  public:
+    IUInterfaceUsuario();
+    virtual ~IUInterfaceUsuario();
 
-    IUComandosusuarioautenticado();
-    virtual ~IUComandosusuarioautenticado();
-
-    virtual void comandosusuarioautenticado() throw(runtime_error) = 0;
-
-    virtual void setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado*) = 0;
+    virtual void interfaceUsuario() throw(runtime_error) = 0;
 };
 
-///Classe que representa a interface da lógica de negócios enolvendo os comandos de um usuário autenticado.
-class ILNComandosusuarioautenticado{
-public:
 
-    virtual ~ILNComandosusuarioautenticado();
-
-    virtual Resultado incluir(const Titulo&,const Nome&,const Data&,const Codigo&,const Genero&) throw(runtime_error) = 0;
-    virtual Resultado remover(const Titulo&) throw(runtime_error) = 0;
-    virtual Resultado registrarresenha(const Nome&,const Titulo&,const Texto&) throw(runtime_error) = 0;
-    virtual Resultado trocarlivro(const Titulo&) throw(runtime_error) = 0;
-    virtual Resultado buscarlivro(const Titulo&) throw(runtime_error) = 0;
-    virtual Resultado buscarusuario(const Apelido&) throw(runtime_error) = 0;
-
-};
 
 #endif

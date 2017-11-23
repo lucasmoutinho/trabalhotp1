@@ -382,72 +382,253 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
     return resultado;
 }
 
-CTRLComandosusuarioautenticado::CTRLComandosusuarioautenticado(){
+CTRLInterfaceUsuario::CTRLInterfaceUsuario()
+{
 }
 
-CTRLComandosusuarioautenticado::~CTRLComandosusuarioautenticado(){
+CTRLInterfaceUsuario::~CTRLInterfaceUsuario()
+{
 }
 
-void CTRLComandosusuarioautenticado::comandosusuarioautenticado() throw(runtime_error){
-    ///Método de comandos de usuario da controladora
+void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
+    //Controladora da Interface de Usuario
+    
+    //Declaracao de Containers
 
-    ComandoIUusuarioautenticado* comando;
+    ContainerUsuario *ContUsuario;
+    ContUsuario = new ContainerUsuario();
+
+    ContainerLivro *ContLivro;
+    ContLivro = new ContainerLivro();
+
+    ContainerResenha *ContResenha;
+    ContResenha = new ContainerResenha();
+
+    ///Cadastro Usuario
+
+    IUCadastro *cntrCadastro;
+    cntrCadastro = new CTRLCadastro();
+
+    cntrCadastro->setContainer(ContUsuario);
+
+    ///Cadastro Livro
+
+    IUCadastrolivro *cntrCadastrolivro;
+    cntrCadastrolivro = new CTRLCadastrolivro();
+
+    cntrCadastrolivro->setContainer(ContLivro);
+
+    ///Autenticação
+
+    IUAutenticacao *cntrAutenticacao;
+    cntrAutenticacao = new CTRLAutenticacao();
+
+    cntrAutenticacao->setContainer(ContUsuario);
+
+    ///Registro Resenha
+
+    IURegistroresenha *cntrRegistroresenha;
+    cntrRegistroresenha = new CTRLRegistroresenha();
+
+    cntrRegistroresenha->setContainer(ContResenha);
+
+    ///Buscar usuario
+
+    IUBuscarusuario *cntrBuscarusuario;
+    cntrBuscarusuario = new CTRLBuscarusuario();
+
+    cntrBuscarusuario->setContainer(ContUsuario);
+
+    ///Buscar livro
+
+    IUBuscarlivro *cntrBuscarlivro;
+    cntrBuscarlivro = new CTRLBuscarlivro();
+
+    cntrBuscarlivro->setContainer(ContLivro);
+
+    ///Trocar livro
+
+    IUTrocarlivro *cntrTrocarlivro;
+    cntrTrocarlivro = new CTRLTrocarlivro();
+
+    cntrTrocarlivro->setContainer(ContLivro);
+
+    //Variaveis de interface
+
+    Resultado resultado;
     int opcao;
 
-    while(true){
-
+    while (true)
+    {
         cout << "**************************************************" << endl;
         cout << "Selecione uma opcao, entre as abaixo, como usuario autenticado :" << endl;
-        cout << "Retornar ao menu - " << RETORNAR_MENU <<  endl;
-        cout << "Incluir livro - " << INCLUIR <<  endl;
-        cout << "Remover livro - " << REMOVER <<  endl;
-        cout << "Registrar resenha - " << REGISTRAR_RESENHA <<  endl;
-        cout << "Trocar livro - " << TROCAR_LIVRO <<  endl;
-        cout << "Buscar livro - " << BUSCAR_LIVRO <<  endl;
-        cout << "Buscar usuario - " << BUSCAR_USUARIO <<  endl;
-        cout << "**************************************************" << endl << endl;
+        cout << "Retornar ao menu - " << RETORNAR_MENU << endl;
+        cout << "Incluir livro - " << INCLUIR << endl;
+        cout << "Remover livro - " << REMOVER << endl;
+        cout << "Registrar resenha - " << REGISTRAR_RESENHA << endl;
+        cout << "Trocar livro - " << TROCAR_LIVRO << endl;
+        cout << "Buscar livro - " << BUSCAR_LIVRO << endl;
+        cout << "Buscar usuario - " << BUSCAR_USUARIO << endl;
+        cout << "**************************************************" << endl<< endl;
         cin >> opcao;
 
-        switch(opcao){
-            case INCLUIR:
-                comando = new ComandoIUUsuarioincluir();
-                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
-                delete comando;
+        switch (opcao){
+            case 1:
+
+                while (true)
+                {
+                    try
+                    {
+                        resultado = cntrCadastro->cadastrar();
+                        if (resultado.getValor() == Resultado::SUCESSO_CADASTRO)
+                        {
+                            break;
+                        }
+                    }
+                    catch (const runtime_error &exp)
+                    {
+                        cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
+                    }
+                }
                 break;
-            case REMOVER:
-                comando = new ComandoIUUsuarioexcluir();
-                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
-                delete comando;
+
+            case 2:
+
+                while (true)
+                {
+                    try
+                    {
+                        resultado = cntrCadastrolivro->cadastrarlivro();
+                        if (resultado.getValor() == Resultado::SUCESSO_CADASTRO_LIVRO)
+                        {
+                            break;
+                        }
+                    }
+                    catch (const runtime_error &exp)
+                    {
+                        cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
+                    }
+                }
                 break;
-            case REGISTRAR_RESENHA:
-                comando = new ComandoIUUsuarioregistrarresenha();
-                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
-                delete comando;
+
+            case 3:
+
+                while (true)
+                {
+                    try
+                    {
+                        resultado = cntrAutenticacao->autenticar();
+                        if (resultado.getValor() == Resultado::SUCESSO_AUTENTICACAO)
+                        {
+                            break;
+                        }
+                    }
+                    catch (const runtime_error &exp)
+                    {
+                        cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
+                    }
+                }
                 break;
-            case TROCAR_LIVRO:
-                comando = new ComandoIUUsuariotrocarlivro();
-                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
-                delete comando;
+
+            case 4:
+
+                while (true)
+                {
+                    try
+                    {
+                        resultado = cntrRegistroresenha->registrarresenha();
+                        if (resultado.getValor() == Resultado::SUCESSO_REGISTRO_RESENHA)
+                        {
+                            break;
+                        }
+                    }
+                    catch (const runtime_error &exp)
+                    {
+                        cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
+                    }
+                }
                 break;
-            case BUSCAR_LIVRO:
-                comando = new ComandoIUUsuariobuscarlivro();
-                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
-                delete comando;
+
+            case 5:
+
+                while (true)
+                {
+                    try
+                    {
+                        resultado = cntrBuscarusuario->buscarusuario();
+                        if (resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO || resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO)
+                        {
+                            break;
+                        }
+                    }
+                    catch (const runtime_error &exp)
+                    {
+                        cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
+                    }
+                }
                 break;
-            case BUSCAR_USUARIO:
-                comando = new ComandoIUUsuariobuscarusuario();
-                comando->comandosusuarioautenticado(cntrLNComandosusuarioautenticado);
-                delete comando;
+
+            case 6:
+
+                while (true)
+                {
+                    try
+                    {
+                        resultado = cntrBuscarlivro->buscarlivro();
+                        if (resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO)
+                        {
+                            break;
+                        }
+                    }
+                    catch (const runtime_error &exp)
+                    {
+                        cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
+                    }
+                }
                 break;
-            case RETORNAR_MENU:
+
+            case 7:
+
+                while (true)
+                {
+                    try
+                    {
+                        resultado = cntrTrocarlivro->trocarlivro();
+                        if (resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO)
+                        {
+                            break;
+                        }
+                    }
+                    catch (const runtime_error &exp)
+                    {
+                        cout << "Erro de Sistema" << endl;
+                        cout << "Pressione Enter para continuar" << endl;
+                    }
+                }
                 break;
+
             default:
                 cout << "Valor invalido, informe novamente" << endl << endl;
                 break;
+            }
+
+            if (opcao == RETORNAR_MENU)
+            {
+                break;
+            }
         }
 
-        if(opcao == RETORNAR_MENU){
-            break;
-        }
-    }
+    delete cntrCadastro;
+    delete cntrCadastrolivro;
+    delete cntrAutenticacao;
+    delete cntrRegistroresenha;
+    delete cntrBuscarusuario;
+    delete cntrBuscarlivro;
+    delete cntrTrocarlivro;
 }

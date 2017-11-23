@@ -205,33 +205,26 @@ void inline CTRLTrocarlivro::setContainer(ContainerLivro *ContLivro)
     this->ContLivro = ContLivro;
 }
 
-///Classe controladora dos comandos de um usuário autenticado
-// class CTRLComandosusuarioautenticado:public IUComandosusuarioautenticado{
-// public:
+///Classe controladora da interface de usuario
+class CTRLInterfaceUsuario : public IUInterfaceUsuario
+{
+  public:
 
-//     CTRLComandosusuarioautenticado();
-//     virtual ~CTRLComandosusuarioautenticado();
+    const static int SAIR = 0;
+    const static int DESLOGAR = 1;
+    const static int CADASTRAR_USUARIO = 2;
+    const static int AUTENTICAR_USUARIO = 3;
+    const static int BUSCAR_USUARIO = 4;
+    const static int CADASTRAR_LIVRO = 5;
+    const static int BUSCAR_LIVRO = 6;
+    const static int TROCAR_LIVRO = 7;
+    const static int REGISTRA_RESENHA = 8;
+    
+    CTRLInterfaceUsuario();
+    virtual ~CTRLInterfaceUsuario();
 
-//     void comandosusuarioautenticado() throw(runtime_error);
+    void interfaceUsuario() throw(runtime_error);
+};
 
-//     void setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado*);
-
-// private:
-
-//     const static int RETORNAR_MENU = 0;
-//     const static int INCLUIR = 1;
-//     const static int REMOVER = 2;
-//     const static int REGISTRAR_RESENHA = 3;
-//     const static int TROCAR_LIVRO = 4;
-//     const static int BUSCAR_LIVRO = 5;
-//     const static int BUSCAR_USUARIO = 6;
-
-//     ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado;
-// };
-
-// void inline CTRLComandosusuarioautenticado::setCntrLNComandosusuarioautenticado(ILNComandosusuarioautenticado *cntrLNComandosusuarioautenticado){
-//     ///Método responsável por fazer a ligação entre controladora de comandos de um usuário autenticado e lógica de negócio
-//     this->cntrLNComandosusuarioautenticado = cntrLNComandosusuarioautenticado;
-// }
 
 #endif

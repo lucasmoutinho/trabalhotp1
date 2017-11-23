@@ -63,11 +63,14 @@ IUTrocarlivro::~IUTrocarlivro(){
 ILNTrocarlivro::~ILNTrocarlivro(){
 }
 
-IUComandosusuarioautenticado::IUComandosusuarioautenticado(){
+IUInterfaceUsuario::IUInterfaceUsuario()
+{
 }
 
-IUComandosusuarioautenticado::~IUComandosusuarioautenticado(){
+IUInterfaceUsuario::~IUInterfaceUsuario()
+{
 }
 
-ILNComandosusuarioautenticado::~ILNComandosusuarioautenticado(){
+ILNInterfaceUsuario::~ILNInterfaceUsuario()
+{
 }

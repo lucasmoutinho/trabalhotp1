@@ -167,8 +167,7 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
     resultado = ContUsuario->autenticar(apelido, senha);
 
     if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
-        cout << endl << "Falha ao autenticar usuario" << endl;
-        cout << "Pressione Enter para continuar" << endl << endl;
+        cout << endl << "Falha ao autenticar usuario" << endl<< endl;
     }
 
     return resultado;
@@ -538,16 +537,15 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                 break;
             case AUTENTICAR_USUARIO:
 
-                while (true)
+                if(opcao == DESLOGAR){
+                    break;
+                }
+                try
                 {
-
-                    if(opcao == DESLOGAR){
-                        break;
-                    }
-                    try
+                    resultado = cntrAutenticacao->autenticar();
+                    if (resultado.getValor() == Resultado::SUCESSO_AUTENTICACAO)
                     {
-                        resultado = cntrAutenticacao->autenticar();
-                        if (resultado.getValor() == Resultado::SUCESSO_AUTENTICACAO)
+                        while (true)
                         {
 
                             cout << "**************************************************" << endl;
@@ -608,7 +606,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
 
                                 case REMOVER_LIVRO:
 
-                                     while (true)
+                                        while (true)
                                     {
                                         try
                                         {
@@ -650,7 +648,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
 
                                 case TROCAR_LIVRO:
 
-                                     while (true)
+                                        while (true)
                                     {
                                         try
                                         {
@@ -703,18 +701,13 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                             if(opcao == DESLOGAR){
                                 break;
                             }
-
                         }
                     }
-                    catch (const runtime_error &exp)
-                    {
-                        cout << "Erro de Sistema" << endl;
-                        cout << "Pressione Enter para continuar" << endl;
-                    }
-
-                    if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
-                        opcao = DESLOGAR;
-                    }
+                }
+                catch (const runtime_error &exp)
+                {
+                    cout << "Erro de Sistema" << endl;
+                    cout << "Pressione Enter para continuar" << endl;
                 }
 
                 break;

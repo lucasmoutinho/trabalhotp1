@@ -159,15 +159,22 @@ public:
     Resultado buscarlivro() throw(runtime_error);
 
     void setCntrLNBuscarlivro(ILNBuscarlivro*);
+    void setContainer(ContainerLivro *);
 
-private:
+  private:
 
     ILNBuscarlivro *LNBuscarlivro;
+    ContainerLivro *ContLivro;
 };
 
 void inline CTRLBuscarlivro::setCntrLNBuscarlivro(ILNBuscarlivro *LNBuscarlivro){
     ///Método responsável por fazer a ligação entre controladora de busca de livro e lógica de negócio
     this->LNBuscarlivro = LNBuscarlivro;
+}
+
+void inline CTRLBuscarlivro::setContainer(ContainerLivro *ContLivro)
+{
+    this->ContLivro = ContLivro;
 }
 
 ///Classe controladora da troca de livros
@@ -180,15 +187,22 @@ public:
     Resultado trocarlivro() throw(runtime_error);
 
     void setCntrLNTrocarlivro(ILNTrocarlivro*);
+    void setContainer(ContainerLivro *);
 
-private:
+  private:
 
     ILNTrocarlivro *LNTrocarlivro;
+    ContainerLivro *ContLivro;
 };
 
 void inline CTRLTrocarlivro::setCntrLNTrocarlivro(ILNTrocarlivro *LNTrocarlivro){
     ///Método responsável por fazer a ligação entre controladora de troca de livro e lógica de negócio
     this->LNTrocarlivro = LNTrocarlivro;
+}
+
+void inline CTRLTrocarlivro::setContainer(ContainerLivro *ContLivro)
+{
+    this->ContLivro = ContLivro;
 }
 
 ///Classe controladora dos comandos de um usuário autenticado

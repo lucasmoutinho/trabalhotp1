@@ -126,7 +126,7 @@ Resultado ContainerUsuario::buscar(Apelido apelido)
   string chave = apelido.getApelido();
 
   cout << endl<< endl<< "**************************************************" << endl;
-  cout << "Pesquisando usuario com apelido: " << apelido.getApelido() << endl;
+  cout << "Pesquisando usuario com apelido: " << chave << " ..." << endl;
   cout << "**************************************************" << endl<< endl;
 
   for (list<Usuario>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
@@ -136,10 +136,90 @@ Resultado ContainerUsuario::buscar(Apelido apelido)
     {
 
       resultado.setValor(Resultado::SUCESSO_BUSCA_USUARIO);
+
+      cout << endl<< "**************************************************" << endl;
+      cout << "Usuario encontrado" << endl;
+      cout << "Nome :  " << elemento->getNome() << endl;
+      cout << "Apelido :  " << elemento->getApelido() << endl;
+      cout << "Telefone :  " << elemento->getTelefone() << endl;
+      cout << "**************************************************" << endl << endl;
+
       return resultado;
     }
   }
 
-  resultado.setValor(Resultado::FALHA_BUSCA_LIVRO);
+  resultado.setValor(Resultado::USUARIO_NAO_ENCONTRADO);
+  return resultado;
+}
+
+Resultado ContainerLivro::buscar(Titulo titulo)
+{
+
+  Resultado resultado;
+  string chave = titulo.getTitulo();
+
+  cout << endl << endl<< "**************************************************" << endl;
+  cout << "Pesquisando livro com titulo: " << chave << " ..." << endl;
+  cout << "**************************************************" << endl << endl;
+
+  for (list<Livro>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
+  {
+
+    if (elemento->getTitulo() == chave)
+    {
+
+      resultado.setValor(Resultado::SUCESSO_BUSCA_LIVRO);
+
+      cout << endl << "**************************************************" << endl;
+      cout << "Livro encontrado" << endl;
+      cout << "Titulo :  " << elemento->getTitulo() << endl;
+      cout << "Autor :  "<< elemento->getAutor()<< endl;
+      cout << "Data de publicacao :  "<< elemento->getData()<< endl;
+      cout << "Genero literario :  "<< elemento->getGenero()<< endl;
+      cout << "Resenhas acerca do livro :  "<<  endl;
+      cout << "**************************************************" << endl<< endl;
+
+      return resultado;
+    }
+  }
+
+  resultado.setValor(Resultado::LIVRO_NAO_ENCONTRADO);
+  return resultado;
+}
+
+Resultado ContainerLivro::trocar(Titulo titulo)
+{
+
+  Resultado resultado;
+  string chave = titulo.getTitulo();
+
+  cout << endl<< endl<< "**************************************************" << endl;
+  cout << "Pesquisando livro com titulo: " << chave << " ..." << endl;
+  cout << "**************************************************" << endl<< endl;
+
+  for (list<Livro>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
+  {
+
+    if (elemento->getTitulo() == chave)
+    {
+
+      resultado.setValor(Resultado::SUCESSO_TROCA_LIVRO);
+
+      cout << endl
+           << "**************************************************" << endl;
+      cout << "Livro encontrado" << endl;
+      cout << "Titulo :  " << elemento->getTitulo() << endl;
+      cout << "Autor :  " << elemento->getAutor() << endl;
+      cout << "Data de publicacao :  " << elemento->getData() << endl;
+      cout << "Genero literario :  " << elemento->getGenero() << endl;
+      cout << "Resenhas acerca do livro :  " << endl;
+      cout << "**************************************************" << endl
+           << endl;
+
+      return resultado;
+    }
+  }
+
+  resultado.setValor(Resultado::FALHA_TROCA_LIVRO);
   return resultado;
 }

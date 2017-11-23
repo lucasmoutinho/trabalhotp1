@@ -151,6 +151,7 @@ public:
     virtual Resultado buscarlivro() throw(runtime_error) = 0;
 
     virtual void setCntrLNBuscarlivro(ILNBuscarlivro*) = 0;
+    virtual void setContainer(ContainerLivro *) = 0;
 };
 
 ///Classe que representa a interface da lógica de negócios da busca de livros.
@@ -176,6 +177,7 @@ public:
     virtual Resultado trocarlivro() throw(runtime_error) = 0;
 
     virtual void setCntrLNTrocarlivro(ILNTrocarlivro*) = 0;
+    virtual void setContainer(ContainerLivro *) = 0;
 };
 
 ///Classe que representa a interface da lógica de negócios da troca de livros.

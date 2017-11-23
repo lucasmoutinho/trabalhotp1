@@ -83,7 +83,7 @@ int main(){
     ILNBuscarlivro *stubLNBuscarlivro;
     stubLNBuscarlivro = new STUBBuscarlivro();
 
-    cntrBuscarlivro->setCntrLNBuscarlivro(stubLNBuscarlivro);
+    cntrBuscarlivro->setContainer(ContLivro);
 
     ///Trocar livro
 

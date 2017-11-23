@@ -28,6 +28,8 @@ private:
 
 public:
   Resultado cadastrar(Livro);
+  Resultado buscar(Titulo);
+  Resultado trocar(Titulo);
 };
 
 class ContainerResenha

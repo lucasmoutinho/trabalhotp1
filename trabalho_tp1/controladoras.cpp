@@ -261,19 +261,7 @@ Resultado CTRLBuscarusuario::buscarusuario() throw(runtime_error){
 
     resultado = ContUsuario->buscar(apelido);
 
-    if(resultado.getValor() == Resultado::FALHA_BUSCA_USUARIO){
-        cout << endl << "Falha ao buscar usuario" << endl;
-        cout << "Pressione Enter para continuar" << endl << endl;
-    }
-    else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO){
-        cout << endl << "**************************************************" << endl;
-        cout << "Usuario encontrado" << endl;
-        cout << "Nome :  " << "Joao" << endl;
-        cout << "Apelido :  " << apelido.getApelido() << endl;
-        cout << "Telefone :  " << "(61)-123456789" << endl;
-        cout << "**************************************************" << endl << endl;
-    }
-    else if(resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO){
+    if(resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
         cout << "Usuario nao encontrado" << endl;
         cout << "**************************************************" << endl << endl;
@@ -312,7 +300,7 @@ Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
         }
     }
 
-    resultado = LNBuscarlivro->buscarlivro(titulo);
+    resultado = ContLivro->buscar(titulo);
 
     if(resultado.getValor() == Resultado::FALHA_BUSCA_LIVRO){
         cout << endl << "Falha ao buscar livro" << endl;
@@ -367,7 +355,7 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
         }
     }
 
-    resultado = LNTrocarlivro->trocarlivro(titulo);
+    resultado = ContLivro->trocar(titulo);
 
     if(resultado.getValor() == Resultado::FALHA_TROCA_LIVRO){
         cout << endl << "Falha ao buscar titulo do livro para troca" << endl;

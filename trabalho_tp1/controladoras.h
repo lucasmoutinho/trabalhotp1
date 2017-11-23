@@ -3,12 +3,16 @@
 
 #include "dominios.h"
 #include "entidades.h"
+#include "TUdominios.h"
+#include "TUentidades.h"
 #include "interfaces.h"
-#include "comandos.h"
+#include "controladoras.h"
+#include "stubs.h"
 #include "containers.h"
 #include <iostream>
 #include <stdexcept>
 #include <stdio.h>
+#include <cstdio>
 
 using namespace std;
 

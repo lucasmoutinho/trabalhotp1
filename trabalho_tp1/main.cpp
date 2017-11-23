@@ -6,7 +6,6 @@
 #include "TUentidades.h"
 #include "interfaces.h"
 #include "controladoras.h"
-#include "comandos.h"
 #include "stubs.h"
 #include "containers.h"
 

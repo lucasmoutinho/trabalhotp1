@@ -88,7 +88,7 @@ private:
 public:
 	Livro();
 	virtual ~Livro();
-	
+
 	void setContainer(ContainerResenha *resenhas){
 		this->resenhas = resenhas;
 	}
@@ -221,6 +221,9 @@ public:
 	const static int FALHA_TROCA_LIVRO = 14;
 	const static int SUCESSO_TROCA_LIVRO = 15;
 	const static int TROCA_NAO_ENCONTRADO = 16;
+
+	Resultado();
+	virtual ~Resultado();
 
 	void setValor(int valor){
 		///Método responsável por armazenar o valor de validação.

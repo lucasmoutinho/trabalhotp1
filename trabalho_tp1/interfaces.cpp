@@ -70,7 +70,3 @@ IUInterfaceUsuario::IUInterfaceUsuario()
 IUInterfaceUsuario::~IUInterfaceUsuario()
 {
 }
-
-ILNInterfaceUsuario::~ILNInterfaceUsuario()
-{
-}

@@ -23,3 +23,11 @@ Usuario::Usuario()
 Usuario::~Usuario()
 {
 }
+
+Resultado::Resultado()
+{
+}
+
+Resultado::~Resultado()
+{
+}

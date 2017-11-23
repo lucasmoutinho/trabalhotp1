@@ -22,6 +22,7 @@ public:
   Resultado cadastrar(Livro);
   Resultado buscar(Titulo);
   Resultado trocar(Titulo);
+  Resultado remover(Titulo);
 };
 
 #endif

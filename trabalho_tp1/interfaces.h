@@ -116,6 +116,20 @@ public:
     virtual void setContainer(ContainerLivro *) = 0;
 };
 
+class IURemoverLivro;
+
+///Classe que representa a interface de usuario da troca de livros.
+class IURemoverLivro{
+public:
+
+    IURemoverLivro();
+    virtual ~IURemoverLivro();
+
+    virtual Resultado removerLivro() throw(runtime_error) = 0;
+
+    virtual void setContainer(ContainerLivro *) = 0;
+};
+
 
 class IUInterfaceUsuario;
 

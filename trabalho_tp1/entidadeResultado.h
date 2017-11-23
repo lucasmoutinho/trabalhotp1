@@ -32,6 +32,8 @@ public:
   const static int FALHA_TROCA_LIVRO = 14;
   const static int SUCESSO_TROCA_LIVRO = 15;
   const static int TROCA_NAO_ENCONTRADO = 16;
+  const static int FALHA_REMOVE_LIVRO = 14;
+  const static int SUCESSO_REMOVE_LIVRO = 15;
 
   Resultado();
   virtual ~Resultado();

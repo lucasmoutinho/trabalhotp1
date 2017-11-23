@@ -116,6 +116,42 @@ Resultado ContainerLivro::trocar(Titulo titulo)
   return resultado;
 }
 
+Resultado ContainerLivro::remover(Titulo titulo)
+{
+
+  Resultado resultado;
+  string chave = titulo.getTitulo();
+
+  cout << endl
+       << endl
+       << "**************************************************" << endl;
+  cout << "Pesquisando livro com titulo: " << chave << " ..." << endl;
+  cout << "**************************************************" << endl
+       << endl;
+
+  for (list<Livro>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
+  {
+
+    if (elemento->getTitulo() == chave)
+    {
+
+      resultado.setValor(Resultado::SUCESSO_REMOVE_LIVRO);
+      container.remove(*elemento);
+
+      cout << endl
+           << "**************************************************" << endl;
+      cout << "Livro encontrado e removido com sucesso..." << endl;
+      cout << "**************************************************" << endl
+           << endl;
+
+      return resultado;
+    }
+  }
+
+  resultado.setValor(Resultado::FALHA_REMOVE_LIVRO);
+  return resultado;
+}
+
 ContainerLivro::ContainerLivro()
 {
 }

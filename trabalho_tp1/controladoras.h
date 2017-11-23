@@ -167,21 +167,43 @@ void inline CTRLTrocarlivro::setContainer(ContainerLivro *ContLivro)
     this->ContLivro = ContLivro;
 }
 
+///Classe controladora da remocao de livros
+class CTRLRemoverLivro:public IURemoverLivro{
+public:
+
+    CTRLRemoverLivro();
+    virtual ~CTRLRemoverLivro();
+
+    Resultado removerLivro() throw(runtime_error);
+
+    void setContainer(ContainerLivro *);
+
+  private:
+
+    ContainerLivro *ContLivro;
+};
+
+
+void inline CTRLRemoverLivro::setContainer(ContainerLivro *ContLivro)
+{
+    this->ContLivro = ContLivro;
+}
+
 ///Classe controladora da interface de usuario
 class CTRLInterfaceUsuario : public IUInterfaceUsuario
 {
   public:
 
     const static int SAIR = 0;
-    const static int DESLOGAR = 1;
-    const static int CADASTRAR_USUARIO = 2;
-    const static int AUTENTICAR_USUARIO = 3;
-    const static int BUSCAR_USUARIO = 4;
-    const static int CADASTRAR_LIVRO = 5;
-    const static int REMOVER_LIVRO = 6;
-    const static int BUSCAR_LIVRO = 7;
-    const static int TROCAR_LIVRO = 8;
-    const static int REGISTRAR_RESENHA = 9;
+    const static int CADASTRAR_USUARIO = 1;
+    const static int AUTENTICAR_USUARIO = 2;
+    const static int BUSCAR_USUARIO = 3;
+    const static int CADASTRAR_LIVRO = 4;
+    const static int REMOVER_LIVRO = 5;
+    const static int BUSCAR_LIVRO = 6;
+    const static int TROCAR_LIVRO = 7;
+    const static int REGISTRAR_RESENHA = 8;
+    const static int DESLOGAR = 9;
 
     CTRLInterfaceUsuario();
     virtual ~CTRLInterfaceUsuario();

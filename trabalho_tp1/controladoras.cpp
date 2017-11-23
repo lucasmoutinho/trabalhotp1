@@ -382,6 +382,42 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
     return resultado;
 }
 
+CTRLRemoverLivro::CTRLRemoverLivro(){
+}
+
+CTRLRemoverLivro::~CTRLRemoverLivro(){
+}
+
+Resultado CTRLRemoverLivro::removerLivro() throw(runtime_error){
+    ///Método de troca de livros da controladora
+
+    Resultado resultado;
+    Titulo titulo;
+    string entrada_titulo;
+
+    while(true){
+
+        try{
+            getchar();
+            cout << "**************************************************" << endl;
+            cout << "Informe o Título do livro que deseja remover :" << endl;
+            getline(cin, entrada_titulo);
+            titulo.setTitulo(entrada_titulo);
+            cout << endl << "**************************************************" << endl;
+            break;
+        }
+        catch (const invalid_argument &exp){
+            cout << endl << "Entrada(s) invalida(s), informe novamente." << endl;
+            cout << "Pressione Enter para continuar" << endl << endl;
+        }
+    }
+
+    resultado = ContLivro->remover(titulo);
+
+
+    return resultado;
+}
+
 CTRLInterfaceUsuario::CTRLInterfaceUsuario()
 {
 }
@@ -453,27 +489,34 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
 
     cntrTrocarlivro->setContainer(ContLivro);
 
+    ///Remover livro
+
+    IURemoverLivro *cntrRemoverLivro;
+    cntrRemoverLivro = new CTRLRemoverLivro();
+
+    cntrRemoverLivro->setContainer(ContLivro);
+
     //Variaveis de interface
 
     Resultado resultado;
     int opcao;
 
-    while (true)
-    {
+    while (true){
+
         cout << "**************************************************" << endl;
-        cout << "Selecione uma opcao, entre as abaixo, como usuario autenticado :" << endl;
-        cout << "Retornar ao menu - " << SAIR<< endl;
-        cout << "Incluir livro - " << CADASTRAR_LIVRO << endl;
-        cout << "Remover livro - " << REMOVER_LIVRO << endl;
-        cout << "Registrar resenha - " << REGISTRAR_RESENHA << endl;
-        cout << "Trocar livro - " << TROCAR_LIVRO << endl;
-        cout << "Buscar livro - " << BUSCAR_LIVRO << endl;
-        cout << "Buscar usuario - " << BUSCAR_USUARIO << endl;
+        cout << "Bem vindo a Biblioteca Virtual :" << endl;
+        cout << "Escolha a opcao entre as abaixo :" << endl;
+        cout << "Sair do sistema - " << SAIR<< endl;
+        cout << "Cadastrar Usuario - " << CADASTRAR_USUARIO << endl;
+        cout << "Autenticar Usuario - " << AUTENTICAR_USUARIO << endl;
         cout << "**************************************************" << endl<< endl;
         cin >> opcao;
 
         switch (opcao){
-            case 1:
+            case SAIR:
+
+                break;
+            case CADASTRAR_USUARIO:
 
                 while (true)
                 {
@@ -491,29 +534,9 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                         cout << "Pressione Enter para continuar" << endl;
                     }
                 }
+
                 break;
-
-            case 2:
-
-                while (true)
-                {
-                    try
-                    {
-                        resultado = cntrCadastrolivro->cadastrarlivro();
-                        if (resultado.getValor() == Resultado::SUCESSO_CADASTRO_LIVRO)
-                        {
-                            break;
-                        }
-                    }
-                    catch (const runtime_error &exp)
-                    {
-                        cout << "Erro de Sistema" << endl;
-                        cout << "Pressione Enter para continuar" << endl;
-                    }
-                }
-                break;
-
-            case 3:
+            case AUTENTICAR_USUARIO:
 
                 while (true)
                 {
@@ -522,7 +545,162 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                         resultado = cntrAutenticacao->autenticar();
                         if (resultado.getValor() == Resultado::SUCESSO_AUTENTICACAO)
                         {
-                            break;
+
+                            cout << "**************************************************" << endl;
+                            cout << "Bem vindo Fulano" << endl;
+                            cout << "Escolha a opcao entre as abaixo :" << endl;
+                            cout << "Sair do sistema - " << SAIR<< endl;
+                            cout << "Buscar Usuario - " << BUSCAR_USUARIO << endl;
+                            cout << "Cadastrar Livro - " << CADASTRAR_LIVRO << endl;
+                            cout << "Remover Livro - " << REMOVER_LIVRO << endl;
+                            cout << "Buscar Livro - " << BUSCAR_LIVRO << endl;
+                            cout << "Trocar Livro - " << TROCAR_LIVRO << endl;
+                            cout << "Registrar Resenha - " << REGISTRAR_RESENHA << endl;
+                            cout << "Deslogar do Sistema - " << DESLOGAR << endl;
+                            cout << "**************************************************" << endl<< endl;
+                            cin >> opcao;
+
+                            switch(opcao){
+                                case BUSCAR_USUARIO:
+
+                                    while (true)
+                                    {
+                                        try
+                                        {
+                                            resultado = cntrBuscarusuario->buscarusuario();
+                                            if (resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO || resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO)
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        catch (const runtime_error &exp)
+                                        {
+                                            cout << "Erro de Sistema" << endl;
+                                            cout << "Pressione Enter para continuar" << endl;
+                                        }
+                                    }
+
+                                    break;
+                                
+                                case CADASTRAR_LIVRO:
+
+                                    while (true)
+                                    {
+                                        try
+                                        {
+                                            resultado = cntrCadastrolivro->cadastrarlivro();
+                                            if (resultado.getValor() == Resultado::SUCESSO_CADASTRO_LIVRO)
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        catch (const runtime_error &exp)
+                                        {
+                                            cout << "Erro de Sistema" << endl;
+                                            cout << "Pressione Enter para continuar" << endl;
+                                        }
+                                    }
+
+                                    break;
+
+                                case REMOVER_LIVRO:
+
+                                     while (true)
+                                    {
+                                        try
+                                        {
+                                            resultado = cntrTrocarlivro->trocarlivro();
+                                            if (resultado.getValor() == Resultado::SUCESSO_REMOVE_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO)
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        catch (const runtime_error &exp)
+                                        {
+                                            cout << "Erro de Sistema" << endl;
+                                            cout << "Pressione Enter para continuar" << endl;
+                                        }
+                                    }
+
+                                    break;
+
+                                case BUSCAR_LIVRO:
+
+                                    while (true)
+                                    {
+                                        try
+                                        {
+                                            resultado = cntrBuscarlivro->buscarlivro();
+                                            if (resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO)
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        catch (const runtime_error &exp)
+                                        {
+                                            cout << "Erro de Sistema" << endl;
+                                            cout << "Pressione Enter para continuar" << endl;
+                                        }
+                                    }
+
+                                    break;
+
+                                case TROCAR_LIVRO:
+
+                                     while (true)
+                                    {
+                                        try
+                                        {
+                                            resultado = cntrTrocarlivro->trocarlivro();
+                                            if (resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO)
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        catch (const runtime_error &exp)
+                                        {
+                                            cout << "Erro de Sistema" << endl;
+                                            cout << "Pressione Enter para continuar" << endl;
+                                        }
+                                    }
+
+                                    break;
+
+                                case REGISTRAR_RESENHA:
+
+                                    while (true)
+                                    {
+                                        try
+                                        {
+                                            resultado = cntrRegistroresenha->registrarresenha();
+                                            if (resultado.getValor() == Resultado::SUCESSO_REGISTRO_RESENHA)
+                                            {
+                                                break;
+                                            }
+                                        }
+                                        catch (const runtime_error &exp)
+                                        {
+                                            cout << "Erro de Sistema" << endl;
+                                            cout << "Pressione Enter para continuar" << endl;
+                                        }
+                                    }
+
+                                    break;
+
+                                case DESLOGAR:
+
+                                    break;
+
+                                default:
+                                    cout << "Valor invalido, informe novamente" << endl << endl;
+                                    break;
+
+                            }
+
+                            if(opcao == DESLOGAR){
+                                break;
+                            }
+
                         }
                     }
                     catch (const runtime_error &exp)
@@ -531,98 +709,16 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                         cout << "Pressione Enter para continuar" << endl;
                     }
                 }
+
                 break;
-
-            case 4:
-
-                while (true)
-                {
-                    try
-                    {
-                        resultado = cntrRegistroresenha->registrarresenha();
-                        if (resultado.getValor() == Resultado::SUCESSO_REGISTRO_RESENHA)
-                        {
-                            break;
-                        }
-                    }
-                    catch (const runtime_error &exp)
-                    {
-                        cout << "Erro de Sistema" << endl;
-                        cout << "Pressione Enter para continuar" << endl;
-                    }
-                }
-                break;
-
-            case 5:
-
-                while (true)
-                {
-                    try
-                    {
-                        resultado = cntrBuscarusuario->buscarusuario();
-                        if (resultado.getValor() == Resultado::SUCESSO_BUSCA_USUARIO || resultado.getValor() == Resultado::USUARIO_NAO_ENCONTRADO)
-                        {
-                            break;
-                        }
-                    }
-                    catch (const runtime_error &exp)
-                    {
-                        cout << "Erro de Sistema" << endl;
-                        cout << "Pressione Enter para continuar" << endl;
-                    }
-                }
-                break;
-
-            case 6:
-
-                while (true)
-                {
-                    try
-                    {
-                        resultado = cntrBuscarlivro->buscarlivro();
-                        if (resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO)
-                        {
-                            break;
-                        }
-                    }
-                    catch (const runtime_error &exp)
-                    {
-                        cout << "Erro de Sistema" << endl;
-                        cout << "Pressione Enter para continuar" << endl;
-                    }
-                }
-                break;
-
-            case 7:
-
-                while (true)
-                {
-                    try
-                    {
-                        resultado = cntrTrocarlivro->trocarlivro();
-                        if (resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO)
-                        {
-                            break;
-                        }
-                    }
-                    catch (const runtime_error &exp)
-                    {
-                        cout << "Erro de Sistema" << endl;
-                        cout << "Pressione Enter para continuar" << endl;
-                    }
-                }
-                break;
-
             default:
                 cout << "Valor invalido, informe novamente" << endl << endl;
                 break;
-            }
 
-            if (opcao == SAIR)
-            {
-                break;
-            }
+        if(opcao == SAIR){
+            break;
         }
+    }
 
     delete cntrCadastro;
     delete cntrCadastrolivro;
@@ -631,4 +727,5 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     delete cntrBuscarusuario;
     delete cntrBuscarlivro;
     delete cntrTrocarlivro;
+    delete cntrRemoverLivro;
 }

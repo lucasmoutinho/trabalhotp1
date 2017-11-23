@@ -47,6 +47,12 @@ IUTrocarlivro::IUTrocarlivro(){
 IUTrocarlivro::~IUTrocarlivro(){
 }
 
+IURemoverLivro::IURemoverLivro(){
+}
+
+IURemoverLivro::~IURemoverLivro(){
+}
+
 
 IUInterfaceUsuario::IUInterfaceUsuario()
 {

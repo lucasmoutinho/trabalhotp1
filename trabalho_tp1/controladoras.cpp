@@ -47,10 +47,14 @@ Resultado CTRLCadastro::cadastrar() throw(runtime_error){
         }
     }
 
+    ContainerLivro *ContLivro;
+    ContLivro = new ContainerLivro();
+
     usuario.setNome(nome.getNome());
     usuario.setApelido(apelido.getApelido());
     usuario.setSenha(senha.getSenha());
     usuario.setTelefone(telefone.getTelefone());
+    usuario.setContainer(ContLivro);
 
     resultado = ContUsuario->cadastrar(usuario);
 
@@ -135,7 +139,7 @@ CTRLAutenticacao::CTRLAutenticacao(){
 CTRLAutenticacao::~CTRLAutenticacao(){
 }
 
-Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
+Resultado CTRLAutenticacao::autenticar(Usuario** user) throw(runtime_error){
     ///Método de autenticação da controladora
 
     Resultado resultado;
@@ -164,7 +168,7 @@ Resultado CTRLAutenticacao::autenticar() throw(runtime_error){
         }
     }
 
-    resultado = ContUsuario->autenticar(apelido, senha);
+    resultado = ContUsuario->autenticar(apelido, senha, user);
 
     if(resultado.getValor() == Resultado::FALHA_AUTENTICACAO){
         cout << endl << "Falha ao autenticar usuario" << endl<< endl;
@@ -428,6 +432,11 @@ CTRLInterfaceUsuario::~CTRLInterfaceUsuario()
 void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     //Controladora da Interface de Usuario
 
+    //Declaracao de ponteiros
+
+    Usuario* user = NULL;
+    Livro* book = NULL;
+
     //Declaracao de Containers
 
     ContainerUsuario *ContUsuario;
@@ -451,7 +460,6 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     IUCadastrolivro *cntrCadastrolivro;
     cntrCadastrolivro = new CTRLCadastrolivro();
 
-    cntrCadastrolivro->setContainer(ContLivro);
 
     ///Autenticação
 
@@ -537,19 +545,15 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                 break;
             case AUTENTICAR_USUARIO:
 
-                if(opcao == DESLOGAR){
-                    break;
-                }
                 try
                 {
-                    resultado = cntrAutenticacao->autenticar();
+                    resultado = cntrAutenticacao->autenticar(&user);
                     if (resultado.getValor() == Resultado::SUCESSO_AUTENTICACAO)
                     {
                         while (true)
                         {
-
                             cout << "**************************************************" << endl;
-                            cout << "Bem vindo Fulano" << endl;
+                            cout << "Bem vindo " << user->getApelido() << " ..." << endl;
                             cout << "Escolha a opcao entre as abaixo :" << endl;
                             cout << "Buscar Usuario - " << BUSCAR_USUARIO << endl;
                             cout << "Cadastrar Livro - " << CADASTRAR_LIVRO << endl;
@@ -589,6 +593,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                     {
                                         try
                                         {
+                                            cntrCadastrolivro->setContainer(user->getContainer());
                                             resultado = cntrCadastrolivro->cadastrarlivro();
                                             if (resultado.getValor() == Resultado::SUCESSO_CADASTRO_LIVRO)
                                             {
@@ -610,6 +615,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                     {
                                         try
                                         {
+                                            cntrRemoverLivro->setContainer(user->getContainer());
                                             resultado = cntrTrocarlivro->trocarlivro();
                                             if (resultado.getValor() == Resultado::SUCESSO_REMOVE_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO)
                                             {
@@ -631,6 +637,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                     {
                                         try
                                         {
+                                            cntrBuscarlivro->setContainer(user->getContainer());
                                             resultado = cntrBuscarlivro->buscarlivro();
                                             if (resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO)
                                             {

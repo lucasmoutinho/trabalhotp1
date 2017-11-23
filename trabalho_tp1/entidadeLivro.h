@@ -28,6 +28,11 @@ public:
   	this->resenhas = resenhas;
   }
 
+  ContainerResenha* getContainer()
+  {
+  	return this->resenhas;
+  }
+
   void setTitulo(string titulo) throw(invalid_argument)
   {
     ///Método responsável por armazenar o título de determinado livro.

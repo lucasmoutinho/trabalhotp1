@@ -28,6 +28,11 @@ public:
   	this->estante = estante;
   }
 
+  ContainerLivro* getContainer()
+  {
+  	return this->estante;
+  }
+
   void setNome(string nome) throw(invalid_argument)
   {
     ///Método responsável por armazenar o nome de determinado usuário.

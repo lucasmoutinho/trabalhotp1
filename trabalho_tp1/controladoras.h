@@ -66,7 +66,7 @@ public:
     CTRLAutenticacao();
     virtual ~CTRLAutenticacao();
 
-    Resultado autenticar() throw(runtime_error);
+    Resultado autenticar(Usuario**) throw(runtime_error);
 
     void setContainer(ContainerUsuario*);
 

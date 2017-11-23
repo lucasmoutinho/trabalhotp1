@@ -20,7 +20,7 @@ public:
   virtual ~ContainerUsuario();
 
   Resultado cadastrar(Usuario);
-  Resultado autenticar(Apelido, Senha);
+  Resultado autenticar(Apelido, Senha, Usuario**);
   Resultado buscar(Apelido);
 };
 

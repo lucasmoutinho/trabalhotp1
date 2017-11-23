@@ -34,7 +34,7 @@ Resultado ContainerUsuario::cadastrar(Usuario usuario)
   return resultado;
 }
 
-Resultado ContainerUsuario::autenticar(Apelido apelido, Senha senha)
+Resultado ContainerUsuario::autenticar(Apelido apelido, Senha senha, Usuario** user)
 {
 
   Resultado resultado;
@@ -49,15 +49,12 @@ Resultado ContainerUsuario::autenticar(Apelido apelido, Senha senha)
 
       resultado.setValor(Resultado::SUCESSO_AUTENTICACAO);
 
-      cout << endl
-           << endl
-           << "**************************************************" << endl;
+      cout << endl << endl << "**************************************************" << endl;
       cout << "Usuario Autenticado com Sucesso" << endl;
-      cout << "Apelido :  " << apelido.getApelido() << endl;
-      cout << "Senha :  " << senha.getSenha() << endl;
-      cout << "**************************************************" << endl
-           << endl;
-
+      cout << "Apelido :  " << elemento->getApelido() << endl;
+      cout << "Senha :  " << elemento->getSenha() << endl;
+      cout << "**************************************************" << endl << endl;
+      *user = &(*elemento);
       return resultado;
     }
   }

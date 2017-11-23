@@ -52,7 +52,7 @@ public:
     IUAutenticacao();
     virtual ~IUAutenticacao();
 
-    virtual Resultado autenticar() throw(runtime_error) = 0;
+    virtual Resultado autenticar(Usuario**) throw(runtime_error) = 0;
 
     virtual void setContainer(ContainerUsuario*) = 0;
 };

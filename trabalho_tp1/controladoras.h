@@ -5,6 +5,7 @@
 #include "entidades.h"
 #include "interfaces.h"
 #include "comandos.h"
+#include "containers.h"
 #include <iostream>
 #include <stdexcept>
 #include <stdio.h>

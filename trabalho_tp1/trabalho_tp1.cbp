@@ -29,6 +29,8 @@
 		<Unit filename="TUentidades.h" />
 		<Unit filename="comandos.cpp" />
 		<Unit filename="comandos.h" />
+		<Unit filename="containers.cpp" />
+		<Unit filename="containers.h" />
 		<Unit filename="controladoras.cpp" />
 		<Unit filename="controladoras.h" />
 		<Unit filename="dominios.cpp" />

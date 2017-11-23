@@ -392,7 +392,7 @@ CTRLInterfaceUsuario::~CTRLInterfaceUsuario()
 
 void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     //Controladora da Interface de Usuario
-    
+
     //Declaracao de Containers
 
     ContainerUsuario *ContUsuario;
@@ -462,9 +462,9 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     {
         cout << "**************************************************" << endl;
         cout << "Selecione uma opcao, entre as abaixo, como usuario autenticado :" << endl;
-        cout << "Retornar ao menu - " << RETORNAR_MENU << endl;
-        cout << "Incluir livro - " << INCLUIR << endl;
-        cout << "Remover livro - " << REMOVER << endl;
+        cout << "Retornar ao menu - " << SAIR<< endl;
+        cout << "Incluir livro - " << CADASTRAR_LIVRO << endl;
+        cout << "Remover livro - " << REMOVER_LIVRO << endl;
         cout << "Registrar resenha - " << REGISTRAR_RESENHA << endl;
         cout << "Trocar livro - " << TROCAR_LIVRO << endl;
         cout << "Buscar livro - " << BUSCAR_LIVRO << endl;
@@ -618,7 +618,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                 break;
             }
 
-            if (opcao == RETORNAR_MENU)
+            if (opcao == SAIR)
             {
                 break;
             }

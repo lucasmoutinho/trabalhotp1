@@ -29,7 +29,7 @@ Resultado STUBCadastro::cadastrar(const Nome &nome,const Apelido &apelido,const 
         throw runtime_error("Erro de Sistema");
     }
     else{
-        resultado.setValor(Resultado::SUCESSO_CADASTRO); 
+        resultado.setValor(Resultado::SUCESSO_CADASTRO);
     }
 
     return resultado;
@@ -66,7 +66,7 @@ Resultado STUBCadastrolivro::cadastrarlivro(const Titulo &titulo,const Nome &aut
         throw runtime_error("Erro de Sistema");
     }
     else{
-        resultado.setValor(Resultado::SUCESSO_CADASTRO_LIVRO); 
+        resultado.setValor(Resultado::SUCESSO_CADASTRO_LIVRO);
     }
 
     return resultado;
@@ -100,7 +100,7 @@ Resultado STUBAutenticacao::autenticar(const Apelido &apelido,const Senha &senha
         throw runtime_error("Erro de Sistema");
     }
     else{
-        resultado.setValor(Resultado::SUCESSO_AUTENTICACAO); 
+        resultado.setValor(Resultado::SUCESSO_AUTENTICACAO);
     }
 
     return resultado;
@@ -135,7 +135,7 @@ Resultado STUBRegistroresenha::registrarresenha(const Nome &autor,const Titulo &
         throw runtime_error("Erro de Sistema");
     }
     else{
-        resultado.setValor(Resultado::SUCESSO_REGISTRO_RESENHA); 
+        resultado.setValor(Resultado::SUCESSO_REGISTRO_RESENHA);
     }
 
     return resultado;
@@ -169,7 +169,7 @@ Resultado STUBBuscarusuario::buscarusuario(const Apelido &apelido) throw(runtime
         throw runtime_error("Erro de Sistema");
     }
     else if(apelido.getApelido() == USUARIO_CADASTRADO){
-        resultado.setValor(Resultado::SUCESSO_BUSCA_USUARIO); 
+        resultado.setValor(Resultado::SUCESSO_BUSCA_USUARIO);
     }
     else{
         resultado.setValor(Resultado::USUARIO_NAO_ENCONTRADO);
@@ -206,7 +206,7 @@ Resultado STUBBuscarlivro::buscarlivro(const Titulo &titulo) throw(runtime_error
         throw runtime_error("Erro de Sistema");
     }
     else if(titulo.getTitulo() == LIVRO_CADASTRADO){
-        resultado.setValor(Resultado::SUCESSO_BUSCA_LIVRO); 
+        resultado.setValor(Resultado::SUCESSO_BUSCA_LIVRO);
     }
     else{
         resultado.setValor(Resultado::LIVRO_NAO_ENCONTRADO);
@@ -243,189 +243,10 @@ Resultado STUBTrocarlivro::trocarlivro(const Titulo &titulo) throw(runtime_error
         throw runtime_error("Erro de Sistema");
     }
     else if(titulo.getTitulo() == LIVRO_DISPONIVEL_TROCA){
-        resultado.setValor(Resultado::SUCESSO_TROCA_LIVRO); 
+        resultado.setValor(Resultado::SUCESSO_TROCA_LIVRO);
     }
     else{
         resultado.setValor(Resultado::TROCA_NAO_ENCONTRADO);
-    }
-
-    return resultado;
-}
-
-STUBComandosusuarioautenticado::STUBComandosusuarioautenticado(){
-}
-
-STUBComandosusuarioautenticado::~STUBComandosusuarioautenticado(){
-}
-
-const string STUBComandosusuarioautenticado::TRIGGER_FALHA_CADASTRO_LIVRO = "forrest";
-const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO = "gump";
-const string STUBComandosusuarioautenticado::TRIGGER_FALHA_REGISTRO_RESENHA = "forrest";
-const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA = "gump";
-const string STUBComandosusuarioautenticado::TRIGGER_FALHA_BUSCAR_USUARIO = "luca";
-const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO = "caio";
-const string STUBComandosusuarioautenticado::USUARIO_CADASTRADO = "jon";
-const string STUBComandosusuarioautenticado::TRIGGER_FALHA_BUSCAR_LIVRO = "forrest";
-const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO = "gump";
-const string STUBComandosusuarioautenticado::LIVRO_CADASTRADO = "Lobinho";
-const string STUBComandosusuarioautenticado::TRIGGER_FALHA_TROCAR_LIVRO = "forrest";
-const string STUBComandosusuarioautenticado::TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO = "gump";
-const string STUBComandosusuarioautenticado::LIVRO_DISPONIVEL_TROCA = "Lobinho";
-
-Resultado STUBComandosusuarioautenticado::incluir(const Titulo &titulo,const Nome &autor,const Data &data,const Codigo &codigo,const Genero &genero) throw(runtime_error){
-    ///Método de implementação do STUB do comando de inclusão de um usuário autenticado
-
-    Resultado resultado;
-
-    cout << endl << endl << "**************************************************" << endl;
-    cout << "Livro a incluir na estante" << endl;
-    cout << "Titulo :  " << titulo.getTitulo() << endl;
-    cout << "Autor :  " << autor.getNome() << endl;
-    cout << "Data :  " << data.getData() << endl;
-    cout << "Codigo :  " << codigo.getCodigo() << endl;
-    cout << "Genero :  " << genero.getGenero() << endl;
-    cout << "**************************************************" << endl << endl;
-
-
-    if(data.getData() == TRIGGER_FALHA_CADASTRO_LIVRO){
-        resultado.setValor(Resultado::FALHA_CADASTRO_LIVRO);
-    }
-    else if(data.getData() == TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO){
-        throw runtime_error("Erro de Sistema");
-    }
-    else{
-        resultado.setValor(Resultado::SUCESSO_CADASTRO_LIVRO); 
-    }
-
-    return resultado;
-}
-
-Resultado STUBComandosusuarioautenticado::remover(const Titulo &titulo) throw(runtime_error){
-    ///Método de implementação do STUB do comando de exclusão de um usuário autenticado
-
-    Resultado resultado;
-
-    cout << endl << endl << "**************************************************" << endl;
-    cout << "Livro a remover da estante" << endl;
-    cout << "Titulo :  " << titulo.getTitulo() << endl;
-    cout << "**************************************************" << endl << endl;
-
-
-    if(titulo.getTitulo() == TRIGGER_FALHA_CADASTRO_LIVRO){
-        resultado.setValor(Resultado::FALHA_CADASTRO_LIVRO);
-    }
-    else if(titulo.getTitulo() == TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO){
-        throw runtime_error("Erro de Sistema");
-    }
-    else{
-        resultado.setValor(Resultado::SUCESSO_CADASTRO_LIVRO); 
-    }
-
-    return resultado;
-}
-
-Resultado STUBComandosusuarioautenticado::registrarresenha(const Nome &autor,const Titulo &titulo,const Texto &texto) throw(runtime_error){
-    ///Método de implementação do STUB do comando de registro de resenhas de um usuário autenticado
-
-    Resultado resultado;
-    
-    cout << endl << endl << "**************************************************" << endl;
-    cout << "Resenha registrada" << endl;
-    cout << "Autor :  " << autor.getNome() << endl;
-    cout << "Titulo :  " << titulo.getTitulo() << endl;
-    cout << "Texto :  " << texto.getTexto() << endl;
-    cout << "**************************************************" << endl << endl;
-
-
-    if(titulo.getTitulo() == TRIGGER_FALHA_REGISTRO_RESENHA){
-        resultado.setValor(Resultado::FALHA_REGISTRO_RESENHA);
-    }
-    else if(titulo.getTitulo() == TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA){
-        throw runtime_error("Erro de Sistema");
-    }
-    else{
-        resultado.setValor(Resultado::SUCESSO_REGISTRO_RESENHA); 
-    }
-
-    return resultado;
-}
-
-Resultado STUBComandosusuarioautenticado::trocarlivro(const Titulo &titulo) throw(runtime_error){
-    ///Método de implementação do STUB do comando de troca de livros de um usuário autenticado
-
-    Resultado resultado;
-    
-    cout << endl << endl << "**************************************************" << endl;
-    cout << "Livro pesquisado" << endl;
-    cout << "Titulo :  " << titulo.getTitulo() << endl;
-    cout << "**************************************************" << endl << endl;
-
-
-    if(titulo.getTitulo() == TRIGGER_FALHA_TROCAR_LIVRO){
-        resultado.setValor(Resultado::FALHA_TROCA_LIVRO);
-    }
-    else if(titulo.getTitulo() == TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO){
-        throw runtime_error("Erro de Sistema");
-    }
-    else if(titulo.getTitulo() == LIVRO_DISPONIVEL_TROCA){
-        resultado.setValor(Resultado::SUCESSO_TROCA_LIVRO); 
-    }
-    else{
-        resultado.setValor(Resultado::TROCA_NAO_ENCONTRADO);
-    }
-
-    return resultado;
-}
-
-Resultado STUBComandosusuarioautenticado::buscarlivro(const Titulo &titulo) throw(runtime_error){
-    ///Método de implementação do STUB do comando de busca de livros de um usuário autenticado
-
-    Resultado resultado;
-    
-    cout << endl << endl << "**************************************************" << endl;
-    cout << "Livro pesquisado" << endl;
-    cout << "Titulo :  " << titulo.getTitulo() << endl;
-    cout << "**************************************************" << endl << endl;
-
-
-    if(titulo.getTitulo() == TRIGGER_FALHA_BUSCAR_LIVRO){
-        resultado.setValor(Resultado::FALHA_BUSCA_LIVRO);
-    }
-    else if(titulo.getTitulo() == TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO){
-        throw runtime_error("Erro de Sistema");
-    }
-    else if(titulo.getTitulo() == LIVRO_CADASTRADO){
-        resultado.setValor(Resultado::SUCESSO_BUSCA_LIVRO); 
-    }
-    else{
-        resultado.setValor(Resultado::LIVRO_NAO_ENCONTRADO);
-    }
-
-    return resultado;
-}
-
-Resultado STUBComandosusuarioautenticado::buscarusuario(const Apelido &apelido) throw(runtime_error){
-    ///Método de implementação do STUB do comando de busca de usuários de um usuário autenticado
-    
-    Resultado resultado;
-    
-    cout << endl << endl << "**************************************************" << endl;
-    cout << "Usuário pesquisado" << endl;
-    cout << "Apelido :  " << apelido.getApelido() << endl;
-    cout << "**************************************************" << endl << endl;
-
-
-    if(apelido.getApelido() == TRIGGER_FALHA_BUSCAR_USUARIO){
-        resultado.setValor(Resultado::FALHA_BUSCA_USUARIO);
-    }
-    else if(apelido.getApelido() == TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO){
-        throw runtime_error("Erro de Sistema");
-    }
-    else if(apelido.getApelido() == USUARIO_CADASTRADO){
-        resultado.setValor(Resultado::SUCESSO_BUSCA_USUARIO); 
-    }
-    else{
-        resultado.setValor(Resultado::USUARIO_NAO_ENCONTRADO);
     }
 
     return resultado;

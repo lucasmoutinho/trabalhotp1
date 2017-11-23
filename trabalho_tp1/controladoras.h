@@ -2,13 +2,18 @@
 #define __CONTROLADORAS_H_INCLUDED__
 
 #include "dominios.h"
-#include "entidades.h"
+#include "entidadeUsuario.h"
+#include "entidadeLivro.h"
+#include "entidadeResenha.h"
+#include "entidadeResultado.h"
 #include "TUdominios.h"
 #include "TUentidades.h"
 #include "interfaces.h"
 #include "controladoras.h"
 #include "stubs.h"
-#include "containers.h"
+#include "containerUsuario.h"
+#include "containerLivro.h"
+#include "containerResenha.h"
 #include <iostream>
 #include <stdexcept>
 #include <stdio.h>
@@ -220,10 +225,11 @@ class CTRLInterfaceUsuario : public IUInterfaceUsuario
     const static int AUTENTICAR_USUARIO = 3;
     const static int BUSCAR_USUARIO = 4;
     const static int CADASTRAR_LIVRO = 5;
-    const static int BUSCAR_LIVRO = 6;
-    const static int TROCAR_LIVRO = 7;
-    const static int REGISTRA_RESENHA = 8;
-    
+    const static int REMOVER_LIVRO = 6;
+    const static int BUSCAR_LIVRO = 7;
+    const static int TROCAR_LIVRO = 8;
+    const static int REGISTRAR_RESENHA = 9;
+
     CTRLInterfaceUsuario();
     virtual ~CTRLInterfaceUsuario();
 

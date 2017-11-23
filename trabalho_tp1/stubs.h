@@ -111,34 +111,5 @@ public:
 
 };
 
-///Classe que representa o STUB de comandos de um usuário autenticado
-class STUBComandosusuarioautenticado:public ILNComandosusuarioautenticado{
-public:
-
-    STUBComandosusuarioautenticado();
-    virtual ~STUBComandosusuarioautenticado();
-
-    static const string TRIGGER_FALHA_CADASTRO_LIVRO;
-    static const string TRIGGER_ERRO_SISTEMA_CADASTRO_LIVRO;
-    static const string TRIGGER_FALHA_REGISTRO_RESENHA;
-    static const string TRIGGER_ERRO_SISTEMA_REGISTRO_RESENHA;
-    static const string TRIGGER_FALHA_BUSCAR_USUARIO;
-    static const string TRIGGER_ERRO_SISTEMA_BUSCAR_USUARIO;
-    static const string TRIGGER_FALHA_BUSCAR_LIVRO;
-    static const string TRIGGER_ERRO_SISTEMA_BUSCAR_LIVRO;
-    static const string TRIGGER_FALHA_TROCAR_LIVRO;
-    static const string TRIGGER_ERRO_SISTEMA_TROCAR_LIVRO;
-    static const string LIVRO_DISPONIVEL_TROCA;
-    static const string LIVRO_CADASTRADO;
-    static const string USUARIO_CADASTRADO;
-
-    Resultado incluir(const Titulo&, const Nome&, const Data&, const Codigo&, const Genero&) throw(runtime_error);
-    Resultado remover(const Titulo&) throw(runtime_error);
-    Resultado registrarresenha(const Nome&, const Titulo&, const Texto&) throw(runtime_error);
-    Resultado trocarlivro(const Titulo&) throw(runtime_error);
-    Resultado buscarlivro(const Titulo&) throw(runtime_error);
-    Resultado buscarusuario(const Apelido&) throw(runtime_error);
-
-};
 
 #endif

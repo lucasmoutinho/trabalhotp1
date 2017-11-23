@@ -89,13 +89,12 @@
 	<stdio.h>
 	<cstdio>
 
-1511470179 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
+1511470510 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/interfaces.h
 	"dominios.h"
 	"entidadeUsuario.h"
 	"entidadeLivro.h"
 	"entidadeResenha.h"
 	"entidadeResultado.h"
-	"controladoras.h"
 	"containerUsuario.h"
 	"containerLivro.h"
 	"containerResenha.h"
@@ -177,11 +176,12 @@
 	<string>
 	<stdexcept>
 
-1511469120 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerUsuario.h
+1511470616 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerUsuario.h
 	<iostream>
 	<list>
 	<string>
 	"entidadeUsuario.h"
+	"entidadeResultado.h"
 	"dominios.h"
 
 1511468757 /home/moutinho/Documents/UNB/TP1/trabalho1/trabalho_tp1/containerResenha.h

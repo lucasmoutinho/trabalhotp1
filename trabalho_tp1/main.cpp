@@ -35,7 +35,10 @@ int main(){
     ILNCadastrolivro *stubLNCadastrolivro;
     stubLNCadastrolivro = new STUBCadastrolivro();
 
-    cntrCadastrolivro->setCntrLNCadastrolivro(stubLNCadastrolivro);
+    ContainerLivro *ContLivro;
+    ContLivro = new ContainerLivro();
+
+    cntrCadastrolivro->setContainer(ContLivro);
 
     ///Autenticação
 

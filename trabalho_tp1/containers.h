@@ -19,4 +19,22 @@ public:
   Resultado cadastrar(Usuario);
 };
 
+class ContainerLivro
+{
+private:
+  list<Livro> container;
+
+public:
+  Resultado cadastrar(Livro);
+};
+
+class ContainerResenha
+{
+private:
+  list<Resenha> container;
+
+public:
+  Resultado cadastrar(Resenha);
+};
+
 #endif

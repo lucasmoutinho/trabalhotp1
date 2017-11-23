@@ -48,15 +48,21 @@ public:
     Resultado cadastrarlivro() throw(runtime_error);
 
     void setCntrLNCadastrolivro(ILNCadastrolivro*);
+    void setContainer(ContainerLivro *);
 
-private:
+  private:
 
     ILNCadastrolivro *LNCadastrolivro;
+    ContainerLivro *ContLivro;
 };
 
 void inline CTRLCadastrolivro::setCntrLNCadastrolivro(ILNCadastrolivro *LNCadastrolivro){
      ///Método responsável por fazer a ligação entre controladora de cadastro de livro e lógica de negócio
     this->LNCadastrolivro = LNCadastrolivro;
+}
+
+void inline CTRLCadastrolivro::setContainer(ContainerLivro *ContLivro){
+    this->ContLivro = ContLivro;
 }
 
 ///Classe controladora da autenticação

@@ -77,6 +77,7 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
     Data data;
     Codigo codigo;
     Genero genero;
+    Livro livro;
     string entrada_titulo;
     string entrada_autor;
     string entrada_data;
@@ -112,7 +113,13 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
         }
     }
 
-    resultado = LNCadastrolivro->cadastrarlivro(titulo, autor, data, codigo, genero);
+    livro.setAutor(autor.getNome());
+    livro.setCodigo(codigo.getCodigo());
+    livro.setData(data.getData());
+    livro.setGenero(genero.getGenero());
+    livro.setTitulo(titulo.getTitulo());
+
+    resultado = ContLivro->cadastrar(livro);
 
     if(resultado.getValor() == Resultado::FALHA_CADASTRO_LIVRO){
         cout << endl << "Falha ao cadastrar livro" << endl;

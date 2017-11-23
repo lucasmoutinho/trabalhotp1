@@ -47,6 +47,7 @@ public:
     virtual Resultado cadastrarlivro() throw(runtime_error) = 0;
 
     virtual void setCntrLNCadastrolivro(ILNCadastrolivro*) = 0;
+    virtual void setContainer(ContainerLivro *) = 0;
 };
 
 ///Classe que representa a interface da logica de negócio do cadastro do livro.

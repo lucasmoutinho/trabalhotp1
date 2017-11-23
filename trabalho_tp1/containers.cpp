@@ -15,7 +15,26 @@ Resultado ContainerUsuario::cadastrar(Usuario usuario){
   }
 
   container.push_back(usuario);
-  cout << container.begin()->getApelido();
   resultado.setValor(Resultado::SUCESSO_CADASTRO);
+  return resultado;
+}
+
+Resultado ContainerLivro::cadastrar(Livro livro){
+
+  Resultado resultado;
+  string chave = livro.getTitulo();
+
+  for (list<Livro>::iterator elemento = container.begin(); elemento != container.end(); elemento++){
+
+    if (elemento->getTitulo() == chave)
+    {
+
+      resultado.setValor(Resultado::FALHA_CADASTRO_LIVRO);
+      return resultado;
+    }
+  }
+
+  container.push_back(livro);
+  resultado.setValor(Resultado::SUCESSO_CADASTRO_LIVRO);
   return resultado;
 }

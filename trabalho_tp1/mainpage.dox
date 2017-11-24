@@ -9,6 +9,9 @@ unidade para averiguar a correta implementação destes.
 Agora foram acrescentados as interfaces de usuário e das lógicas de negócio das várias funcioanlidades
 que estão disponíveis no sistemas, fazendo a ligação entre as controladoras e os STUBS.
 
+Por fim, foram subtituidas as stubs pelos containers que implementam o armazenamento em memoria das entidades e dominios e permitem
+uma maior usabilidade do sistema como um todo
+
 ## ALUNOS:
 - Lucas da Silva Moutinho - 15/0015747
 - João Pedro Batista Ribeiro Costa - 15/0080123

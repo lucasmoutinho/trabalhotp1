@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['registrarresenha',['registrarresenha',['../classCTRLRegistroresenha.html#a53e19d05d395441fa0ac54d184a8c186',1,'CTRLRegistroresenha::registrarresenha()'],['../classSTUBRegistroresenha.html#a98762ff953cb017d00a225a0772b6394',1,'STUBRegistroresenha::registrarresenha()'],['../classSTUBComandosusuarioautenticado.html#a39e1508359209fe795a91817f0c96e20',1,'STUBComandosusuarioautenticado::registrarresenha()']]],
-  ['remover',['remover',['../classSTUBComandosusuarioautenticado.html#a80c1a29ca48ebb60f6ba0d417946d595',1,'STUBComandosusuarioautenticado']]],
-  ['run',['run',['../classTUNome.html#ae20734cb15f71890e57aff02a00f6313',1,'TUNome::run()'],['../classTUApelido.html#ab5aabaa60fd00030d047ef8bf6c55fec',1,'TUApelido::run()'],['../classTUTelefone.html#abdf98e48a737ab44ad59cc63f26d6788',1,'TUTelefone::run()'],['../classTUSenha.html#ac5ddea52ed42b828961f343b82074125',1,'TUSenha::run()'],['../classTUTitulo.html#a2bf05b935f07f368b03c694d1f8ce8c7',1,'TUTitulo::run()'],['../classTUData.html#a4fd95b821fa6d55bdc82be6f3a3cbef2',1,'TUData::run()'],['../classTUCodigo.html#a4e6994bcde0011cdf0b0bb7a2c4d94d9',1,'TUCodigo::run()'],['../classTUTexto.html#afd0ced06861f0e336ef7248f36b31e2c',1,'TUTexto::run()'],['../classTUGenero.html#ade5f70b689c22924dfbd50bfabf0666c',1,'TUGenero::run()'],['../classTUUsuario.html#af12e1b9020cfb11a1f659373a70268fa',1,'TUUsuario::run()'],['../classTULivro.html#ab5966f07d89cd055f1cb35bdf0769169',1,'TULivro::run()'],['../classTUResenha.html#a255531383ebe29a85c654a848288d89c',1,'TUResenha::run()']]]
+  ['registrarresenha',['registrarresenha',['../classCTRLRegistroresenha.html#a7ffdc7e6a667bbf5d93c95659944f621',1,'CTRLRegistroresenha']]],
+  ['remover',['remover',['../classContainerLivro.html#a5f38b5d1a6b133f28860d8039fa412cd',1,'ContainerLivro']]],
+  ['removerlivro',['removerLivro',['../classCTRLRemoverLivro.html#adecee20558b737d5e4e5267c87455a97',1,'CTRLRemoverLivro']]]
 ];

@@ -2,6 +2,7 @@
 
 Resultado ContainerUsuario::cadastrar(Usuario usuario)
 {
+///Metodo da classe container de usuarios que permite o cadastro de usuarios
 
   Resultado resultado;
   string chave = usuario.getApelido();
@@ -36,6 +37,7 @@ Resultado ContainerUsuario::cadastrar(Usuario usuario)
 
 Resultado ContainerUsuario::autenticar(Apelido apelido, Senha senha, Usuario** user)
 {
+///Metodo da classe container de usuarios que permite a autenticacao de usuarios
 
   Resultado resultado;
   string chave1 = apelido.getApelido();
@@ -65,6 +67,7 @@ Resultado ContainerUsuario::autenticar(Apelido apelido, Senha senha, Usuario** u
 
 Resultado ContainerUsuario::buscar(Apelido apelido)
 {
+///Metodo da classe container de usuarios que permite a busca de usuarios
 
   Resultado resultado;
   string chave = apelido.getApelido();

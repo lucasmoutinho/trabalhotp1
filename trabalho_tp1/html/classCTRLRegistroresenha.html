@@ -82,16 +82,17 @@ Inheritance diagram for CTRLRegistroresenha:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a53e19d05d395441fa0ac54d184a8c186"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResultado.html">Resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTRLRegistroresenha.html#a53e19d05d395441fa0ac54d184a8c186">registrarresenha</a> ()  throw (runtime_error)</td></tr>
-<tr class="separator:a53e19d05d395441fa0ac54d184a8c186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89128992373f3a1e857e49294e820dc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTRLRegistroresenha.html#a89128992373f3a1e857e49294e820dc3">setCntrLNRegistroresenha</a> (<a class="el" href="classILNRegistroresenha.html">ILNRegistroresenha</a> *)</td></tr>
-<tr class="separator:a89128992373f3a1e857e49294e820dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffdc7e6a667bbf5d93c95659944f621"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResultado.html">Resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTRLRegistroresenha.html#a7ffdc7e6a667bbf5d93c95659944f621">registrarresenha</a> (string, string)  throw (runtime_error)</td></tr>
+<tr class="separator:a7ffdc7e6a667bbf5d93c95659944f621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ee6ec7da046f2b61b138c996f17d45"><td class="memItemLeft" align="right" valign="top"><a id="ac7ee6ec7da046f2b61b138c996f17d45"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setContainer</b> (<a class="el" href="classContainerResenha.html">ContainerResenha</a> *)</td></tr>
+<tr class="separator:ac7ee6ec7da046f2b61b138c996f17d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe controladora do registro de resenhas. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a53e19d05d395441fa0ac54d184a8c186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53e19d05d395441fa0ac54d184a8c186">&#9670;&nbsp;</a></span>registrarresenha()</h2>
+<a id="a7ffdc7e6a667bbf5d93c95659944f621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ffdc7e6a667bbf5d93c95659944f621">&#9670;&nbsp;</a></span>registrarresenha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -102,8 +103,19 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classResultado.html">Resultado</a> CTRLRegistroresenha::registrarresenha </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>entrada_titulo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>entrada_autor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
         <tr>
           <td align="right">throw </td><td>(</td><td colspan="2">runtime_error</td>
@@ -119,35 +131,6 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Método de registramento de resenha da controladora </p>
-
-<p>Implements <a class="el" href="classIURegistroresenha.html">IURegistroresenha</a>.</p>
-
-</div>
-</div>
-<a id="a89128992373f3a1e857e49294e820dc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89128992373f3a1e857e49294e820dc3">&#9670;&nbsp;</a></span>setCntrLNRegistroresenha()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CTRLRegistroresenha::setCntrLNRegistroresenha </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classILNRegistroresenha.html">ILNRegistroresenha</a> *&#160;</td>
-          <td class="paramname"><em>LNRegistroresenha</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Método responsável por fazer a ligação entre controladora de registro de resenhas e lógica de negócio </p>
 
 <p>Implements <a class="el" href="classIURegistroresenha.html">IURegistroresenha</a>.</p>
 

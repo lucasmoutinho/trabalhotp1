@@ -82,16 +82,17 @@ Inheritance diagram for CTRLBuscarlivro:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ade2ee03bc32f28ea54ba771e1b69c482"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResultado.html">Resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTRLBuscarlivro.html#ade2ee03bc32f28ea54ba771e1b69c482">buscarlivro</a> ()  throw (runtime_error)</td></tr>
-<tr class="separator:ade2ee03bc32f28ea54ba771e1b69c482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0022d7cf6df4d7f66a209929e7d8f53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTRLBuscarlivro.html#ae0022d7cf6df4d7f66a209929e7d8f53">setCntrLNBuscarlivro</a> (<a class="el" href="classILNBuscarlivro.html">ILNBuscarlivro</a> *)</td></tr>
-<tr class="separator:ae0022d7cf6df4d7f66a209929e7d8f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220f5a7d88a1316eb04a37cacc20c542"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classResultado.html">Resultado</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTRLBuscarlivro.html#a220f5a7d88a1316eb04a37cacc20c542">buscarlivro</a> (<a class="el" href="classLivro.html">Livro</a> **)  throw (runtime_error)</td></tr>
+<tr class="separator:a220f5a7d88a1316eb04a37cacc20c542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba558c715f6af58b8694b8fbd8cde49"><td class="memItemLeft" align="right" valign="top"><a id="a9ba558c715f6af58b8694b8fbd8cde49"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setContainer</b> (<a class="el" href="classContainerLivro.html">ContainerLivro</a> *)</td></tr>
+<tr class="separator:a9ba558c715f6af58b8694b8fbd8cde49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Classe controladora da busca de livros. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ade2ee03bc32f28ea54ba771e1b69c482"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade2ee03bc32f28ea54ba771e1b69c482">&#9670;&nbsp;</a></span>buscarlivro()</h2>
+<a id="a220f5a7d88a1316eb04a37cacc20c542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220f5a7d88a1316eb04a37cacc20c542">&#9670;&nbsp;</a></span>buscarlivro()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -102,7 +103,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classResultado.html">Resultado</a> CTRLBuscarlivro::buscarlivro </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classLivro.html">Livro</a> **&#160;</td>
+          <td class="paramname"><em>livro</em></td><td>)</td>
           <td></td>
         </tr>
         <tr>
@@ -119,35 +121,6 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Método de busca de livros da controladora </p>
-
-<p>Implements <a class="el" href="classIUBuscarlivro.html">IUBuscarlivro</a>.</p>
-
-</div>
-</div>
-<a id="ae0022d7cf6df4d7f66a209929e7d8f53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0022d7cf6df4d7f66a209929e7d8f53">&#9670;&nbsp;</a></span>setCntrLNBuscarlivro()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CTRLBuscarlivro::setCntrLNBuscarlivro </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classILNBuscarlivro.html">ILNBuscarlivro</a> *&#160;</td>
-          <td class="paramname"><em>LNBuscarlivro</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Método responsável por fazer a ligação entre controladora de busca de livro e lógica de negócio </p>
 
 <p>Implements <a class="el" href="classIUBuscarlivro.html">IUBuscarlivro</a>.</p>
 

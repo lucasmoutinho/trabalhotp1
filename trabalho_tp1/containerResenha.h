@@ -10,6 +10,7 @@
 
 using namespace std;
 
+///Classe que implementa o container para uma lista de resenhas e metodos que envolvem o acesso a tal
 class ContainerResenha
 {
 private:

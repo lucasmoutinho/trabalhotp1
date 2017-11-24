@@ -2,6 +2,7 @@
 
 Resultado ContainerLivro::cadastrar(Livro livro)
 {
+///Metodo da classe container de livros que permite o cadastro de livros
 
   Resultado resultado;
   string chave = livro.getTitulo();
@@ -37,6 +38,7 @@ Resultado ContainerLivro::cadastrar(Livro livro)
 
 Resultado ContainerLivro::buscar(Titulo titulo, Livro** livro)
 {
+  ///Metodo da classe container de livros que permite a busca de livros
 
   Resultado resultado;
   string chave = titulo.getTitulo();
@@ -83,6 +85,7 @@ Resultado ContainerLivro::buscar(Titulo titulo, Livro** livro)
 
 Resultado ContainerLivro::trocar(Titulo titulo)
 {
+///Metodo da classe container de livros que permite a troca de livros
 
   Resultado resultado;
 
@@ -98,6 +101,7 @@ cout << endl
 
 Resultado ContainerLivro::remover(Titulo titulo)
 {
+///Metodo da classe container de livros que permite a remocao de livros
 
   Resultado resultado;
   string chave = titulo.getTitulo();

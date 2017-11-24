@@ -133,7 +133,7 @@ public:
 
 class IUInterfaceUsuario;
 
-///Classe que representa a interface de usuario da troca de livros.
+///Classe que representa a interface de apresentacao do sistema para o usuario.
 class IUInterfaceUsuario
 {
   public:

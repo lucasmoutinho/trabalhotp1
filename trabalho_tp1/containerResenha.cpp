@@ -2,6 +2,7 @@
 
 Resultado ContainerResenha::cadastrar(Resenha resenha)
 {
+///Metodo da classe container de resenhas que permite o cadastro de resenhas
 
   Resultado resultado;
   string chave1 = resenha.getTexto();
@@ -37,6 +38,7 @@ Resultado ContainerResenha::cadastrar(Resenha resenha)
 
 Resultado ContainerResenha::buscar()
 {
+///Metodo da classe container de resenhas que permite a busca de resenhas
 
   Resultado resultado;
 

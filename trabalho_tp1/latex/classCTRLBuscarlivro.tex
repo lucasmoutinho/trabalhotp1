@@ -18,9 +18,10 @@ Inheritance diagram for C\+T\+R\+L\+Buscarlivro\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classResultado}{Resultado} \hyperlink{classCTRLBuscarlivro_ade2ee03bc32f28ea54ba771e1b69c482}{buscarlivro} ()  throw (runtime\+\_\+error)
+\hyperlink{classResultado}{Resultado} \hyperlink{classCTRLBuscarlivro_a220f5a7d88a1316eb04a37cacc20c542}{buscarlivro} (\hyperlink{classLivro}{Livro} $\ast$$\ast$)  throw (runtime\+\_\+error)
 \item 
-void \hyperlink{classCTRLBuscarlivro_ae0022d7cf6df4d7f66a209929e7d8f53}{set\+Cntr\+L\+N\+Buscarlivro} (\hyperlink{classILNBuscarlivro}{I\+L\+N\+Buscarlivro} $\ast$)
+\mbox{\Hypertarget{classCTRLBuscarlivro_a9ba558c715f6af58b8694b8fbd8cde49}\label{classCTRLBuscarlivro_a9ba558c715f6af58b8694b8fbd8cde49}} 
+void {\bfseries set\+Container} (\hyperlink{classContainerLivro}{Container\+Livro} $\ast$)
 \end{DoxyCompactItemize}
 
 
@@ -28,23 +29,13 @@ void \hyperlink{classCTRLBuscarlivro_ae0022d7cf6df4d7f66a209929e7d8f53}{set\+Cnt
 Classe controladora da busca de livros. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classCTRLBuscarlivro_ade2ee03bc32f28ea54ba771e1b69c482}\label{classCTRLBuscarlivro_ade2ee03bc32f28ea54ba771e1b69c482}} 
+\mbox{\Hypertarget{classCTRLBuscarlivro_a220f5a7d88a1316eb04a37cacc20c542}\label{classCTRLBuscarlivro_a220f5a7d88a1316eb04a37cacc20c542}} 
 \index{C\+T\+R\+L\+Buscarlivro@{C\+T\+R\+L\+Buscarlivro}!buscarlivro@{buscarlivro}}
 \index{buscarlivro@{buscarlivro}!C\+T\+R\+L\+Buscarlivro@{C\+T\+R\+L\+Buscarlivro}}
 \subsubsection{\texorpdfstring{buscarlivro()}{buscarlivro()}}
-{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} C\+T\+R\+L\+Buscarlivro\+::buscarlivro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \hyperlink{classResultado}{Resultado} C\+T\+R\+L\+Buscarlivro\+::buscarlivro (\begin{DoxyParamCaption}\item[{\hyperlink{classLivro}{Livro} $\ast$$\ast$}]{livro }\end{DoxyParamCaption}) throw  runtime\+\_\+error) \hspace{0.3cm}{\ttfamily [virtual]}}
 
 Método de busca de livros da controladora 
-
-Implements \hyperlink{classIUBuscarlivro}{I\+U\+Buscarlivro}.
-
-\mbox{\Hypertarget{classCTRLBuscarlivro_ae0022d7cf6df4d7f66a209929e7d8f53}\label{classCTRLBuscarlivro_ae0022d7cf6df4d7f66a209929e7d8f53}} 
-\index{C\+T\+R\+L\+Buscarlivro@{C\+T\+R\+L\+Buscarlivro}!set\+Cntr\+L\+N\+Buscarlivro@{set\+Cntr\+L\+N\+Buscarlivro}}
-\index{set\+Cntr\+L\+N\+Buscarlivro@{set\+Cntr\+L\+N\+Buscarlivro}!C\+T\+R\+L\+Buscarlivro@{C\+T\+R\+L\+Buscarlivro}}
-\subsubsection{\texorpdfstring{set\+Cntr\+L\+N\+Buscarlivro()}{setCntrLNBuscarlivro()}}
-{\footnotesize\ttfamily void C\+T\+R\+L\+Buscarlivro\+::set\+Cntr\+L\+N\+Buscarlivro (\begin{DoxyParamCaption}\item[{\hyperlink{classILNBuscarlivro}{I\+L\+N\+Buscarlivro} $\ast$}]{L\+N\+Buscarlivro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
-
-Método responsável por fazer a ligação entre controladora de busca de livro e lógica de negócio 
 
 Implements \hyperlink{classIUBuscarlivro}{I\+U\+Buscarlivro}.
 

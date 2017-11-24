@@ -373,7 +373,7 @@ CTRLRemoverLivro::~CTRLRemoverLivro(){
 }
 
 Resultado CTRLRemoverLivro::removerLivro() throw(runtime_error){
-    ///Método de troca de livros da controladora
+    ///Método de remocao de livros da controladora
 
     Resultado resultado;
     Titulo titulo;
@@ -411,7 +411,7 @@ CTRLInterfaceUsuario::~CTRLInterfaceUsuario()
 }
 
 void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
-    //Controladora da Interface de Usuario
+    ///Método de apresentacao da interface do sistema da controladora para o usuario
 
     //Declaracao de ponteiros
 

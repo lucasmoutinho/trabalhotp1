@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['buscarlivro',['buscarlivro',['../classCTRLBuscarlivro.html#ade2ee03bc32f28ea54ba771e1b69c482',1,'CTRLBuscarlivro::buscarlivro()'],['../classSTUBBuscarlivro.html#accbcec2b22c7b768e488e96624d9a9d6',1,'STUBBuscarlivro::buscarlivro()'],['../classSTUBComandosusuarioautenticado.html#a12f684d2240412050e6eee54ebdd1a57',1,'STUBComandosusuarioautenticado::buscarlivro()']]],
-  ['buscarusuario',['buscarusuario',['../classCTRLBuscarusuario.html#a4c73f22cb6b0083a99a21e3abe45cc5a',1,'CTRLBuscarusuario::buscarusuario()'],['../classSTUBBuscarusuario.html#a141fd191173b121439e480f32318aa14',1,'STUBBuscarusuario::buscarusuario()'],['../classSTUBComandosusuarioautenticado.html#ad156d9cd3554e120bc8fff5916955465',1,'STUBComandosusuarioautenticado::buscarusuario()']]]
+  ['buscar',['buscar',['../classContainerLivro.html#a1de05fa370f2cfaceabfe5ed59b86d03',1,'ContainerLivro::buscar()'],['../classContainerResenha.html#af9d3273c5f38b68673b419defe24a4c6',1,'ContainerResenha::buscar()'],['../classContainerUsuario.html#ae25b805fee893e20b85a501e1ba4d252',1,'ContainerUsuario::buscar()']]],
+  ['buscarlivro',['buscarlivro',['../classCTRLBuscarlivro.html#a220f5a7d88a1316eb04a37cacc20c542',1,'CTRLBuscarlivro']]],
+  ['buscarusuario',['buscarusuario',['../classCTRLBuscarusuario.html#a4c73f22cb6b0083a99a21e3abe45cc5a',1,'CTRLBuscarusuario']]]
 ];

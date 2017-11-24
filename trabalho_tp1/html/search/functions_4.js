@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['incluir',['incluir',['../classSTUBComandosusuarioautenticado.html#ac9e1818a8953c75e8c608f2eac526d4d',1,'STUBComandosusuarioautenticado']]]
+  ['interfaceusuario',['interfaceUsuario',['../classCTRLInterfaceUsuario.html#a733e0feb4a9391c04b96bd0d7efb2ebc',1,'CTRLInterfaceUsuario']]]
 ];

@@ -35,7 +35,7 @@ Resultado ContainerLivro::cadastrar(Livro livro)
   return resultado;
 }
 
-Resultado ContainerLivro::buscar(Titulo titulo)
+Resultado ContainerLivro::buscar(Titulo titulo, Livro** livro)
 {
 
   Resultado resultado;
@@ -64,8 +64,13 @@ Resultado ContainerLivro::buscar(Titulo titulo)
       cout << "Data de publicacao :  " << elemento->getData() << endl;
       cout << "Genero literario :  " << elemento->getGenero() << endl;
       cout << "Resenhas acerca do livro :  " << endl;
+
+      elemento->getContainer()->buscar(); 
+
       cout << "**************************************************" << endl
            << endl;
+
+      *livro = &(*elemento);
 
       return resultado;
     }
@@ -80,39 +85,14 @@ Resultado ContainerLivro::trocar(Titulo titulo)
 {
 
   Resultado resultado;
-  string chave = titulo.getTitulo();
 
-  cout << endl
+cout << endl
        << endl
        << "**************************************************" << endl;
-  cout << "Pesquisando livro com titulo: " << chave << " ..." << endl;
-  cout << "**************************************************" << endl
-       << endl;
+  cout << "autores que desejam trocar o livro: " << titulo.getTitulo()   << endl;
+  cout << "Lucas, Joao, Maria" << endl << "**************************************************" << endl << endl;
 
-  for (list<Livro>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
-  {
-
-    if (elemento->getTitulo() == chave)
-    {
-
-      resultado.setValor(Resultado::SUCESSO_TROCA_LIVRO);
-
-      cout << endl
-           << "**************************************************" << endl;
-      cout << "Livro encontrado" << endl;
-      cout << "Titulo :  " << elemento->getTitulo() << endl;
-      cout << "Autor :  " << elemento->getAutor() << endl;
-      cout << "Data de publicacao :  " << elemento->getData() << endl;
-      cout << "Genero literario :  " << elemento->getGenero() << endl;
-      cout << "Resenhas acerca do livro :  " << endl;
-      cout << "**************************************************" << endl
-           << endl;
-
-      return resultado;
-    }
-  }
-
-  resultado.setValor(Resultado::FALHA_TROCA_LIVRO);
+  resultado.setValor(Resultado::SUCESSO_TROCA_LIVRO);
   return resultado;
 }
 

@@ -20,7 +20,7 @@ public:
   virtual ~ContainerLivro();
 
   Resultado cadastrar(Livro);
-  Resultado buscar(Titulo);
+  Resultado buscar(Titulo, Livro**);
   Resultado trocar(Titulo);
   Resultado remover(Titulo);
 };

@@ -87,7 +87,7 @@ public:
     CTRLRegistroresenha();
     virtual ~CTRLRegistroresenha();
 
-    Resultado registrarresenha() throw(runtime_error);
+    Resultado registrarresenha(string, string) throw(runtime_error);
 
     void setContainer(ContainerResenha *);
 
@@ -130,7 +130,7 @@ public:
     CTRLBuscarlivro();
     virtual ~CTRLBuscarlivro();
 
-    Resultado buscarlivro() throw(runtime_error);
+    Resultado buscarlivro(Livro**) throw(runtime_error);
 
     void setContainer(ContainerLivro *);
 

@@ -67,7 +67,7 @@ public:
     IURegistroresenha();
     virtual ~IURegistroresenha();
 
-    virtual Resultado registrarresenha() throw(runtime_error) = 0;
+    virtual Resultado registrarresenha(string, string) throw(runtime_error) = 0;
 
     virtual void setContainer(ContainerResenha *) = 0;
 };
@@ -97,7 +97,7 @@ public:
     IUBuscarlivro();
     virtual ~IUBuscarlivro();
 
-    virtual Resultado buscarlivro() throw(runtime_error) = 0;
+    virtual Resultado buscarlivro(Livro**) throw(runtime_error) = 0;
 
     virtual void setContainer(ContainerLivro *) = 0;
 };

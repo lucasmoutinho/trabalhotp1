@@ -35,6 +35,19 @@ Resultado ContainerResenha::cadastrar(Resenha resenha)
   return resultado;
 }
 
+Resultado ContainerResenha::buscar()
+{
+
+  Resultado resultado;
+
+  for (list<Resenha>::iterator elemento = container.begin(); elemento != container.end(); elemento++)
+  {
+    cout << "Autor: "<< elemento->getAutor() <<"-- Texto: "<< elemento->getTexto() << endl;
+  }
+
+  return resultado;
+}
+
 ContainerResenha::ContainerResenha()
 {
 }

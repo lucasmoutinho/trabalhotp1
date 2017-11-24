@@ -20,6 +20,7 @@ public:
   virtual ~ContainerResenha();
 
   Resultado cadastrar(Resenha);
+  Resultado buscar();
 };
 
 #endif

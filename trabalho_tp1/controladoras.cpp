@@ -117,11 +117,15 @@ Resultado CTRLCadastrolivro::cadastrarlivro() throw(runtime_error){
         }
     }
 
+    ContainerResenha *ContResenha;
+    ContResenha = new ContainerResenha();
+
     livro.setAutor(autor.getNome());
     livro.setCodigo(codigo.getCodigo());
     livro.setData(data.getData());
     livro.setGenero(genero.getGenero());
     livro.setTitulo(titulo.getTitulo());
+    livro.setContainer(ContResenha);
 
     resultado = ContLivro->cadastrar(livro);
 
@@ -183,7 +187,7 @@ CTRLRegistroresenha::CTRLRegistroresenha(){
 CTRLRegistroresenha::~CTRLRegistroresenha(){
 }
 
-Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
+Resultado CTRLRegistroresenha::registrarresenha(string entrada_titulo, string entrada_autor) throw(runtime_error){
     ///Método de registramento de resenha da controladora
 
     Resultado resultado;
@@ -191,22 +195,21 @@ Resultado CTRLRegistroresenha::registrarresenha() throw(runtime_error){
     Titulo titulo;
     Texto texto;
     Resenha resenha;
-    string entrada_autor;
-    string entrada_titulo;
     string entrada_texto;
+
+    autor.setNome(entrada_autor);
+    titulo.setTitulo(entrada_titulo);
 
     while(true){
 
         try{
-            getchar();
+
+            cout << endl << "**************************************************" << endl;
+            cout << "Habilitado insercao da resenha.....:" << endl;
+            cout << endl << "**************************************************" << endl << endl;
+
             cout << "**************************************************" << endl;
-            cout << "Informe o Autor :" << endl;
-            getline(cin, entrada_autor);;
-            autor.setNome(entrada_autor);
-            cout << "Informe a Titulo :" << endl;
-            getline(cin, entrada_titulo);;
-            titulo.setTitulo(entrada_titulo);
-            cout << "Informe o Texto :" << endl;
+            cout << "Informe o Texto da resenha:" << endl;
             getline(cin, entrada_texto);
             texto.setTexto(entrada_texto);
             cout << endl << "**************************************************" << endl;
@@ -279,7 +282,7 @@ CTRLBuscarlivro::CTRLBuscarlivro(){
 CTRLBuscarlivro::~CTRLBuscarlivro(){
 }
 
-Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
+Resultado CTRLBuscarlivro::buscarlivro(Livro** livro) throw(runtime_error){
     ///Método de busca de livros da controladora
 
     Resultado resultado;
@@ -303,21 +306,11 @@ Resultado CTRLBuscarlivro::buscarlivro() throw(runtime_error){
         }
     }
 
-    resultado = ContLivro->buscar(titulo);
+    resultado = ContLivro->buscar(titulo, livro);
 
     if(resultado.getValor() == Resultado::FALHA_BUSCA_LIVRO){
         cout << endl << "Falha ao buscar livro" << endl;
         cout << "Pressione Enter para continuar" << endl << endl;
-    }
-    else if(resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO){
-        cout << endl << "**************************************************" << endl;
-        cout << "Livro encontrado" << endl;
-        cout << "Titulo :  " << titulo.getTitulo() << endl;
-        cout << "Autor :  " << "Lucas" << endl;
-        cout << "Data de publicacao :  " << "10/10/10" << endl;
-        cout << "Genero literario :  " << "EPOPEIA" << endl;
-        cout << "Resenhas acerca do livro :  " << "Nenhuma" << endl;
-        cout << "**************************************************" << endl << endl;
     }
     else if(resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
@@ -363,18 +356,6 @@ Resultado CTRLTrocarlivro::trocarlivro() throw(runtime_error){
     if(resultado.getValor() == Resultado::FALHA_TROCA_LIVRO){
         cout << endl << "Falha ao buscar titulo do livro para troca" << endl;
         cout << "Pressione Enter para continuar" << endl << endl;
-    }
-    else if(resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO){
-        cout << endl << "**************************************************" << endl;
-        cout << "Livro disponivel para troca" << endl;
-        cout << "Titulo do livro :  " << titulo.getTitulo() << endl;
-        cout << "Lista de usuarios com exemplares e que desejam a troca:" << endl;
-        cout << "USER1 :  " << "Lucas" << endl;
-        cout << "USER2 :  " << "Joao" << endl;
-        cout << "USER3 :  " << "Nato" << endl;
-        cout << "USER4 :  " << "Pedro" << endl;
-        cout << "USER5 :  " << "Caio" << endl;
-        cout << "**************************************************" << endl << endl;
     }
     else if(resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO){
         cout << endl << "**************************************************" << endl;
@@ -442,12 +423,6 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     ContainerUsuario *ContUsuario;
     ContUsuario = new ContainerUsuario();
 
-    ContainerLivro *ContLivro;
-    ContLivro = new ContainerLivro();
-
-    ContainerResenha *ContResenha;
-    ContResenha = new ContainerResenha();
-
     ///Cadastro Usuario
 
     IUCadastro *cntrCadastro;
@@ -473,8 +448,6 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     IURegistroresenha *cntrRegistroresenha;
     cntrRegistroresenha = new CTRLRegistroresenha();
 
-    cntrRegistroresenha->setContainer(ContResenha);
-
     ///Buscar usuario
 
     IUBuscarusuario *cntrBuscarusuario;
@@ -487,21 +460,15 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
     IUBuscarlivro *cntrBuscarlivro;
     cntrBuscarlivro = new CTRLBuscarlivro();
 
-    cntrBuscarlivro->setContainer(ContLivro);
-
     ///Trocar livro
 
     IUTrocarlivro *cntrTrocarlivro;
     cntrTrocarlivro = new CTRLTrocarlivro();
 
-    cntrTrocarlivro->setContainer(ContLivro);
-
     ///Remover livro
 
     IURemoverLivro *cntrRemoverLivro;
     cntrRemoverLivro = new CTRLRemoverLivro();
-
-    cntrRemoverLivro->setContainer(ContLivro);
 
     //Variaveis de interface
 
@@ -616,7 +583,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                         try
                                         {
                                             cntrRemoverLivro->setContainer(user->getContainer());
-                                            resultado = cntrTrocarlivro->trocarlivro();
+                                            resultado = cntrRemoverLivro->removerLivro();
                                             if (resultado.getValor() == Resultado::SUCESSO_REMOVE_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO)
                                             {
                                                 break;
@@ -638,7 +605,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                         try
                                         {
                                             cntrBuscarlivro->setContainer(user->getContainer());
-                                            resultado = cntrBuscarlivro->buscarlivro();
+                                            resultado = cntrBuscarlivro->buscarlivro(&book);
                                             if (resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO)
                                             {
                                                 break;
@@ -659,6 +626,7 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                     {
                                         try
                                         {
+                                            cntrTrocarlivro->setContainer(user->getContainer());
                                             resultado = cntrTrocarlivro->trocarlivro();
                                             if (resultado.getValor() == Resultado::SUCESSO_TROCA_LIVRO || resultado.getValor() == Resultado::TROCA_NAO_ENCONTRADO)
                                             {
@@ -680,7 +648,38 @@ void CTRLInterfaceUsuario::interfaceUsuario() throw(runtime_error){
                                     {
                                         try
                                         {
-                                            resultado = cntrRegistroresenha->registrarresenha();
+
+
+                                            while (true)
+                                            {
+                                                try
+                                                {
+                                                    
+                                                    cout << endl<< "**************************************************" << endl;
+                                                    cout << "Iniciando busca pelo livro da resenha.... :" << endl;
+                                                    cout << endl << "**************************************************" << endl<<endl;
+
+                                                    cntrBuscarlivro->setContainer(user->getContainer());
+                                                    resultado = cntrBuscarlivro->buscarlivro(&book);
+                                                    if (resultado.getValor() == Resultado::SUCESSO_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO)
+                                                    {
+                                                        break;
+                                                    }
+                                                }
+                                                catch (const runtime_error &exp)
+                                                {
+                                                    cout << "Erro de Sistema" << endl;
+                                                    cout << "Pressione Enter para continuar" << endl;
+                                                }
+                                            }
+
+                                            if (resultado.getValor() == Resultado::FALHA_BUSCA_LIVRO || resultado.getValor() == Resultado::LIVRO_NAO_ENCONTRADO)
+                                            {
+                                                break;
+                                            }
+
+                                            cntrRegistroresenha->setContainer(book->getContainer());
+                                            resultado = cntrRegistroresenha->registrarresenha(book->getTitulo(), user->getNome());
                                             if (resultado.getValor() == Resultado::SUCESSO_REGISTRO_RESENHA)
                                             {
                                                 break;
